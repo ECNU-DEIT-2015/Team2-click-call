@@ -1,0 +1,95 @@
+#title{
+  font-size: 35px;
+  left: 300px;
+  top:10px;
+  text-align:center;
+}
+
+#sidebar {
+  line-height:30px;
+  background-color:#393857;
+  height:1000px;
+  width:200px;
+  float:left;
+  position:fixed;
+  margin-right:30px;
+  margin-bottom:30px;
+}
+
+#classname{
+  float:left;
+  left:1000px; 
+}
+
+#topbarinside{
+  float:left;
+  position:fixed;
+  background-color:#ffffff;
+  height:80px;
+  width:1240px;  
+  margin-left:200px;    
+  margin-bottom:30px;
+  padding-left:50px;
+  
+}
+
+#classchoosed {
+  float:left;
+  position:fixed;
+  background-color:white; 
+  height:700px;
+  width:420px;
+  margin-top:110px;
+  margin-left: 230px;
+  margin-bottom:30px;
+  box-shadow:5px 5px 5px rgba(119,151,178,0.36);
+}
+
+#classbg{
+  background-color:#F9F9F9; 
+  margin-left: 20px;  
+  margin-right: 20px;
+  width: 380px;
+  height: 600px;
+}
+
+#classinfo {
+  float:left;
+  position:fixed;
+  background-color:white; 
+  height:196px;
+  width:740px;
+  margin-top:110px;
+  margin-left: 675px;
+  margin-bottom:30px;
+  box-shadow:5px 5px 5px rgba(119,151,178,0.36);
+}
+
+#studentinfo {
+  float:left;
+  position:fixed;
+  background-color:white; 
+  height:479px;
+  width:740px;
+  margin-top:331px;
+  margin-left: 675px;
+  margin-bottom:30px;
+  overflow-y:scroll; 
+  overflow-x:scroll;
+  box-shadow:5px 5px 5px rgba(119,151,178,0.36);
+}
+
+#stubg{
+  background-color:#F9F9F9; 
+  margin-left: 20px;  
+  margin-right: 20px;
+  width: 690px;
+  height: 389px;
+}
+
+#subtitle{
+  font-size: 21px;
+  font-family: Arial;
+  padding-left: 30px;  
+  padding-top: 5px;  
+}
