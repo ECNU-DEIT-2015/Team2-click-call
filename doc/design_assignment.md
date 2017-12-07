@@ -242,7 +242,7 @@
             <th>刘冠群</th>
         </tr>
          <tr>
-            <th>SelectElement/th>
+            <th>SelectElement</th>
             <th>onlesson-st-choose-quet</th>
             <th>刘冠群</th>
         </tr>
