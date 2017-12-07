@@ -157,3 +157,39 @@
             <th>汤夏颖</th>
         </tr>
 </table>
+
+
+### click-URL
+
+<table>
+        <tr>
+            <th>元素</th>
+            <th> id </th>
+            <th> 分工 </th>
+        </tr>
+         <tr>
+            <th>click-LoginPage</th>
+            <th>localhost:8080/click/LoginPage</th>
+            <th>林凌</th>
+        </tr>
+         <tr>
+            <th>click-BeforeLesson</th>
+            <th>localhost:8080/click/BeforeLesson</th>
+            <th>林凌</th>
+        </tr>
+        <tr>
+            <th>click-AddLesson</th>
+            <th>localhost:8080/click/AddLesson</th>
+            <th>汤夏颖</th>
+        </tr>
+        <tr>
+            <th>click-StartClick</th>
+            <th>localhost:8080/click/StartClick</th>
+            <th>汤夏颖</th>
+        </tr>
+         <tr>
+            <th>click-ClassRecord</th>
+            <th>localhost:8080/click/ClassRecord</th>
+            <th>汤夏颖</th>
+        </tr>
+</table>
