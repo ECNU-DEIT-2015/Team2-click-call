@@ -158,6 +158,105 @@
         </tr>
 </table>
 
+### onlesson-page
+
+<table>
+        <tr>
+            <th>元素</th>
+            <th> id </th>
+            <th> 分工 </th>
+        </tr>
+         <tr>
+            <th>buttonElement</th>
+            <th>onlesson-st-choose-random</th>
+            <th>刘冠群</th>
+        </tr>
+         <tr>
+            <th>buttonElement</th>
+            <th>onlesson-st-choose-unrandom</th>
+            <th>刘冠群</th>
+        </tr>
+         <tr>
+            <th>buttonElement</th>
+            <th>onlesson-call-closecall/th>
+            <th>刘冠群</th>
+        </tr>
+         <tr>
+            <th>buttonElement</th>
+            <th>onlesson-outclass</th>
+            <th>刘冠群</th>
+        </tr>
+          <tr>
+            <th>InputElement</th>
+            <th>onlesson-st-quet</th>
+            <th>刘冠群</th>
+        </tr>
+         <tr>
+            <th>InputElement</th>
+            <th>onlesson-st-choose-text</th>
+            <th>刘冠群</th>
+        </tr>
+         <tr>
+            <th>InputElement</th>
+            <th>onlesson-st-info-stname</th>
+            <th>刘冠群</th>
+        </tr>
+         <tr>
+            <th>InputElement</th>
+            <th>onlesson-st-info-stid</th>
+            <th>刘冠群</th>
+        </tr>
+         <tr>
+            <th>InputElement</th>
+            <th>onlesson-st-info-stiflu</th>
+            <th>刘冠群</th>
+        </tr>
+         <tr>
+            <th>InputElement</th>
+            <th>onlesson-st-info-stnumbei</th>
+            <th>刘冠群</th>
+        </tr>
+         <tr>
+            <th>InputElement</th>
+            <th>onlesson-st-record-text</th>
+            <th>刘冠群</th>
+        </tr>
+        <tr>
+            <th>InputElement</th>
+            <th>onlesson-st-record-situ</th>
+            <th>刘冠群</th>
+        </tr>
+        <tr>
+            <th>InputElement</th>
+            <th>onlesson-st-record-had</th>
+            <th>刘冠群</th>
+        </tr>
+        <tr>
+            <th>InputElement</th>
+            <th>onlesson-st-record-hadnot</th>
+            <th>刘冠群</th>
+        </tr>
+        <tr>
+            <th>ImageElement</th>
+            <th>onlesson-st-info-pic</th>
+            <th>刘冠群</th>
+        </tr>
+         <tr>
+            <th>SelectElement/th>
+            <th>onlesson-st-choose-quet</th>
+            <th>刘冠群</th>
+        </tr>
+         <tr>
+            <th>SelectElement</th>
+            <th>onless-topbarinside-class</th>
+            <th>刘冠群</th>
+        </tr>
+         <tr>
+            <th>UlistElement</th>
+            <th>onlesson-st-record-infor</th>
+            <th>刘冠群</th>
+        </tr>
+</table>
 
 ### click-URL
 
@@ -186,6 +285,11 @@
             <th>click-StartClick</th>
             <th>localhost:8080/click/StartClick</th>
             <th>汤夏颖</th>
+        </tr>
+         <tr>
+            <th>click-onlesson-page</th>
+            <th>localhost:8080/click/onlesson-page</th>
+            <th>刘冠群</th>
         </tr>
          <tr>
             <th>click-ClassRecord</th>
