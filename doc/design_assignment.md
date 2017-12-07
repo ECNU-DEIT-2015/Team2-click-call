@@ -178,7 +178,7 @@
         </tr>
          <tr>
             <th>buttonElement</th>
-            <th>onlesson-call-closecall/th>
+            <th>onlesson-call-closecall</th>
             <th>刘冠群</th>
         </tr>
          <tr>
