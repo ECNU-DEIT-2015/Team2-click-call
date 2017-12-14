@@ -1,0 +1,77 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#topbar {
+    line-height:0px;
+    background-color:#393857;
+    height:70px;
+    width:1400px;
+    top: 0px;
+    float: center;
+    position:fixed;
+    margin-right:0px;
+    margin-bottom:0px;
+    z-index:-1;
+  }
+#logo{
+    position:absolute;
+    top: 10px;
+}
+#login{
+    position:absolute;
+    left: 1140px;
+    top: 18px;
+}
+#register{
+    position:absolute;
+    left: 1220px;
+    top: 18px;
+}
+#startlogin{
+    position:absolute;
+    left: 550px;
+    top: 500px;
+}
+#loginbg{
+    position:absolute;
+    left: 540px;
+    top: 100px;
+    z-index:1;
+}
+#useridlog{
+    position:absolute;
+    left: 565px;
+    top: 270px;
+    z-index:2;
+}
+#password{
+    position:absolute;
+    left: 565px;
+    top: 320px;
+    z-index:2;
+}
+#userid{
+    position:absolute;
+    left: 600px;
+    top: 270px;
+    z-index:2;
+}
+#userpassword{
+    position:absolute;
+    left: 600px;
+    top: 325px;
+    z-index:2;
+}
+#signup{
+    position:absolute;
+    left: 585px;
+    top: 370px;
+    z-index:2;
+}
