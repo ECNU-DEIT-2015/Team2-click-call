@@ -1,8 +1,8 @@
-name: exercises
+name: Team2
 version: 0.0.1
 description: A Sample web application
 dependencies:
-  browser: "^0.10.0+2"
+  browser:  "^0.10.0+2"
   redstone: "^0.6.8"
 dev_dependencies:
   unittest: any
