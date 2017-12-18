@@ -12,33 +12,124 @@
 
 <div id="topbarinside">
     <br>
-   <p>您一共参加了3门课程</p>
-   <div>
-      <img src="/Users/sherrytowne/Desktop/exercise/web/img_Settings.png" >
-   </div>
+   <div>您一共参加了3门课程</div>
+   <br>
+   <div id="topbarinside-class">
+      <select>
+           <option>web网络教育应用</option>
+           <option>教育学</option>
+           <option>虚拟现实</option>
+       </select>
+     </div>
 </div>
 
 <div id="sidebar">
-</div>
+  <p id="userphoto"><image src="images/photo.png" width=43 height=43></image></p>
+  <p id="usernameshow"style="font-family:arial;color:white;font-size:14px;">姓名：游客</p>
+  <p id="useridshow"style="font-family:arial;color:white;font-size:14px;">学号：00000000</p>
+  <p id="startcall"><image src="images/startcall.png" width=171 height=59.4></image></p>
+  <p id="myclass"><image src="images/我的课程.png" width=200 height=50></image></p>
+  <p id="randomclass"><image src="images/随机点名.png" width=200 height=50></image></p>
+  <p id="recordclass"><image src="images/课堂记录.png" width=200 height=50></image></p>
+  <p id="help"><image src="images/使用帮助.png" width=200 height=50></image></p>
+  <p id="advice"><image src="images/意见反馈.png" width=200 height=50></image></p>
+ </div>
 
-<div id="classchoosed">
+<!-- <div id=27part>
+ <div id="classchoosed">
   <p id=subtitle>已选课程</p>
-  
-  <div id="classbg">
-  </div>
-</div>
-
-<div id="classinfo">
-    <p id=subtitle>课程概况</p>
-
-        
+  <div id="classbg"></div>
+ </div>
+ <div id="classinfo">
+    <p id=subtitle>课程概况</p>  
  </div>
 
  <div id="studentinfo">
    <p id=subtitle>学生信息</p>
    <div id="stubg">
    </div>
+ </div>
 </div>
+-->
+
+
+<div id=14part>
+ <div id="onlesson-st">
+  <div id="onlesson-st-quet">
+    <form action="form_action.asp" method="get">
+       新增提问: <input type="text" name="fname" size="50"/>
+        <input type="submit" value="确认"/>
+     </form>
+   </div> 
+
+   <hr/>
+
+ <div id="onlesson-st-choose">
+   <div id="onlesson-st-choose-text">花式点名</div>
+   <div id="onlesson-st-choose-quet">
+     <form action="" method="get">  
+         <select>
+             <option>webAPP与web的区别</option>
+             <option>一个点名程序需要哪些功能</option>
+         </select> 
+     </form>  
+   </div>
+   <div id="onlesson-st-choose-random"><image src="images/random.png" width=105 height=45></image></div>
+   <div id="onlesson-st-choose-unrandom"><image src="images/condition.png" width=105 height=45></image></div>
+ </div>
+
+ <div id="onlesson-st-info">
+    <div id="onlesson-st-info-pic"><image src="images/ecnu.jpg" width=130 height=160></image></div>
+    <div id="onlesson-st-info-stname">姓名：  </div>
+    <div id="onlesson-st-info-stid">学号：  </div>
+    <div id="onlesson-st-info-stiflu">印象：  </div>
+    <div id="onlesson-st-info-stnumbei">被点次数：  </div>
+ </div> 
+      
+    <div id="onlesson-st-record">
+       <div id="onlesson-st-record-text">签到记录</div>
+       <div id="onlesson-st-record-info">
+           <table border=0 cellspacing="0" cellpadding="20" width=680 height=30>
+            <tr>
+           <th>姓名</th>
+           <th>学号</th>
+           <th>签到时间</th>
+           <th>签到地点</th>
+            </tr>
+          </table>
+        </div>
+    </div>
+ </div>
+
+ <div id="onlesson-call">
+  <div id="onlesson-call-situ">签到情况</div>
+  <div id="onlesson-call-had">已签到人数：</div>
+  <div id="onlesson-call-hadnot">未签到人数：</div>
+  <div id="onlesson-call-closecall"><image src="images/relieve.png" width=200 height=50></image></div>
+  <div id="onlesson-call-text">虚拟座位表</div>
+  <div id="onlesson-call-char1"></div>
+  <div id="onlesson-call-char2"></div>
+  <div id="onlesson-call-char3"></div>
+  <div id="onlesson-call-char4"></div>
+  <div id="onlesson-call-char5"></div>
+  <div id="onlesson-call-char6"></div>
+  <div id="onlesson-call-char7"></div>
+  <div id="onlesson-call-char8"></div>
+  <div id="onlesson-call-char9"></div>
+  <div id="onlesson-call-char10"></div>
+  <div id="onlesson-call-char11"></div>
+  <div id="onlesson-call-char12"></div>
+  <div id="onlesson-call-char13"></div>
+  <div id="onlesson-call-char14"></div>
+  <div id="onlesson-call-char15"></div>
+  <div id="onlesson-call-char16"></div>
+  <div id="onlesson-call-char17"></div>
+  <div id="onlesson-call-char18"></div>
+  <div id="onlesson-call-char19"></div>
+  <div id="onlesson-call-char20"></div>
+  <div id="onlesson-call-outclass"><image src="images/offclass.png" width=100 height=50></image></div>
+ </div>
+</div> 
 
 <link rel="stylesheet" href="styles.css">
 <script defer src="main.dart" type="application/dart"></script>
