@@ -1,7 +1,6 @@
 #title{
   font-size: 35px;
   left: 300px;
-  top:10px;
   text-align:center;
 }
 
@@ -34,8 +33,7 @@
   
 }
 
-#topbarinside-class {
-}
+
 
 #classchoosed {
   float:left;
@@ -472,4 +470,200 @@
   position:fixed; 
   margin-top:540px; 
   margin-left:158px;
+}
+
+#topbar {
+  background-color:#393857;
+  height:80px;
+  width:1440px; 
+  position:fixed;
+}
+
+#bg{
+  margin-top:80px; 
+  position:absolute;
+}
+
+#logo{
+  position:fixed;
+  top: 5px;
+  left: 25px;
+}
+#login{
+  position:fixed;
+  left: 1140px;
+  top: 12px;
+}
+#register{
+  position:fixed;
+  left: 1220px;
+  top: 12px;
+
+}
+#startlogin{
+  position:fixed;
+  left: 600px;
+  top: 500px;
+}
+#loginbg{
+  position:fixed;
+  left: 600px;
+  top: 100px;
+  z-index:1;
+}
+#useridlog{
+  position:fixed;
+  left: 625px;
+  top: 270px;
+  z-index:2;
+}
+#password{
+  position:fixed;
+  left: 625px;
+  top: 320px;
+  z-index:2;
+}
+#userid{
+  position:fixed;
+  left: 675px;
+  top: 270px;
+  z-index:2;
+}
+#userpassword{
+  position:fixed;
+  left: 675px;
+  top: 325px;
+  z-index:2;
+}
+#signup{
+  position:fixed;
+  left: 645px;
+  top: 370px;
+  z-index:2;
+}
+
+#userphoto{
+  position:absolute;
+  left:15px;
+  top: 35px;
+}
+#usernameshow{
+  position:absolute;
+  left: 63px;
+  top: 38px;
+}
+#useridshow{
+  position:absolute;
+  left: 63px;
+  top: 63px;
+}
+#startcall{
+  position:absolute;
+  left: 15px;
+  top: 110px;
+}
+#myclass{
+  position:absolute;
+  left: 0px;
+  top: 200px;
+}
+#randomclass{
+  position:absolute;
+  left: 0px;
+  top: 260px;
+}
+#recordclass{
+  position:absolute;
+  left: 0px;
+  top: 310px;
+}
+#help{
+  position:absolute;
+  left: 0px;
+  top: 360px;
+}
+#advice{
+  position:absolute;
+  left: 0px;
+  top: 410px;
+}
+#topbarinside{
+  float:left;
+  position:fixed;
+  background-color:#ffffff;
+  height:80px;
+  width:1240px;  
+  margin-left:200px;    
+  margin-bottom:30px;
+  padding-left:50px;
+}
+
+#out{
+  float:left;
+  position:fixed;
+  margin-left:950px;
+  margin-top:-20px;    
+  padding-left:30px;
+}
+
+
+#classchoosing {
+  float:left;
+  position:fixed;
+  background-color:white; 
+  height:700px;
+  width:1090px;
+  margin-top:110px;
+  margin-left: 230px;
+  margin-bottom:30px;
+  box-shadow:5px 5px 5px rgba(119,151,178,0.36);
+  z-index:1;
+}
+#subtitle{
+  font-size: 16px;
+  font-family: Arial;
+  padding-left: 30px;  
+  padding-top: 2px;  
+}
+
+div.img
+{
+margin:3px;
+border:1px solid #bebebe;
+height:auto;
+width:auto;
+float:left;
+text-align:center;
+}
+div.img img
+{
+display:inline;
+margin:3px;
+border:1px solid #bebebe;
+}
+div.img a:hover img
+{
+border:1px solid #333333;
+}
+div.desc
+{
+text-align:center;
+font-weight:normal;
+width:150px;
+font-size:12px;
+margin:10px 5px 10px 5px;
+}
+#classcancel{
+  float:right;
+  position:fixed;
+  margin-left:950px;
+  margin-top:410px;    
+  padding-left:30px;
+}
+#classok{
+  float:right;
+  position:fixed;
+  margin-left:850px;
+  margin-top:410px;    
+  padding-left:30px;
 }
