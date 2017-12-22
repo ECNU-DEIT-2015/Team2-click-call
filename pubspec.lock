@@ -235,6 +235,12 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.8"
+  shelf_cors:
+    description:
+      name: shelf_cors
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.1"
   shelf_packages_handler:
     description:
       name: shelf_packages_handler
@@ -271,6 +277,12 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.4.0"
+  sqljocky5:
+    description:
+      name: sqljocky5
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   stack_trace:
     description:
       name: stack_trace
