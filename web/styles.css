@@ -4,6 +4,14 @@
   text-align:center;
 }
 
+#startpage{
+  style:"visibility: hidden;"
+}
+
+#choosepage{
+  style:"visibility: none;"
+}
+
 #sidebar {
   line-height:30px;
   background-color:#393857;
