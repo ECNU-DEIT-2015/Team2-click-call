@@ -1,56 +1,48 @@
-import 'dart:async';
-import 'dart:convert';
 import 'dart:html';
-InputElement toDoInput;
-var wordList;
+import 'dart:math' show Random;
+
+LIElement list;
+ButtonElement deleteAll;
+String studentname;
+
+List nameList = ["10154507101","10154507102","10154507103","10154507104",
+"10154507107","10154507109","10154507110","10154507112",
+"10154507113","10154507114","10154507117","10154507121","10154507123",
+"10154507124","10154507127","10154507132","10154507134","10154507138",
+"韩庆慧","谢函","宋金阳","李佳璇","谢琪","杨芙蓉","荆泽宇","黄大龙","李敏",
+"刘冠群","林凌","彭茂源","张思宁","崔红洋","汤夏颖","苏颖晞","姜宇轩","于潇雪"];
 
 
-main() async {
-  querySelector('#startcall').onClick.listen(makeRequest);
-  querySelector('#userphoto').onClick.listen(makePostRequest);
-  wordList = querySelector('#wordList');
+void main()
+{ 
+  querySelector("#loginbutton").onClick.listen(onloginClicked);
+  list = querySelector('#list');
+  list.onChange.listen(addlistitem);
+  deleteAll= querySelector('#delete-all'); 
+  deleteAll.onClick.listen(deleteAllElements);
+
 }
 
-void handleError(Object error) {
-  wordList.children.add(new LIElement()..text = 'Request failed.');
-}
 
-Future makeRequest(Event e) async{
-  var path = 'http://localhost:90/data/';
-  try {
-    processString(await HttpRequest.getString(path));
-  } catch (e) {
-    print('Couldn\'t open $path');
-    handleError(e);
-  }
+void onloginClicked(Event e)
+{
+  Random select_number = new Random();
+  int number = select_number.nextInt(18);
+  querySelector("#select-name").text = nameList[number];
+  querySelector("#select-id").text = nameList[number+18];
+  studentname=nameList[number+18];
+  addlistitem(e);
 }
 
 
-Future requestComplete(HttpRequest request) async{
-  if(request.status==200){
-    List<String>web=
-    JSON.decode(request.responseText) as List<String>;
-    for(int i=0;i<web.length;i++){
-      wordList.children.add(new LIElement()..text=web[i]);
-    }
-  }else{
-    wordList.children.add(
-      new LIElement().text='Request failed,status=${request.status}');
-  }
+
+void addlistitem(Event e)
+{
+  var newName = new LIElement();
+  newName.text = studentname;
+  list.children.add(newName);
 }
 
-void processString(String jsonString) {
-  List<String> web = JSON.decode(jsonString ) as List<String>;
-  //List<String> a=JSON.getData()
-  for (int i = 0; i < web.length; i++) {
-    wordList.children.add(new LIElement()..text = web[i]);
-  }
-}
-
-Future makePostRequest(Event e) async { 
-  String url = 'http://localhost:90/data/add';
-  HttpRequest.request(url, method: 'POST', sendData:'''{'user':'zhangsan'}''' )
-      .then((HttpRequest resp) {
-    querySelector('#xiaotip').text = resp.responseText;
-  });
+void deleteAllElements(Event e) {
+  list.children.clear();
 }
