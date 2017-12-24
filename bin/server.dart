@@ -28,7 +28,7 @@ Future getDataFromDB() async{
       var results = await pool.query('select iduser, firstname,lastname from user');
       String response;
       await results.forEach((row) { 
-      response =JSON.encode([ "FirstName: ${row[1]}"," LastName: ${row[2]}"]);
+      response =JSON.encode([ "FirstName: ${row[1]}, LastName: ${row[2]}"]);
   });
       return response;
      // return '''["林凌","刘冠群","汤夏颖"]''';

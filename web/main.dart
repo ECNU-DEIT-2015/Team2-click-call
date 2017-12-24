@@ -4,7 +4,6 @@ import 'dart:html';
 InputElement toDoInput;
 var wordList;
 
-
 main() async {
   querySelector('#startcall').onClick.listen(makeRequest);
   querySelector('#userphoto').onClick.listen(makePostRequest);
@@ -31,7 +30,7 @@ Future requestComplete(HttpRequest request) async{
     List<String>web=
     JSON.decode(request.responseText) as List<String>;
     for(int i=0;i<web.length;i++){
-      wordList.children.add(new LIElement()..text=web[i]);
+      wordList.text=web[i];
     }
   }else{
     wordList.children.add(
@@ -45,6 +44,7 @@ void processString(String jsonString) {
   for (int i = 0; i < web.length; i++) {
     wordList.children.add(new LIElement()..text = web[i]);
   }
+ // querySelector('#seatid').text =web[i];
 }
 
 Future makePostRequest(Event e) async { 

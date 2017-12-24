@@ -5,18 +5,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="scaffolded-by" content="https://github.com/google/stagehand">
-  <title>课堂点名小程序</title>
+  <title>课堂点名应用小程序</title>
   <style> body{background-color: #EEF4F9} </style>
 </head>
 <body>
 
+<div id=startpage>
+        <div id="topbar"> 
+          <p id="bg"><image src="images/bg.png" width=1440 height=808></image></p>
+          <p id="logo"><image src="images/logo.png" width=172 height=65></image></p>
+          <p id="loginbutton"><image src="images/login.png" width=61.8 height=34.2></image></p>
+          <p id="registerbutton"><image src="images/register.png" width=97.2 height=34.2></image></p>
+         </div>
+      
+         <div id="startloginbutton">
+           <image src="images/start.png" width=237 height=82></image>
+         </div>
+      
+         <div id=login  style="display:none;">
+         <p id="userid"><input type="text" name="userid"><br></p>
+         <p id="userpassword"><input type="password" name="userpassword"></p>
+           <p id="loginbg"><image src="images/loginbg.png" width=241 height=387></image></p>
+           <p id="useridlog"><image src="images/user.png" width=25 height=25></image></p>
+           <p id="password"><image src="images/password.png" width=22.5 height=28></image></p>
+           <p id="signup"><image src="images/signup.png" width=149 height=46.2></image></p>
+         </div>
+</div>
 
+<div id=choosepage style="display:none;">
        <div id="topbarinside">
           <br>
-          <ul id="wordList">
-          </ul>
           <p id="xiaotip"style="font-family:arial;color:black;font-size:14px;">您还没有选择课程，请现在下方勾选参加的课程</p>
-         <!--  <p id="out"><image src="images/退出.png" width=22.5 height=20></image></p></p> -->
          </div>
 
              <div id="sidebar">
@@ -65,33 +84,10 @@
           <p id="classok"><image src="images/确认.png" width=110 height=66></image></p>
           <p id="classcancel"><image src="images/取消.png" width=110 height=66></image></p>
          </div>
--->
-  
-<!-- 
-<div id=17part>
-  <div id="topbar"> 
-    <p id="bg"><image src="images/bg.png" width=1440 height=808></image></p>
-    <p id="logo"><image src="images/logo.png" width=172 height=65></image></p>
-    <p id="login"><image src="images/login.png" width=61.8 height=34.2></image></p>
-    <p id="register"><image src="images/register.png" width=97.2 height=34.2></image></p>
-   </div>
-
-   <div>
-     <p id="startlogin"><image src="images/start.png" width=237 height=82></image></p>
-   </div>
-   <p id="userid"><input type="text" name="userid"><br></p>
-   <p id="userpassword"><input type="password" name="userpassword"></p>
-
-   <div>
-     <p id="loginbg"><image src="images/loginbg.png" width=241 height=387></image></p>
-     <p id="useridlog"><image src="images/user.png" width=25 height=25></image></p>
-     <p id="password"><image src="images/password.png" width=22.5 height=28></image></p>
-     <p id="signup"><image src="images/signup.png" width=149 height=46.2></image></p>
-   </div>
 </div>
--->
 
-<!-- 
+
+<div id=classpage style="display:none;">
 <div id="topbarinside">
     <br>
    <div>您一共参加了3门课程</div>
@@ -104,7 +100,6 @@
        </select>
      </div>
 </div>
-
     <div id="sidebar">
         <p id="userphoto"><image src="images/photo.png" width=43 height=43></image></p>
         <p id="usernameshow"style="font-family:arial;color:white;font-size:14px;">姓名：游客</p>
@@ -117,8 +112,6 @@
         <p id="help"><image src="images/使用帮助.png" width=200 height=50></image></p>
         <p id="advice"><image src="images/意见反馈.png" width=200 height=50></image></p>
        </div>
-       
-<div id=27part>
  <div id="classchoosed">
   <p id=subtitle>已选课程</p>
   <div id="classbg"></div>
@@ -133,12 +126,35 @@
    </div>
  </div>
 </div>
--->
 
 
 
-<!-- 
-<div id=14part>
+
+<div id=lessonpage style="display:none;">
+    <div id="topbarinside">
+        <br>
+       <div>您一共参加了3门课程</div>
+       <br>
+       <div id="topbarinside-class">
+          <select>
+               <option>web网络教育应用</option>
+               <option>教育学</option>
+               <option>虚拟现实</option>
+           </select>
+         </div>
+    </div>
+    <div id="sidebar">
+        <p id="userphoto"><image src="images/photo.png" width=43 height=43></image></p>
+        <p id="usernameshow"style="font-family:arial;color:white;font-size:14px;">姓名：游客</p>
+        <p id="useridshow"style="font-family:arial;color:white;font-size:14px;">学号：00000000</p>
+        <p id="startcall"><image src="images/startcall.png" width=171 height=59.4></image></p>
+        
+        <p id="myclass"><image src="images/我的课程.png" width=200 height=50></image></p>
+        <p id="randomclass"><image src="images/随机点名.png" width=200 height=50></image></p>
+        <p id="recordclass"><image src="images/课堂记录.png" width=200 height=50></image></p>
+        <p id="help"><image src="images/使用帮助.png" width=200 height=50></image></p>
+        <p id="advice"><image src="images/意见反馈.png" width=200 height=50></image></p>
+       </div>
  <div id="onlesson-st">
   <div id="onlesson-st-quet">
     <form action="form_action.asp" method="get">
@@ -146,9 +162,7 @@
         <input type="submit" value="确认"/>
      </form>
    </div> 
-
    <hr/>
-
  <div id="onlesson-st-choose">
    <div id="onlesson-st-choose-text">花式点名</div>
    <div id="onlesson-st-choose-quet">
@@ -215,7 +229,6 @@
   <div id="onlesson-call-outclass"><image src="images/offclass.png" width=100 height=50></image></div>
  </div>
 </div> 
--->
 
 
 
