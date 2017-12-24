@@ -5,13 +5,13 @@ InputElement toDoInput;
 var wordList;
 
 main() async {
-  querySelector('#startcall').onClick.listen(makeRequest);
+  querySelector('#onlesson-call-char1').onClick.listen(makeRequest);
   querySelector('#userphoto').onClick.listen(makePostRequest);
-  wordList = querySelector('#wordList');
+  wordList = querySelector('#studentid1');
 }
 
 void handleError(Object error) {
-  wordList.children.add(new LIElement()..text = 'Request failed.');
+ wordList.text = 'Request failed.';
 }
 
 Future makeRequest(Event e) async{
@@ -29,12 +29,12 @@ Future requestComplete(HttpRequest request) async{
   if(request.status==200){
     List<String>web=
     JSON.decode(request.responseText) as List<String>;
-    for(int i=0;i<web.length;i++){
+    for(int i=10;i<web.length;i++){
       wordList.text=web[i];
     }
   }else{
-    wordList.children.add(
-      new LIElement().text='Request failed,status=${request.status}');
+    wordList.add(
+      wordList.text='Request failed,status=${request.status}');
   }
 }
 
@@ -42,7 +42,7 @@ void processString(String jsonString) {
   List<String> web = JSON.decode(jsonString ) as List<String>;
   //List<String> a=JSON.getData()
   for (int i = 0; i < web.length; i++) {
-    wordList.children.add(new LIElement()..text = web[i]);
+    wordList.text = web[i];
   }
  // querySelector('#seatid').text =web[i];
 }

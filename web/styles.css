@@ -290,9 +290,13 @@
   position:fixed;
   background-color:#EEEBEB;
   height:35px;
-  width:72px;  
+  width:70px;  
   margin-top:210px;
   margin-left: 30px;
+}
+#studentid1{
+  margin-top:10px;
+  margin-left:28px;
 }
 #onlesson-call-char2{
   float:left;
@@ -303,6 +307,10 @@
   margin-top:210px;
   margin-left: 124px;
 }
+#studentid2{
+  margin-top:10px;
+  margin-left:28px;
+}
 #onlesson-call-char3{
   float:left;
   position:fixed;
@@ -311,6 +319,10 @@
   width:70px;  
   margin-top:210px;
   margin-left:214px;
+}
+#studentid3{
+  margin-top:10px;
+  margin-left:28px;
 }
 #onlesson-call-char4{
   float:left;
@@ -321,14 +333,22 @@
   margin-top:210px;
   margin-left: 306px;
 }
+#studentid4{
+  margin-top:10px;
+  margin-left:28px;
+}
 #onlesson-call-char5{
   float:left;
   position:fixed;
   background-color:#EEEBEB;
   height:35px;
-  width:72px;  
+  width:70px;  
   margin-top:270px;
   margin-left: 30px;
+}
+#studentid5{
+  margin-top:10px;
+  margin-left:28px;
 }
 #onlesson-call-char6{
   float:left;
@@ -339,6 +359,10 @@
   margin-top:270px;
   margin-left: 124px;
 }
+#studentid6{
+  margin-top:10px;
+  margin-left:28px;
+}
 #onlesson-call-char7{
   float:left;
   position:fixed;
@@ -347,6 +371,10 @@
   width:70px;  
   margin-top:270px;
   margin-left:214px;
+}
+#studentid7{
+  margin-top:10px;
+  margin-left:28px;
 }
 #onlesson-call-char8{
   float:left;
@@ -357,14 +385,22 @@
   margin-top:270px;
   margin-left: 306px;
 }
+#studentid8{
+  margin-top:10px;
+  margin-left:28px;
+}
 #onlesson-call-char9{
   float:left;
   position:fixed;
   background-color:#EEEBEB;
   height:35px;
-  width:72px;  
+  width:70px;  
   margin-top:330px;
   margin-left: 30px;
+}
+#studentid9{
+  margin-top:10px;
+  margin-left:28px;
 }
 #onlesson-call-char10{
   float:left;
@@ -375,6 +411,10 @@
   margin-top:330px;
   margin-left: 124px;
 }
+#studentid10{
+  margin-top:10px;
+  margin-left:28px;
+}
 #onlesson-call-char11{
   float:left;
   position:fixed;
@@ -383,6 +423,10 @@
   width:70px;  
   margin-top:330px;
   margin-left:214px;
+}
+#studentid11{
+  margin-top:10px;
+  margin-left:28px;
 }
 #onlesson-call-char12{
   float:left;
@@ -393,14 +437,22 @@
   margin-top:330px;
   margin-left: 306px;
 }
+#studentid12{
+  margin-top:10px;
+  margin-left:28px;
+}
 #onlesson-call-char13{
   float:left;
   position:fixed;
   background-color:#EEEBEB;
   height:35px;
-  width:72px;  
+  width:70px;  
   margin-top:390px;
   margin-left: 30px;
+}
+#studentid13{
+  margin-top:10px;
+  margin-left:28px;
 }
 #onlesson-call-char14{
   float:left;
@@ -411,6 +463,10 @@
   margin-top:390px;
   margin-left: 124px;
 }
+#studentid14{
+  margin-top:10px;
+  margin-left:28px;
+}
 #onlesson-call-char15{
   float:left;
   position:fixed;
@@ -419,6 +475,10 @@
   width:70px;  
   margin-top:390px;
   margin-left:214px;
+}
+#studentid15{
+  margin-top:10px;
+  margin-left:28px;
 }
 #onlesson-call-char16{
   float:left;
@@ -429,6 +489,10 @@
   margin-top:390px;
   margin-left: 306px;
 }
+#studentid16{
+  margin-top:10px;
+  margin-left:28px;
+}
 #onlesson-call-char17{
   float:left;
   position:fixed;
@@ -436,18 +500,13 @@
   height:35px;
   width:70px;  
   margin-top:450px;
-  margin-left: 306px;
-}
-#onlesson-call-char18{
-  float:left;
-  position:fixed;
-  background-color:#EEEBEB;
-  height:35px;
-  width:72px;  
-  margin-top:450px;
   margin-left: 30px;
 }
-#onlesson-call-char19{
+#studentid17{
+  margin-top:10px;
+  margin-left:28px;
+}
+#onlesson-call-char18{
   float:left;
   position:fixed;
   background-color:#EEEBEB;
@@ -456,7 +515,11 @@
   margin-top:450px;
   margin-left: 124px;
 }
-#onlesson-call-char20{
+#studentid18{
+  margin-top:10px;
+  margin-left:28px;
+}
+#onlesson-call-char19{
   float:left;
   position:fixed;
   background-color:#EEEBEB;
@@ -464,6 +527,23 @@
   width:70px;  
   margin-top:450px;
   margin-left:214px;
+}
+#studentid19{
+  margin-top:10px;
+  margin-left:28px;
+}
+#onlesson-call-char20{
+  float:left;
+  position:fixed;
+  background-color:#EEEBEB;
+  height:35px;
+  width:70px;  
+  margin-top:450px;
+  margin-left: 306px;
+}
+#studentid20{
+  margin-top:10px;
+  margin-left:28px;
 }
 #onlesson-call-outclass{
   float:left;

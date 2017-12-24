@@ -24,11 +24,11 @@ Future getDataFromDB() async{
   var pool = new ConnectionPool(
       host: 'www.muedu.org',port: 3306,
       user: 'deit-2015',password: 'deit@2015!',
-      db: 'project_2015_example',max: 5);
-      var results = await pool.query('select iduser, firstname,lastname from user');
+      db: 'project_2015_2',max:15);
+      var results = await pool.query('select userid from user');
       String response;
       await results.forEach((row) { 
-      response =JSON.encode([ "FirstName: ${row[1]}, LastName: ${row[2]}"]);
+      response =JSON.encode(["${row[1]}"]);
   });
       return response;
      // return '''["林凌","刘冠群","汤夏颖"]''';
