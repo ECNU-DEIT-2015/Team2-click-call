@@ -10,11 +10,11 @@
 </head>
 <body>
 
-<div id=startpage style="display:none;">
+<div id=startpage >
         <div id="topbar"> 
           <p id="bg"><image src="images/bg.png" width=1440 height=808></image></p>
           <p id="logo"><image src="images/logo.png" width=172 height=65></image></p>
-          <p id="loginbutton"><image src="images/login.png" width=61.8 height=34.2></image></p>
+          <p id="loginbutton" ><input type="button" onclick="display('loginbutton')" ><image src="images/login.png" width=61.8 height=34.2></image></p>
           <p id="registerbutton"><image src="images/register.png" width=97.2 height=34.2></image></p>
          </div>
       
@@ -32,7 +32,7 @@
          </div>
 </div>
 
-<div id=choosepage style="display:none;">
+<div id=choosepage style="display:none">
        <div id="topbarinside">
           <br>
           <p id="xiaotip"style="font-family:arial;color:black;font-size:14px;">您还没有选择课程，请现在下方勾选参加的课程</p>
@@ -87,7 +87,7 @@
 </div>
 
 
-<div id=classpage style="display:none;">
+<div id=classpage style="display:none">
 <div id="topbarinside">
     <br>
    <div>您一共参加了3门课程</div>
@@ -130,7 +130,7 @@
 
 
 
-<div id=lessonpage>
+<div id=lessonpage style="display:none">
     <div id="topbarinside">
         <br>
        <div>您一共参加了3门课程</div>
@@ -200,7 +200,7 @@
     </div>
  </div>
 
- <div id="onlesson-call">
+ <div id="onlesson-call" >
   <div id="onlesson-call-situ">签到情况</div>
   <div id="onlesson-call-had">已签到人数：</div>
   <div id="onlesson-call-hadnot">未签到人数：</div>

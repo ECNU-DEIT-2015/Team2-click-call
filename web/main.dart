@@ -8,6 +8,9 @@ main() async {
   querySelector('#onlesson-call-char1').onClick.listen(makeRequest);
   querySelector('#userphoto').onClick.listen(makePostRequest);
   wordList = querySelector('#studentid1');
+   querySelector("#startpage")//点击登录
+   ..id
+   ..onClick.listen(LoginButton);
 }
 
 void handleError(Object error) {
@@ -53,4 +56,11 @@ Future makePostRequest(Event e) async {
       .then((HttpRequest resp) {
     querySelector('#xiaotip').text = resp.responseText;
   });
+}
+
+void LoginButton(MouseEvent event){
+    var x=document.getElementById("startpage");
+    var y=document.getElementById("choosepage");
+    x.style.display='none';
+    y.style.display='block';
 }
