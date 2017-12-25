@@ -29,7 +29,7 @@ Future requestComplete(HttpRequest request) async{
   if(request.status==200){
     List<String>web=
     JSON.decode(request.responseText) as List<String>;
-    for(int i=10;i<web.length;i++){
+    for(int i=0;i<web.length;i++){
       wordList.text=web[i];
     }
   }else{
