@@ -13,7 +13,7 @@ main() async {
   querySelector('#onlesson-call-char1').onClick.listen(makeRequest);
   querySelector('#userphoto').onClick.listen(makePostRequest);
   wordList = querySelector('#studentid1');
-  querySelector("#startpage")//点击登录，跳转到选课页面
+  querySelector("#loginbutton")//点击登录按钮，跳转到选课页面
    ..id
    ..onClick.listen(LoginButton);
   querySelector("#classok")//点击确认选课，跳转已选课页面

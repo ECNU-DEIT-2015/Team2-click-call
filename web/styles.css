@@ -591,6 +591,19 @@
   top: 100px;
   z-index:1;
 }
+
+#successlogin{
+  position:fixed;
+  left: 600px;
+  top: 100px;
+}
+
+#failurelogin{
+  position:fixed;
+  left: 600px;
+  top: 100px;
+}
+
 #useridlog{
   position:fixed;
   left: 625px;
