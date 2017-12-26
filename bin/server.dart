@@ -25,11 +25,14 @@ Future getDataFromDB() async{
       host: 'www.muedu.org',port: 3306,
       user: 'deit-2015',password: 'deit@2015!',
       db: 'project_2015_2',max:15);
-      var results = await pool.query('select userid-1 from user');
+      var results = await pool.query('select userid from user');
       String response;
       await results.forEach((row) { 
       response =JSON.encode(["${row[0]}"]);
   });
+      //await results.forEach((row) { 
+      //response =JSON.encode(["${row[0]}"]);
+  //});
       return response;
      // return '''["林凌","刘冠群","汤夏颖"]''';
 }
