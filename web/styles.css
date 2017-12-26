@@ -569,18 +569,18 @@
   top: 5px;
   left: 25px;
 }
-#login{
+#loginbutton{
   position:fixed;
   left: 1140px;
   top: 12px;
 }
-#register{
+#registerbutton{
   position:fixed;
   left: 1220px;
   top: 12px;
 
 }
-#startlogin{
+#startloginbutton{
   position:fixed;
   left: 600px;
   top: 500px;
