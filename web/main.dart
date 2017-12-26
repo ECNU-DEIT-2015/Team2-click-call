@@ -3,14 +3,28 @@ import 'dart:convert';
 import 'dart:html';
 InputElement toDoInput;
 var wordList;
+var ab=document.getElementById("startpage");
+var abb=document.getElementById("sidebar");
+var bc=document.getElementById("choosepage");
+var cd=document.getElementById("classpage");
+var de=document.getElementById("lessonpage");
 
 main() async {
   querySelector('#onlesson-call-char1').onClick.listen(makeRequest);
   querySelector('#userphoto').onClick.listen(makePostRequest);
   wordList = querySelector('#studentid1');
-   querySelector("#startpage")//点击登录
+  querySelector("#startpage")//点击登录，跳转到选课页面
    ..id
    ..onClick.listen(LoginButton);
+  querySelector("#classok")//点击确认选课，跳转已选课页面
+   ..id
+   ..onClick.listen(ClassokButton);
+  querySelector("#myclass")//左侧点击我的课程
+   ..id
+   ..onClick.listen(ClassokButton);
+  querySelector("#randomclass")//左侧点击随机点名
+   ..id
+   ..onClick.listen(RandomclassButton);
 }
 
 void handleError(Object error) {
@@ -59,8 +73,25 @@ Future makePostRequest(Event e) async {
 }
 
 void LoginButton(MouseEvent event){
-    var x=document.getElementById("startpage");
-    var y=document.getElementById("choosepage");
-    x.style.display='none';
-    y.style.display='block';
+    ab.style.display='none';
+    abb.style.display='block';
+    bc.style.display='block';
+    cd.style.display='none';
+    de.style.display='none';
+}
+
+void ClassokButton(MouseEvent event){
+    ab.style.display='none';
+    abb.style.display='block';
+    bc.style.display='none';
+    cd.style.display='block';
+    de.style.display='none';
+}
+
+void RandomclassButton(MouseEvent event){
+    ab.style.display='none';
+    abb.style.display='block';
+    bc.style.display='none';
+    cd.style.display='none';
+    de.style.display='block';
 }

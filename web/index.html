@@ -14,11 +14,11 @@
         <div id="topbar"> 
           <p id="bg"><image src="images/bg.png" width=1440 height=808></image></p>
           <p id="logo"><image src="images/logo.png" width=172 height=65></image></p>
-          <p id="loginbutton" ><image src="images/login.png" width=61.8 height=34.2></image></p>
-          <p id="registerbutton"><image src="images/register.png" width=97.2 height=34.2></image></p>
+          <p id="loginbutton" type="button" ><image src="images/login.png" width=61.8 height=34.2></image></p>
+          <p id="registerbutton" type="button"><image src="images/register.png" width=97.2 height=34.2></image></p>
          </div>
       
-         <div id="startloginbutton">
+         <div id="startloginbutton" type="button">
            <image src="images/start.png" width=237 height=82></image>
          </div>
       
@@ -32,25 +32,24 @@
          </div>
 </div>
 
+<div id="sidebar" style="display:none">
+  <p id="userphoto"><image src="images/photo.png" width=43 height=43></image></p>
+  <p id="usernameshow"style="font-family:arial;color:white;font-size:14px;">姓名：游客</p>
+  <p id="useridshow"style="font-family:arial;color:white;font-size:14px;">学号：00000000</p>
+  <p id="startcall"><image src="images/startcall.png" width=171 height=59.4></image></p>
+
+  <p id="myclass" type="button"><image src="images/我的课程.png" width=200 height=50></image></p>
+  <p id="randomclass"  type="button"><image src="images/随机点名.png" width=200 height=50></image></p>
+  <p id="recordclass"><image src="images/课堂记录.png" width=200 height=50></image></p>
+  <p id="help"><image src="images/使用帮助.png" width=200 height=50></image></p>
+  <p id="advice"><image src="images/意见反馈.png" width=200 height=50></image></p>
+</div>
+
 <div id=choosepage style="display:none">
        <div id="topbarinside">
           <br>
           <p id="xiaotip"style="font-family:arial;color:black;font-size:14px;">您还没有选择课程，请现在下方勾选参加的课程</p>
          </div>
-
-             <div id="sidebar">
-        <p id="userphoto"><image src="images/photo.png" width=43 height=43></image></p>
-        <p id="usernameshow"style="font-family:arial;color:white;font-size:14px;">姓名：游客</p>
-        <p id="useridshow"style="font-family:arial;color:white;font-size:14px;">学号：00000000</p>
-        <p id="startcall"><image src="images/startcall.png" width=171 height=59.4></image></p>
-        
-        <p id="myclass"><image src="images/我的课程.png" width=200 height=50></image></p>
-        <p id="randomclass"><image src="images/随机点名.png" width=200 height=50></image></p>
-        <p id="recordclass"><image src="images/课堂记录.png" width=200 height=50></image></p>
-        <p id="help"><image src="images/使用帮助.png" width=200 height=50></image></p>
-        <p id="advice"><image src="images/意见反馈.png" width=200 height=50></image></p>
-       </div>
-
          <div id="classchoosing">
            <p id=subtitle>选择课程</p>
           <div class="img">
@@ -100,18 +99,6 @@
        </select>
      </div>
 </div>
-    <div id="sidebar">
-        <p id="userphoto"><image src="images/photo.png" width=43 height=43></image></p>
-        <p id="usernameshow"style="font-family:arial;color:white;font-size:14px;">姓名：游客</p>
-        <p id="useridshow"style="font-family:arial;color:white;font-size:14px;">学号：00000000</p>
-        <p id="startcall"><image src="images/startcall.png" width=171 height=59.4></image></p>
-        
-        <p id="myclass"><image src="images/我的课程.png" width=200 height=50></image></p>
-        <p id="randomclass"><image src="images/随机点名.png" width=200 height=50></image></p>
-        <p id="recordclass"><image src="images/课堂记录.png" width=200 height=50></image></p>
-        <p id="help"><image src="images/使用帮助.png" width=200 height=50></image></p>
-        <p id="advice"><image src="images/意见反馈.png" width=200 height=50></image></p>
-       </div>
  <div id="classchoosed">
   <p id=subtitle>已选课程</p>
   <div id="classbg"></div>
@@ -143,18 +130,6 @@
            </select>
          </div>
     </div>
-    <div id="sidebar">
-        <p id="userphoto"><image src="images/photo.png" width=43 height=43></image></p>
-        <p id="usernameshow"style="font-family:arial;color:white;font-size:14px;">姓名：游客</p>
-        <p id="useridshow"style="font-family:arial;color:white;font-size:14px;">学号：00000000</p>
-        <p id="startcall"><image src="images/startcall.png" width=171 height=59.4></image></p>
-        
-        <p id="myclass"><image src="images/我的课程.png" width=200 height=50></image></p>
-        <p id="randomclass"><image src="images/随机点名.png" width=200 height=50></image></p>
-        <p id="recordclass"><image src="images/课堂记录.png" width=200 height=50></image></p>
-        <p id="help"><image src="images/使用帮助.png" width=200 height=50></image></p>
-        <p id="advice"><image src="images/意见反馈.png" width=200 height=50></image></p>
-       </div>
  <div id="onlesson-st">
   <div id="onlesson-st-quet">
     <form action="form_action.asp" method="get">
