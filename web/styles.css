@@ -296,7 +296,6 @@
 }
 #studentid1{
   margin-top:3px;
-  margin-left:25px;
   text-align:center;
   color:#E61919;
   font-size: 25px;
@@ -315,11 +314,12 @@
 }
 #studentid2{
   margin-top:3px;
-  margin-left:25px;
   text-align:center;
   color:#E61919;
   font-size: 25px;
-  border:10px
+  border:10px;
+  font-family:"微软雅黑","黑体","宋体";
+  height:36px;
 }
 #onlesson-call-char3{
   float:left;
@@ -332,11 +332,12 @@
 }
 #studentid3{
   margin-top:3px;
-  margin-left:25px;
   text-align:center;
   color:#E61919;
   font-size: 25px;
-  border:10px
+  border:10px;
+  font-family:"微软雅黑","黑体","宋体";
+  height:36px;
 }
 #onlesson-call-char4{
   float:left;
@@ -349,11 +350,12 @@
 }
 #studentid4{
   margin-top:3px;
-  margin-left:25px;
   text-align:center;
   color:#E61919;
   font-size: 25px;
-  border:10px
+  border:10px;
+  font-family:"微软雅黑","黑体","宋体";
+  height:36px;
 }
 #onlesson-call-char5{
   float:left;
@@ -366,11 +368,12 @@
 }
 #studentid5{
   margin-top:3px;
-  margin-left:25px;
   text-align:center;
   color:#E61919;
   font-size: 25px;
-  border:10px
+  border:10px;
+  font-family:"微软雅黑","黑体","宋体";
+  height:36px;
 }
 #onlesson-call-char6{
   float:left;
@@ -383,11 +386,12 @@
 }
 #studentid6{
   margin-top:3px;
-  margin-left:25px;
   text-align:center;
   color:#E61919;
   font-size: 25px;
-  border:10px
+  border:10px;
+  font-family:"微软雅黑","黑体","宋体";
+  height:36px;
 }
 #onlesson-call-char7{
   float:left;
@@ -400,11 +404,12 @@
 }
 #studentid7{
   margin-top:3px;
-  margin-left:25px;
   text-align:center;
   color:#E61919;
   font-size: 25px;
-  border:10px
+  border:10px;
+  font-family:"微软雅黑","黑体","宋体";
+  height:36px;
 }
 #onlesson-call-char8{
   float:left;
@@ -417,11 +422,12 @@
 }
 #studentid8{
   margin-top:3px;
-  margin-left:25px;
   text-align:center;
   color:#E61919;
   font-size: 25px;
-  border:10px
+  border:10px;
+  font-family:"微软雅黑","黑体","宋体";
+  height:36px;
 }
 #onlesson-call-char9{
   float:left;
@@ -434,11 +440,12 @@
 }
 #studentid9{
   margin-top:3px;
-  margin-left:25px;
   text-align:center;
   color:#E61919;
   font-size: 25px;
-  border:10px
+  border:10px;
+  font-family:"微软雅黑","黑体","宋体";
+  height:36px;
 }
 #onlesson-call-char10{
   float:left;
@@ -451,11 +458,12 @@
 }
 #studentid10{
   margin-top:3px;
-  margin-left:25px;
   text-align:center;
   color:#E61919;
   font-size: 25px;
-  border:10px
+  border:10px;
+  font-family:"微软雅黑","黑体","宋体";
+  height:36px;
 }
 #onlesson-call-char11{
   float:left;
@@ -468,11 +476,12 @@
 }
 #studentid11{
   margin-top:3px;
-  margin-left:25px;
   text-align:center;
   color:#E61919;
   font-size: 25px;
-  border:10px
+  border:10px;
+  font-family:"微软雅黑","黑体","宋体";
+  height:36px;
 }
 #onlesson-call-char12{
   float:left;
@@ -485,11 +494,12 @@
 }
 #studentid12{
   margin-top:3px;
-  margin-left:25px;
   text-align:center;
   color:#E61919;
   font-size: 25px;
-  border:10px
+  border:10px;
+  font-family:"微软雅黑","黑体","宋体";
+  height:36px;
 }
 #onlesson-call-char13{
   float:left;
@@ -502,11 +512,12 @@
 }
 #studentid13{
   margin-top:3px;
-  margin-left:25px;
   text-align:center;
   color:#E61919;
   font-size: 25px;
-  border:10px
+  border:10px;
+  font-family:"微软雅黑","黑体","宋体";
+  height:36px;
 }
 #onlesson-call-char14{
   float:left;
@@ -519,11 +530,12 @@
 }
 #studentid14{
   margin-top:3px;
-  margin-left:25px;
   text-align:center;
   color:#E61919;
   font-size: 25px;
-  border:10px
+  border:10px;
+  font-family:"微软雅黑","黑体","宋体";
+  height:36px;
 }
 #onlesson-call-char15{
   float:left;
@@ -536,11 +548,12 @@
 }
 #studentid15{
   margin-top:3px;
-  margin-left:25px;
   text-align:center;
   color:#E61919;
   font-size: 25px;
-  border:10px
+  border:10px;
+  font-family:"微软雅黑","黑体","宋体";
+  height:36px;
 }
 #onlesson-call-char16{
   float:left;
@@ -553,11 +566,12 @@
 }
 #studentid16{
   margin-top:3px;
-  margin-left:25px;
   text-align:center;
   color:#E61919;
   font-size: 25px;
-  border:10px
+  border:10px;
+  font-family:"微软雅黑","黑体","宋体";
+  height:36px;
 }
 #onlesson-call-char17{
   float:left;
@@ -570,11 +584,12 @@
 }
 #studentid17{
   margin-top:3px;
-  margin-left:25px;
   text-align:center;
   color:#E61919;
   font-size: 25px;
-  border:10px
+  border:10px;
+  font-family:"微软雅黑","黑体","宋体";
+  height:36px;
 }
 #onlesson-call-char18{
   float:left;
@@ -587,11 +602,12 @@
 }
 #studentid18{
   margin-top:3px;
-  margin-left:25px;
   text-align:center;
   color:#E61919;
   font-size: 25px;
-  border:10px
+  border:10px;
+  font-family:"微软雅黑","黑体","宋体";
+  height:36px;
 }
 #onlesson-call-char19{
   float:left;
@@ -604,11 +620,12 @@
 }
 #studentid19{
   margin-top:3px;
-  margin-left:25px;
   text-align:center;
   color:#E61919;
   font-size: 25px;
-  border:10px
+  border:10px;
+  font-family:"微软雅黑","黑体","宋体";
+  height:36px;
 }
 #onlesson-call-char20{
   float:left;
@@ -621,11 +638,12 @@
 }
 #studentid20{
   margin-top:3px;
-  margin-left:25px;
   text-align:center;
   color:#E61919;
   font-size: 25px;
-  border:10px
+  border:10px;
+  font-family:"微软雅黑","黑体","宋体";
+  height:36px;
 }
 #onlesson-call-outclass{
   float:left;
