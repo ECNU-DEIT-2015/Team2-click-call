@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:html';
+import 'dart:math' as math;
 InputElement toDoInput;
+var randomnumber;//此变量用来存储随机数
 int myid=9;//此变量用来存储登录成功后传递过来的学号；
 var wordList;
 var ab=document.getElementById("startpage");
@@ -26,6 +28,10 @@ main() async {
   querySelector("#randomclass")//左侧点击随机点名
    ..id
    ..onClick.listen(RandomclassButton);
+
+  querySelector('#onlesson-st-choose-random').onClick.listen(randomclass);
+  querySelector('#onlesson-st-choose-random').onClick.listen(makePostRequest);
+  //随机点名
 
   querySelector('#onlesson-call-char1').onClick.listen(seat1click);
   querySelector('#onlesson-call-char2').onClick.listen(seat2click);
@@ -110,6 +116,12 @@ void seat20click(Event e){
   querySelector('#studentid20').text=myid.toString();
 }//每个位置被点击后显示相应的学号;
 
+
+void randomclass(Event e){
+randomnumber=new math.Random().nextInt(20);
+}
+//随机点名函数
+
 void handleError(Object error) {
  wordList.text = 'Request failed.';
 }
@@ -149,9 +161,9 @@ void processString(String jsonString) {
 
 Future makePostRequest(Event e) async { 
   String url = 'http://localhost:90/data/add';
-  HttpRequest.request(url, method: 'POST', sendData:'''{'user':'zhangsan'}''' )
+  HttpRequest.request(url, method: 'POST', sendData:randomnumber )
       .then((HttpRequest resp) {
-    querySelector('#xiaotip').text = resp.responseText;
+    querySelector('#onlesson-st-info-stid').text ='学号：  '+ resp.responseText;
   });
 }
 
