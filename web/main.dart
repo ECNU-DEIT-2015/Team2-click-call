@@ -4,6 +4,7 @@ import 'dart:html';
 import 'dart:math' as math;
 InputElement toDoInput;
 var randomnumber;//此变量用来存储随机数
+var usernameinput;//此变量用于用户名登陆
 int myid=9;//此变量用来存储登录成功后传递过来的学号；
 var wordList;
 var ab=document.getElementById("startpage");
@@ -13,8 +14,10 @@ var cd=document.getElementById("classpage");
 var de=document.getElementById("lessonpage");
 
 main() async {
-  //querySelector('#onlesson-call-char1').onClick.listen(makeRequest);
-  //querySelector('#userphoto').onClick.listen(makePostRequest);
+//  querySelector('#signup').onClick.listen(makeRequest);
+  querySelector('#signup').onClick.listen(makePostRequest);
+  usernameinput = querySelector('#userid');
+  usernameinput.onChange.listen(adduserItem);
  // wordList = querySelector('#studentid9');
   querySelector("#loginbutton")//点击登录按钮，跳转到选课页面
    ..id
@@ -122,6 +125,7 @@ randomnumber=new math.Random().nextInt(20);
 }
 //随机点名函数
 
+
 void handleError(Object error) {
  wordList.text = 'Request failed.';
 }
@@ -165,6 +169,13 @@ Future makePostRequest(Event e) async {
       .then((HttpRequest resp) {
     querySelector('#onlesson-st-info-stid').text ='学号：  '+ resp.responseText;
   });
+}
+
+void adduserItem(Event e) {
+  var newusername =
+  newusername.text = usernameinput.value;
+
+  usernameinput.value = '';
 }
 
 void LoginButton(MouseEvent event){
