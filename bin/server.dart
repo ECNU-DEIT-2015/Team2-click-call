@@ -25,7 +25,7 @@ Future getDataFromDB() async{
       host: 'www.muedu.org',port: 3306,
       user: 'deit-2015',password: 'deit@2015!',
       db: 'project_2015_2',max:15);
-      var results = await pool.query('select usernumber from user where userid=10154507102');
+      var results = await pool.query('select userid from user where userid=useridinput');
       String response;
        await results.forEach((row) { 
       response =JSON.encode(["${row[0]}"]);
