@@ -9,23 +9,18 @@ import 'dart:async';
 import 'dart:convert';
 
 
-@app.Route("/data/")
-helloWorld() {
-  return getDataFromDB();
-}
-
 @app.Route("/data/add", methods: const [app.POST])
 addUser(@app.Body(app.TEXT) String userData) {
   String data = userData;
-  return data;
+  return getDataFromDB(data);
 }
 
-Future getDataFromDB() async{
+Future<String> getDataFromDB(String data) async{
   var pool = new ConnectionPool(
       host: 'www.muedu.org',port: 3306,
       user: 'deit-2015',password: 'deit@2015!',
-      db: 'project_2015_2',max:15);
-      var results = await pool.query('select usernumber from user where userid=10154507102');
+      db: 'project_2015_2',max:5);
+      var results = await pool.query("select userid from user where userid='"+data+"'");
       String response;
        await results.forEach((row) { 
       response =JSON.encode(["${row[0]}"]);

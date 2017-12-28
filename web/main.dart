@@ -2,9 +2,9 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:html';
 import 'dart:math' as math;
-InputElement toDoInput;
 var randomnumber;//此变量用来存储随机数
-var usernameinput;//此变量用于用户名登陆
+var userpasswordinput;////此变量为登录时密码
+InputElement  useridinput1;//此变量用于用户名登陆
 int myid=9;//此变量用来存储登录成功后传递过来的学号；
 var wordList;
 var ab=document.getElementById("startpage");
@@ -14,9 +14,7 @@ var cd=document.getElementById("classpage");
 var de=document.getElementById("lessonpage");
 
 main() async {
-//  querySelector('#signup').onClick.listen(makeRequest);
- // querySelector('#signup').onClick.listen(makePostRequest);
- // wordList = querySelector('#studentid9');
+
   querySelector("#loginbutton")//点击登录按钮，跳转到选课页面
    ..id
    ..onClick.listen(LoginButton);
@@ -33,6 +31,10 @@ main() async {
   querySelector('#onlesson-st-choose-random').onClick.listen(randomclass);
   querySelector('#onlesson-st-choose-random').onClick.listen(makePostRequest);
   //随机点名
+
+   querySelector('#signup').onClick.listen(makePostRequest);
+   querySelector('#signup').onClick.listen(makeRequest);
+   wordList = querySelector('#test');
 
   querySelector('#onlesson-call-char1').onClick.listen(seat1click);
   querySelector('#onlesson-call-char2').onClick.listen(seat2click);
@@ -158,16 +160,16 @@ void processString(String jsonString) {
   for (int i = 0; i < web.length; i++) {
     wordList.text = web[i];
   }
- // querySelector('#seatid').text =web[i];
+  querySelector('#test').text =wordList;
 }
 
 Future makePostRequest(Event e) async { 
-
-
+  useridinput1 = querySelector('#userid');
+  String useridinput=useridinput1.value;
   String url = 'http://localhost:90/data/add';
-  HttpRequest.request(url, method: 'POST', sendData:randomnumber )
+  HttpRequest.request(url, method: 'POST', sendData:useridinput)
       .then((HttpRequest resp) {
-   querySelector('#onlesson-st-info-stid').text ='学号：  '+ resp.responseText;
+  querySelector('#test').text =resp.responseText;
   });
 }
 
