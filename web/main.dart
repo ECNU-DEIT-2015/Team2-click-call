@@ -4,12 +4,7 @@ import 'dart:html';
 import 'dart:math' as math;
 InputElement toDoInput;
 var randomnumber;//此变量用来存储随机数
-<<<<<<< Updated upstream
 var usernameinput;//此变量用于用户名登陆
-=======
-var useridinput;//此变量用于用户名登陆
-var userpasswordinput;////此变量为登录时密码
->>>>>>> Stashed changes
 int myid=9;//此变量用来存储登录成功后传递过来的学号；
 var wordList;
 var ab=document.getElementById("startpage");
@@ -20,16 +15,7 @@ var de=document.getElementById("lessonpage");
 
 main() async {
 //  querySelector('#signup').onClick.listen(makeRequest);
-<<<<<<< Updated upstream
-  querySelector('#signup').onClick.listen(makePostRequest);
-  usernameinput = querySelector('#userid');
-  usernameinput.onChange.listen(adduserItem);
-=======
-  useridinput.value = querySelector('#userid').text;
-  userpasswordinput.value = querySelector('#userpassword').text;
-    querySelector('#userpassword').text=useridinput;
-  querySelector('#signup').onClick.listen(makePostRequest);
->>>>>>> Stashed changes
+ // querySelector('#signup').onClick.listen(makePostRequest);
  // wordList = querySelector('#studentid9');
   querySelector("#loginbutton")//点击登录按钮，跳转到选课页面
    ..id
@@ -185,15 +171,6 @@ Future makePostRequest(Event e) async {
   });
 }
 
-<<<<<<< Updated upstream
-void adduserItem(Event e) {
-  var newusername =
-  newusername.text = usernameinput.value;
-
-  usernameinput.value = '';
-}
-=======
->>>>>>> Stashed changes
 
 void LoginButton(MouseEvent event){
     ab.style.display='none';
