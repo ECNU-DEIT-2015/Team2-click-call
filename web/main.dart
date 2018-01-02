@@ -33,7 +33,6 @@ main() async {
   //随机点名
 
    querySelector('#signup').onClick.listen(makePostRequest);
-   querySelector('#signup').onClick.listen(makeRequest);
    wordList = querySelector('#test');
 
   querySelector('#onlesson-call-char1').onClick.listen(seat1click);
@@ -164,7 +163,7 @@ void processString(String jsonString) {
 }
 
 Future makePostRequest(Event e) async { 
-  useridinput1 = querySelector('#userid');
+  useridinput1 = querySelector('#userid input');
   String useridinput=useridinput1.value;
   String url = 'http://localhost:90/data/add';
   HttpRequest.request(url, method: 'POST', sendData:useridinput)
