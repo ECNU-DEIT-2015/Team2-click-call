@@ -1,3 +1,5 @@
+.avatar:hover img{filter:alpha(Opacity=80);-moz-opacity:0.8;opacity: 0.8;transform: scale(1.1);} 
+
 #title{
   font-size: 35px;
   left: 300px;
@@ -756,29 +758,29 @@
   top: 110px;
 }
 #myclass{
-  position:absolute;
+  text-align:center;
   left: 0px;
-  top: 200px;
+  margin-top: 217px;
 }
 #randomclass{
-  position:absolute;
+  text-align:center;
   left: 0px;
-  top: 260px;
+  margin-top: 30px;
 }
 #recordclass{
-  position:absolute;
+  text-align:center;
   left: 0px;
-  top: 310px;
+  margin-top: 30px;
 }
 #help{
-  position:absolute;
+  text-align:center;
   left: 0px;
-  top: 360px;
+  margin-top: 30px;
 }
 #advice{
-  position:absolute;
+  text-align:center;
   left: 0px;
-  top: 410px;
+  margin-top: 30px;
 }
 #topbarinside{
   float:left;
