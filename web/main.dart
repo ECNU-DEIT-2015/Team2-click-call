@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'dart:html';
 import 'dart:math' as math;
 var randomnumber;//此变量用来存储随机数
-var userpasswordinput;////此变量为登录时密码
 InputElement  useridinput1;//此变量用于用户名登陆
+InputElement  userpasswordinput1;
 int myid=9;//此变量用来存储登录成功后传递过来的学号；
 var wordList;
 var ab=document.getElementById("startpage");
@@ -164,9 +164,12 @@ void processString(String jsonString) {
 
 Future makePostRequest(Event e) async { 
   useridinput1 = querySelector('#userid input');
+  userpasswordinput1 = querySelector('#userpassword input');
   String useridinput=useridinput1.value;
+  String userpasswordinput=userpasswordinput1.value;
+  String useridpassword=useridinput+userpasswordinput;
   String url = 'http://localhost:90/data/add';
-  HttpRequest.request(url, method: 'POST', sendData:useridinput)
+  HttpRequest.request(url, method: 'POST', sendData:useridpassword)
       .then((HttpRequest resp) {
   querySelector('#test').text =resp.responseText;
   });
