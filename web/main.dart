@@ -160,14 +160,19 @@ void processString(String jsonString) {
     wordList.text = web[i];
   }
   querySelector('#test').text =wordList;
+  if(wordList!=Null){ 
+   var elem = querySelector('#successlogin');
+   var newIndex = 5;
+   elem.style.zIndex = "${newIndex}";               
+    }
+      else {//显示登录失败图片；
+      }
 }
 
 Future makePostRequest(Event e) async { 
   useridinput1 = querySelector('#userid input');
   userpasswordinput1 = querySelector('#userpassword input');
-  String useridinput=useridinput1.value;
-  String userpasswordinput=userpasswordinput1.value;
-  String useridpassword=useridinput+userpasswordinput;
+  String useridpassword=useridinput1.value+userpasswordinput1.value;
   String url = 'http://localhost:90/data/add';
   HttpRequest.request(url, method: 'POST', sendData:useridpassword)
       .then((HttpRequest resp) {
