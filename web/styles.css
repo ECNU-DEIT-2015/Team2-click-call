@@ -12,7 +12,7 @@
   height:1000px;
   width:200px;
   float:left;
-  position:fixed;
+  position: fixed;
   margin-right:30px;
   margin-bottom:30px;
   text-align:center;
@@ -25,7 +25,7 @@
 
 #topbarinside{
   float:left;
-  position:fixed;
+  position: absolute;
   background-color:#ffffff;
   height:80px;
   width:1240px;  
@@ -39,7 +39,7 @@
 
 #classchoosed {
   float:left;
-  position:fixed;
+  position: absolute;
   background-color:white; 
   height:700px;
   width:420px;
@@ -59,7 +59,7 @@
 
 #classinfo {
   float:left;
-  position:fixed;
+  position: absolute;
   background-color:white; 
   height:196px;
   width:740px;
@@ -71,7 +71,7 @@
 
 #studentinfo {
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:white; 
   height:479px;
   width:740px;
@@ -100,7 +100,7 @@
 
 #onlesson-st{
   float:left;
-  position:fixed;
+  position: absolute;
   background-color:#ffffff;
   height:700px;
   width:740px;  
@@ -130,7 +130,7 @@
 
 #onlesson-st-choose-text{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#ffffff;
   height:80px;
   width:100px; 
@@ -140,7 +140,7 @@
 
 #onlesson-st-choose-quet{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#ffffff;  
   height:80px;
   width:360px; 
@@ -150,7 +150,7 @@
 
 #onlesson-st-choose-random{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#ffffff;  
   height:50px;
   width:60px; 
@@ -160,7 +160,7 @@
 
 #onlesson-st-choose-unrandom{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#ffffff;  
   height:50px;
   width:80px; 
@@ -170,7 +170,7 @@
 
 #onlesson-call{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#ffffff;
   height:700px;
   width:420px;  
@@ -195,7 +195,7 @@
 
 #onlesson-st-info{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#EEEBEB;
   height:200px;
   width:680px;  
@@ -205,7 +205,7 @@
 
 #onlesson-st-record{
   float:left;
-  position:fixed;
+  position:absolute;
   height:200px;
   width:680px;  
   margin-top:90px;
@@ -216,7 +216,7 @@
 }
 #onlesson-st-record-info{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#EEEBEB;
   height:200px;
   width:680px;  
@@ -225,7 +225,7 @@
 
 #onlesson-st-info-pic{
   float:left;
-  position:fixed; 
+  position:absolute; 
   height:160px;
   width:130px; 
   margin-top:25px;
@@ -234,27 +234,27 @@
 
 #onlesson-st-info-stname{
   float:left;
-  position:fixed;  
+  position:absolute;  
   margin-top:25px;
   margin-left:190px;
 }
 
 #onlesson-st-info-stid{
   float:left;
-  position:fixed;  
+  position:absolute;  
   margin-top:90px;
   margin-left:190px;
 }
 
 #onlesson-st-info-stnumbei{
   float:left;
-  position:fixed;  
+  position:absolute;  
   margin-top:25px;
   margin-left:450px;
 }
 #onlesson-st-info-stiflu{
   float:left;
-  position:fixed;  
+  position:absolute;  
   margin-top:90px;
   margin-left:450px;
 }
@@ -265,31 +265,31 @@
 
 #onlesson-call-had{
   float:left;
-  position:fixed;  
+  position:absolute;  
   margin-left:30px;
 }
 
 #onlesson-call-hadnot{
   float:left;
-  position:fixed;  
+  position:absolute;  
   margin-left:220px;
 }
 #onlesson-call-closecall{
   float:left;
-  position:fixed; 
+  position:absolute; 
   margin-top:50px; 
   margin-left:100px;
 }
 
 #onlesson-call-text{
   float:left;
-  position:fixed; 
+  position:absolute; 
   margin-top:150px; 
   margin-left:30px;
 }
 #onlesson-call-char1{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
@@ -307,7 +307,7 @@
 }
 #onlesson-call-char2{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
@@ -325,7 +325,7 @@
 }
 #onlesson-call-char3{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
@@ -343,7 +343,7 @@
 }
 #onlesson-call-char4{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
@@ -361,7 +361,7 @@
 }
 #onlesson-call-char5{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
@@ -379,7 +379,7 @@
 }
 #onlesson-call-char6{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
@@ -397,7 +397,7 @@
 }
 #onlesson-call-char7{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
@@ -415,7 +415,7 @@
 }
 #onlesson-call-char8{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
@@ -433,7 +433,7 @@
 }
 #onlesson-call-char9{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
@@ -451,7 +451,7 @@
 }
 #onlesson-call-char10{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
@@ -469,7 +469,7 @@
 }
 #onlesson-call-char11{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
@@ -487,7 +487,7 @@
 }
 #onlesson-call-char12{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
@@ -505,7 +505,7 @@
 }
 #onlesson-call-char13{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
@@ -523,7 +523,7 @@
 }
 #onlesson-call-char14{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
@@ -541,7 +541,7 @@
 }
 #onlesson-call-char15{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
@@ -559,7 +559,7 @@
 }
 #onlesson-call-char16{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
@@ -577,7 +577,7 @@
 }
 #onlesson-call-char17{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
@@ -595,7 +595,7 @@
 }
 #onlesson-call-char18{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
@@ -613,7 +613,7 @@
 }
 #onlesson-call-char19{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
@@ -631,7 +631,7 @@
 }
 #onlesson-call-char20{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
@@ -649,7 +649,7 @@
 }
 #onlesson-call-outclass{
   float:left;
-  position:fixed; 
+  position:absolute; 
   margin-top:540px; 
   margin-left:158px;
 }
@@ -658,7 +658,7 @@
   background-color:#393857;
   height:80px;
   width:1440px; 
-  position:fixed;
+  position: absolute;
 }
 
 #bg{
@@ -667,72 +667,72 @@
 }
 
 #logo{
-  position:fixed;
+  position: absolute;
   top: 5px;
   left: 25px;
 }
 #loginbutton{
-  position:fixed;
+  position: absolute;
   left: 1140px;
   top: 12px;
 }
 #registerbutton{
-  position:fixed;
+  position: absolute;
   left: 1220px;
   top: 12px;
 
 }
 #startloginbutton{
-  position:fixed;
+  position:absolute;
   left: 600px;
   top: 500px;
 }
 #loginbg{
-  position:fixed;
+  position: absolute;
   left: 600px;
   top: 100px;
   z-index:1;
 }
 
 #successlogin{
-  position:fixed;
+  position: absolute;;
   left: 600px;
   top: 100px;
   z-index:1;
 }
 
 #failurelogin{
-  position:fixed;
+  position:absolute;
   left: 600px;
   top: 100px;
 }
 
 #useridlog{
-  position:fixed;
+  position:absolute;
   left: 625px;
   top: 270px;
   z-index:2;
 }
 #password{
-  position:fixed;
+  position:absolute;
   left: 625px;
   top: 320px;
   z-index:2;
 }
 #userid{
-  position:fixed;
+  position:absolute;
   left: 675px;
   top: 270px;
   z-index:2;
 }
 #userpassword{
-  position:fixed;
+  position:absolute;
   left: 675px;
   top: 325px;
   z-index:2;
 }
 #signup{
-  position:fixed;
+  position:absolute;
   left: 645px;
   top: 370px;
   z-index:2;
@@ -789,7 +789,7 @@
 }
 #topbarinside{
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:#ffffff;
   height:80px;
   width:1240px;  
@@ -800,7 +800,7 @@
 
 #out{
   float:left;
-  position:fixed;
+  position:absolute;
   margin-left:950px;
   margin-top:-20px;    
   padding-left:30px;
@@ -809,7 +809,7 @@
 
 #classchoosing {
   float:left;
-  position:fixed;
+  position:absolute;
   background-color:white; 
   height:700px;
   width:1090px;
@@ -855,14 +855,14 @@ margin:10px 5px 10px 5px;
 }
 #classcancel{
   float:right;
-  position:fixed;
+  position:absolute;
   margin-left:950px;
   margin-top:410px;    
   padding-left:30px;
 }
 #classok{
   float:right;
-  position:fixed;
+  position:absolute;
   margin-left:850px;
   margin-top:410px;    
   padding-left:30px;
