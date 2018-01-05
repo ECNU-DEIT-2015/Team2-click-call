@@ -141,19 +141,6 @@ Future makeRequest(Event e) async{
   }
 }
 
-
-Future requestComplete(HttpRequest request) async{
-  if(request.status==200){
-    List<String>web=JSON.decode(request.responseText) as List<String>;
-    for(int i=0;i<web.length;i++){
-      wordList.text=web[i];
-    }
-  }else{
-   // wordList.add(
-    //  wordList.text='Request failed,status=${request.status}');
-  }
-}
-
 void processString(String jsonString) {
   List<String> web = JSON.decode(jsonString ) as List<String>;
   //List<String> a=JSON.getData()
@@ -161,7 +148,6 @@ void processString(String jsonString) {
     wordList.text = web[i];
   }
   querySelector('#test').text =wordList;
-  
 }
 
 Future makePostRequest(Event e) async { 
@@ -173,14 +159,10 @@ Future makePostRequest(Event e) async {
       .then((HttpRequest resp) {
   querySelector('#test').text =resp.responseText;
 
- if(wordList!=Null){ 
-   if(wordList!='Request failed.'){
-   //var elem = querySelector('#successlogin');
-   suc.style.display='block';
-    bef.style.display='none';
-   //var newIndex = 5;
-   //elem.style.zIndex = "${newIndex}";               
-    } }
+ if(resp.responseText == useridpassword){ 
+    suc.style.display='block';
+    bef.style.display='none';               
+     }
    else {
         bef.style.display='none';//登陆消失，显示登录失败图片；
         suc.style.display='none';
