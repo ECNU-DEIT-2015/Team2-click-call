@@ -12,6 +12,8 @@ var abb=document.getElementById("sidebar");
 var bc=document.getElementById("choosepage");
 var cd=document.getElementById("classpage");
 var de=document.getElementById("lessonpage");
+var suc=document.getElementById("successlogin");
+var bef=document.getElementById("loginbe");
 
 main() async {
 
@@ -142,14 +144,13 @@ Future makeRequest(Event e) async{
 
 Future requestComplete(HttpRequest request) async{
   if(request.status==200){
-    List<String>web=
-    JSON.decode(request.responseText) as List<String>;
+    List<String>web=JSON.decode(request.responseText) as List<String>;
     for(int i=0;i<web.length;i++){
       wordList.text=web[i];
     }
   }else{
-    wordList.add(
-      wordList.text='Request failed,status=${request.status}');
+   // wordList.add(
+    //  wordList.text='Request failed,status=${request.status}');
   }
 }
 
@@ -173,21 +174,17 @@ Future makePostRequest(Event e) async {
   querySelector('#test').text =resp.responseText;
 
  if(wordList!=Null){ 
+   if(wordList!='Request failed.'){
    //var elem = querySelector('#successlogin');
-   var suc=document.getElementById("successlogin");
    suc.style.display='block';
-   var bef=document.getElementById("loginbe");
     bef.style.display='none';
    //var newIndex = 5;
    //elem.style.zIndex = "${newIndex}";               
-    } 
+    } }
    else {
-        var bef=document.getElementById("loginbe");
         bef.style.display='none';//登陆消失，显示登录失败图片；
-        var suc=document.getElementById("successlogin");
         suc.style.display='none';
       }
- 
   });
 }
 
