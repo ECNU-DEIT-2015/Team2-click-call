@@ -160,13 +160,7 @@ void processString(String jsonString) {
     wordList.text = web[i];
   }
   querySelector('#test').text =wordList;
-  if(wordList!=Null){ 
-   var elem = querySelector('#successlogin');
-   var newIndex = 5;
-   elem.style.zIndex = "${newIndex}";               
-    }
-      else {//显示登录失败图片；
-      }
+  
 }
 
 Future makePostRequest(Event e) async { 
@@ -177,6 +171,23 @@ Future makePostRequest(Event e) async {
   HttpRequest.request(url, method: 'POST', sendData:useridpassword)
       .then((HttpRequest resp) {
   querySelector('#test').text =resp.responseText;
+
+ if(wordList!=Null){ 
+   //var elem = querySelector('#successlogin');
+   var suc=document.getElementById("successlogin");
+   suc.style.display='block';
+   var bef=document.getElementById("loginbe");
+    bef.style.display='none';
+   //var newIndex = 5;
+   //elem.style.zIndex = "${newIndex}";               
+    } 
+   else {
+        var bef=document.getElementById("loginbe");
+        bef.style.display='none';//登陆消失，显示登录失败图片；
+        var suc=document.getElementById("successlogin");
+        suc.style.display='none';
+      }
+ 
   });
 }
 
