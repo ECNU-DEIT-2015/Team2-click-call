@@ -164,7 +164,9 @@ Future loginmakePostRequest(Event e) async {
 
           if(resp.responseText == "1"){ 
            suc.style.display='block';
-           bef.style.display='none';               
+           bef.style.display='none'; 
+           querySelector('#useridshow').text =useridinput1.value;
+           querySelector('#usernameshow').text =userpasswordinput1.value;
                }
           else {
           bef.style.display='none';//登陆消失，显示登录失败图片；
