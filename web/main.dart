@@ -31,10 +31,9 @@ main() async {
    ..onClick.listen(RandomclassButton);
 
   querySelector('#onlesson-st-choose-random').onClick.listen(randomclass);
-  querySelector('#onlesson-st-choose-random').onClick.listen(makePostRequest);
   //随机点名
 
-   querySelector('#signup').onClick.listen(makePostRequest);
+   querySelector('#signup').onClick.listen(loginmakePostRequest);//点击signup跳转到登录部分的连接数据库
    wordList = querySelector('#test');
 
   querySelector('#onlesson-call-char1').onClick.listen(seat1click);
@@ -150,25 +149,30 @@ void processString(String jsonString) {
   querySelector('#test').text =wordList;
 }
 
-Future makePostRequest(Event e) async { 
+Future loginmakePostRequest(Event e) async { 
   useridinput1 = querySelector('#userid input');
   userpasswordinput1 = querySelector('#userpassword input');
-  String useridpassword=useridinput1.value+userpasswordinput1.value;
-  String url = 'http://localhost:90/data/add';
-  HttpRequest.request(url, method: 'POST', sendData:useridpassword)
-      .then((HttpRequest resp) {
-  querySelector('#test').text =resp.responseText;
+    if(useridinput1.value.length<11){
+        querySelector('#test').text ="账号为11位数，请输入正确的账号";
+     }//账号必须为11位数，保证下面传输的账号+密码不可能有其他情况
+    else{
+        String useridpassword=useridinput1.value+userpasswordinput1.value;
+        String url = 'http://localhost:90/data/login';
+       HttpRequest.request(url, method: 'POST', sendData:useridpassword)
+       .then((HttpRequest resp) {
+      querySelector('#test').text =resp.responseText;
 
- if(resp.responseText == useridpassword){ 
-    suc.style.display='block';
-    bef.style.display='none';               
+          if(resp.responseText == "1"){ 
+           suc.style.display='block';
+           bef.style.display='none';               
+               }
+          else {
+          bef.style.display='none';//登陆消失，显示登录失败图片；
+          suc.style.display='none';
+               }
+       });
      }
-   else {
-        bef.style.display='none';//登陆消失，显示登录失败图片；
-        suc.style.display='none';
-      }
-  });
-}
+}//登录部分的连接数据库
 
 
 void LoginButton(MouseEvent event){

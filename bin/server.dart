@@ -9,21 +9,22 @@ import 'dart:async';
 import 'dart:convert';
 
 
-@app.Route("/data/add", methods: const [app.POST])
+@app.Route("/data/login", methods: const [app.POST])
 addUser(@app.Body(app.TEXT) String userData) {
   String data = userData;
-  return getDataFromDB(data);
+  return logingetDataFromDB(data);
 }
 
-Future<String> getDataFromDB(String data) async{
+Future<String> logingetDataFromDB(String data) async{
   var pool = new ConnectionPool(
       host: 'www.muedu.org',port: 3306,
       user: 'deit-2015',password: 'deit@2015!',
       db: 'project_2015_2',max:5);
-      var results = await pool.query('select useridpassword from user where useridpassword='+data);
+      var results = await pool.query('select userid,password from user where useridpassword='+data);
       String response;
        await results.forEach((row) { 
-      response =JSON.encode(["${row[0]}"]);
+     // response =JSON.encode(["${row[0]}"]);
+    if((row[0]+row[1])==data){response="1";}//判断账号密码是否正确
   });
       return response;
      // return '''["林凌","刘冠群","汤夏颖"]''';
