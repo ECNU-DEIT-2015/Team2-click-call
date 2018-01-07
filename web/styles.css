@@ -684,9 +684,18 @@
 }
 #startloginbutton{
   position:absolute;
-  left: 600px;
-  top: 500px;
+  left: 630px;
+  top: 400px;
+  z-index:5;
 }
+
+#loginagainbutton{
+  position:absolute;
+  left: 665px;
+  top: 400px;
+  z-index:5;
+}
+
 #loginbg{
   position: absolute;
   left: 600px;
@@ -721,20 +730,20 @@
 }
 #userid{
   position:absolute;
-  left: 675px;
+  left: 670px;
   top: 270px;
   z-index:2;
 }
 #userpassword{
   position:absolute;
-  left: 675px;
+  left: 670px;
   top: 325px;
   z-index:2;
 }
 #signup{
   position:absolute;
   left: 645px;
-  top: 370px;
+  top: 420px;
   z-index:2;
 }
 
