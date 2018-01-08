@@ -2,10 +2,13 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:html';
 import 'dart:math' as math;
-var randomnumber;//此变量用来存储随机数
 InputElement  useridinput1;//此变量用于用户名登陆
 InputElement  userpasswordinput1;
-int myid=9;//此变量用来存储登录成功后传递过来的学号；
+String myid;//此变量用来存储登录成功后的学号后两位，以便在座位上显示；
+var randomnumber= new List<int>();//存随机点名的学号后两位；
+String randomnunow;//将学号后两位转换为字符串；
+UListElement studentlist;//存被点的学生名单
+
 var wordList;
 var ab=document.getElementById("startpage");
 var abb=document.getElementById("sidebar");
@@ -14,6 +17,7 @@ var cd=document.getElementById("classpage");
 var de=document.getElementById("lessonpage");
 var suc=document.getElementById("successlogin");
 var bef=document.getElementById("loginbe");
+var rdm=document.getElementById("clubrandompage");
 
 main() async {
 
@@ -30,8 +34,10 @@ main() async {
    ..id
    ..onClick.listen(RandomclassButton);
 
-  querySelector('#onlesson-st-choose-random').onClick.listen(randomclass);
-  //随机点名
+querySelector("#recordclass")//左侧点击课堂纪录
+   ..id
+   ..onClick.listen(onlyrandomButton);
+   
 
    querySelector('#signup').onClick.listen(loginmakePostRequest);//点击signup跳转到登录部分的连接数据库
    wordList = querySelector('#test');
@@ -56,74 +62,87 @@ main() async {
   querySelector('#onlesson-call-char18').onClick.listen(seat18click);
   querySelector('#onlesson-call-char19').onClick.listen(seat19click);
   querySelector('#onlesson-call-char20').onClick.listen(seat20click);//每个座位设置点击事件，显示相应的学号
+
+ querySelector('#ramdomD').onClick.listen(randomclass1);//随机点名事件
+ studentlist=querySelector("#namelist");
 }
+ 
+void randomclass1(Event e){
+InputElement randomstnu = querySelector('#randomst input');
+int randomstnu1=int.parse(randomstnu.value);//字符串转换成数字；
+    for(int i=1;i<=randomstnu1;i++){
+    randomnumber[i]=new math.Random().nextInt(20);
+    randomnunow=randomnumber[i].toString();
+    randomPostRequest(e);
+   }
+}
+//随机点名函数，目前还没加
+
+void makeclub(Event e){
+
+}//随机分组函数，目前还没加
+
 
 void seat1click(Event e){
-  querySelector('#studentid1').text=myid.toString();
+  querySelector('#studentid1').text=myid;
 }
 void seat2click(Event e){
-  querySelector('#studentid2').text=myid.toString();
+  querySelector('#studentid2').text=myid;
 }
 void seat3click(Event e){
-  querySelector('#studentid3').text=myid.toString();
+  querySelector('#studentid3').text=myid;
 }
 void seat4click(Event e){
-  querySelector('#studentid4').text=myid.toString();
+  querySelector('#studentid4').text=myid;
 }
 void seat5click(Event e){
-  querySelector('#studentid5').text=myid.toString();
+  querySelector('#studentid5').text=myid;
 }
 void seat6click(Event e){
-  querySelector('#studentid6').text=myid.toString();
+  querySelector('#studentid6').text=myid;
 }
 void seat7click(Event e){
-  querySelector('#studentid7').text=myid.toString();
+  querySelector('#studentid7').text=myid;
 }
 void seat8click(Event e){
-  querySelector('#studentid8').text=myid.toString();
+  querySelector('#studentid8').text=myid;
 }
 void seat9click(Event e){
-  querySelector('#studentid9').text=myid.toString();
+  querySelector('#studentid9').text=myid;
 }
 void seat10click(Event e){
-  querySelector('#studentid10').text=myid.toString();
+  querySelector('#studentid10').text=myid;
 }
 void seat11click(Event e){
-  querySelector('#studentid11').text=myid.toString();
+  querySelector('#studentid11').text=myid;
 }
 void seat12click(Event e){
-  querySelector('#studentid12').text=myid.toString();
+  querySelector('#studentid12').text=myid;
 }
 void seat13click(Event e){
-  querySelector('#studentid13').text=myid.toString();
+  querySelector('#studentid13').text=myid;
 }
 void seat14click(Event e){
-  querySelector('#studentid14').text=myid.toString();
+  querySelector('#studentid14').text=myid;
 }
 void seat15click(Event e){
-  querySelector('#studentid15').text=myid.toString();
+  querySelector('#studentid15').text=myid;
 }
 void seat16click(Event e){
-  querySelector('#studentid16').text=myid.toString();
+  querySelector('#studentid16').text=myid;
 }
 void seat17click(Event e){
-  querySelector('#studentid17').text=myid.toString();
+  querySelector('#studentid17').text=myid;
 }
 void seat18click(Event e){
-  querySelector('#studentid18').text=myid.toString();
+  querySelector('#studentid18').text=myid;
 }
 void seat19click(Event e){
-  querySelector('#studentid19').text=myid.toString();
+  querySelector('#studentid19').text=myid;
 }
 void seat20click(Event e){
-  querySelector('#studentid20').text=myid.toString();
+  querySelector('#studentid20').text=myid;
 }//每个位置被点击后显示相应的学号;
-
-
-void randomclass(Event e){
-randomnumber=new math.Random().nextInt(20);
-}
-//随机点名函数
 
 
 void handleError(Object error) {
@@ -163,10 +182,11 @@ Future loginmakePostRequest(Event e) async {
       querySelector('#test').text =resp.responseText;
 
           if(resp.responseText == "1"){ 
-           suc.style.display='block';
-           bef.style.display='none'; 
-           querySelector('#useridshow').text =useridinput1.value;
-           querySelector('#usernameshow').text =userpasswordinput1.value;
+                suc.style.display='block';
+                bef.style.display='none'; //显示登录成功的图片
+                querySelector('#useridshow').text =useridinput1.value;
+                querySelector('#usernameshow').text =userpasswordinput1.value;//登录成功后之后的界面左上方显示账户和密码
+                for (int i = 10; i <= (useridinput1.value).length; i++) myid=(useridinput1.value)[i];
                }
           else {
           bef.style.display='none';//登陆消失，显示登录失败图片；
@@ -176,6 +196,16 @@ Future loginmakePostRequest(Event e) async {
      }
 }//登录部分的连接数据库
 
+Future randomPostRequest(Event e) async { 
+        String url = 'http://localhost:90/data/random';
+       HttpRequest.request(url, method: 'POST', sendData:randomnunow)
+       .then((HttpRequest resp) {
+      //querySelector('#test').text =resp.responseText;
+      var newnamelist=new LIElement();
+      newnamelist.text=resp.responseText;
+     studentlist.children.add(newnamelist);//将点到的学生名单用列表表示出来;
+       });
+}//随机点名部分的连接数据库
 
 void LoginButton(MouseEvent event){
     ab.style.display='none';
@@ -199,4 +229,12 @@ void RandomclassButton(MouseEvent event){
     bc.style.display='none';
     cd.style.display='none';
     de.style.display='block';
+}
+void onlyrandomButton(MouseEvent event){
+    ab.style.display='none';
+    abb.style.display='none';
+    bc.style.display='none';
+    cd.style.display='none';
+    de.style.display='none';
+    rdm.style.display='block';
 }
