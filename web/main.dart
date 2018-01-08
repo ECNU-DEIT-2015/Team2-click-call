@@ -230,6 +230,7 @@ void RandomclassButton(MouseEvent event){
     cd.style.display='none';
     de.style.display='block';
 }
+<<<<<<< HEAD
 void onlyrandomButton(MouseEvent event){
     ab.style.display='none';
     abb.style.display='none';
@@ -238,3 +239,17 @@ void onlyrandomButton(MouseEvent event){
     de.style.display='none';
     rdm.style.display='block';
 }
+=======
+
+
+var webSocket = new WebSocket('ws://localhost:90/ws');
+if (webSocket != null && webSocket.readyState == WebSocket.OPEN) {
+  webSocket.send(data);
+} else {
+  print('WebSocket not connected, message $data not sent');
+}
+webSocket.onMessage.listen((MessageEvent e) {
+  receivedData(e.data);
+});
+
+>>>>>>> 7654c027bb4132e44b59718ced2fb48938973ee5
