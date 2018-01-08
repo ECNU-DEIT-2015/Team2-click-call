@@ -200,3 +200,15 @@ void RandomclassButton(MouseEvent event){
     cd.style.display='none';
     de.style.display='block';
 }
+
+
+var webSocket = new WebSocket('ws://localhost:90/ws');
+if (webSocket != null && webSocket.readyState == WebSocket.OPEN) {
+  webSocket.send(data);
+} else {
+  print('WebSocket not connected, message $data not sent');
+}
+webSocket.onMessage.listen((MessageEvent e) {
+  receivedData(e.data);
+});
+
