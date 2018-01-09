@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:html';
+import 'dart:io';
 import 'dart:math' as math;
 InputElement  useridinput1;//此变量用于用户名登陆
 InputElement  userpasswordinput1;
@@ -230,7 +231,6 @@ void RandomclassButton(MouseEvent event){
     cd.style.display='none';
     de.style.display='block';
 }
-<<<<<<< HEAD
 void onlyrandomButton(MouseEvent event){
     ab.style.display='none';
     abb.style.display='none';
@@ -239,10 +239,13 @@ void onlyrandomButton(MouseEvent event){
     de.style.display='none';
     rdm.style.display='block';
 }
-=======
 
-
+//以下是实时传输的尝试
 var webSocket = new WebSocket('ws://localhost:90/ws');
+ws.onmessage = function(event) {
+  console.log('Count is: ' + event.data);
+};
+
 if (webSocket != null && webSocket.readyState == WebSocket.OPEN) {
   webSocket.send(data);
 } else {
@@ -252,4 +255,9 @@ webSocket.onMessage.listen((MessageEvent e) {
   receivedData(e.data);
 });
 
->>>>>>> 7654c027bb4132e44b59718ced2fb48938973ee5
+//这个届时放到主函数里面
+  for (int i = 0; i < 10; i++) {
+    print(i);
+    sleep(const Duration(milliseconds: 500));
+  }
+
