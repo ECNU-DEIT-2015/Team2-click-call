@@ -1,15 +1,13 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:html';
-import 'dart:io';
 import 'dart:math' as math;
 InputElement  useridinput1;//此变量用于用户名登陆
 InputElement  userpasswordinput1;
 String myid;//此变量用来存储登录成功后的学号后两位，以便在座位上显示；
 var randomnumber= new List<int>();//存随机点名的学号后两位；
 String randomnunow;//将学号后两位转换为字符串；
-UListElement studentlist;//存被点的学生名单
-
+UListElement studentlist;//存被点的学生名单;
 var wordList;
 var ab=document.getElementById("startpage");
 var abb=document.getElementById("sidebar");
@@ -42,6 +40,7 @@ querySelector("#recordclass")//左侧点击课堂纪录
 
    querySelector('#signup').onClick.listen(loginmakePostRequest);//点击signup跳转到登录部分的连接数据库
    wordList = querySelector('#test');
+    randomnumber.addAll([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]);
 
   querySelector('#onlesson-call-char1').onClick.listen(seat1click);
   querySelector('#onlesson-call-char2').onClick.listen(seat2click);
@@ -64,20 +63,9 @@ querySelector("#recordclass")//左侧点击课堂纪录
   querySelector('#onlesson-call-char19').onClick.listen(seat19click);
   querySelector('#onlesson-call-char20').onClick.listen(seat20click);//每个座位设置点击事件，显示相应的学号
 
- querySelector('#ramdomD').onClick.listen(randomclass1);//随机点名事件
+ querySelector('#ramdomD').onClick.listen(randomPostRequest);//随机点名事件
  studentlist=querySelector("#namelist");
 }
- 
-void randomclass1(Event e){
-InputElement randomstnu = querySelector('#randomst input');
-int randomstnu1=int.parse(randomstnu.value);//字符串转换成数字；
-    for(int i=1;i<=randomstnu1;i++){
-    randomnumber[i]=new math.Random().nextInt(20);
-    randomnunow=randomnumber[i].toString();
-    randomPostRequest(e);
-   }
-}
-//随机点名函数，目前还没加
 
 void makeclub(Event e){
 
@@ -198,15 +186,21 @@ Future loginmakePostRequest(Event e) async {
 }//登录部分的连接数据库
 
 Future randomPostRequest(Event e) async { 
-        String url = 'http://localhost:90/data/random';
-       HttpRequest.request(url, method: 'POST', sendData:randomnunow)
+  String url = 'http://localhost:90/data/random';
+  InputElement randomstnu = querySelector('#randomst input');
+  int randomstnu1=int.parse(randomstnu.value);//字符串转换成数字；
+    for(int i=1;i<=randomstnu1;i++){
+       randomnumber[i]=new math.Random().nextInt(20);
+       randomnunow=randomnumber[i].toString();
+        HttpRequest.request(url, method: 'POST', sendData:randomnunow)
        .then((HttpRequest resp) {
       //querySelector('#test').text =resp.responseText;
       var newnamelist=new LIElement();
       newnamelist.text=resp.responseText;
      studentlist.children.add(newnamelist);//将点到的学生名单用列表表示出来;
        });
-}//随机点名部分的连接数据库
+   }     
+}//随机点名部分,直接连接数据库
 
 void LoginButton(MouseEvent event){
     ab.style.display='none';
@@ -240,24 +234,14 @@ void onlyrandomButton(MouseEvent event){
     rdm.style.display='block';
 }
 
-//以下是实时传输的尝试
-var webSocket = new WebSocket('ws://localhost:90/ws');
-ws.onmessage = function(event) {
-  console.log('Count is: ' + event.data);
-};
 
-if (webSocket != null && webSocket.readyState == WebSocket.OPEN) {
-  webSocket.send(data);
-} else {
-  print('WebSocket not connected, message $data not sent');
-}
-webSocket.onMessage.listen((MessageEvent e) {
-  receivedData(e.data);
-});
-
-//这个届时放到主函数里面
-  for (int i = 0; i < 10; i++) {
-    print(i);
-    sleep(const Duration(milliseconds: 500));
-  }
+//var webSocket = new WebSocket('ws://localhost:90/ws');
+//if (webSocket != null && webSocket.readyState == WebSocket.OPEN) {
+//  webSocket.send(data);
+//} else {
+//  print('WebSocket not connected, message $data not sent');
+//}
+//webSocket.onMessage.listen((MessageEvent e) {
+// receivedData(e.data);
+//});
 
