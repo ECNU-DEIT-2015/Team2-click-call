@@ -30,6 +30,26 @@ Future<String> logingetDataFromDB(String data) async{
      // return '''["林凌","刘冠群","汤夏颖"]''';
 }
 
+@app.Route("/data/random", methods: const [app.POST])
+randomuser(@app.Body(app.TEXT) String userData) {
+  String data = userData;
+  return randomDataFromDB(data);
+}
+
+Future<String> randomDataFromDB(String data) async{
+  var pool = new ConnectionPool(
+      host: 'www.muedu.org',port: 3306,
+      user: 'deit-2015',password: 'deit@2015!',
+      db: 'project_2015_2',max:5);
+      var results = await pool.query('select userid from user where usernumber='+data);
+      String response;
+       await results.forEach((row) { 
+       response =JSON.encode(["${row[0]}"]);
+  });
+      return response;
+     // return '''["林凌","刘冠群","汤夏颖"]''';
+}
+
 @app.Route("/register/")
 register() => "you can now a number";
 

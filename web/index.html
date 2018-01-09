@@ -100,6 +100,11 @@
 
 
 <div id=classpage style="display:none">
+
+    <video autoplay style="position: absolute;left: 1%"></video>  
+    <canvas id="myCanvas" style="position: absolute;left: 30%;"></canvas>  
+    <button id="capture" style="position: absolute;left: 30%;top: 55%">拍照</button>
+    
 <div id="topbarinside">
     <br>
    <div>您一共参加了3门课程</div>
@@ -110,7 +115,7 @@
            <option>教育学</option>
            <option>虚拟现实</option>
        </select>
-     </div>
+     </div>   
 </div>
  <div id="classchoosed">
   <p id=subtitle>已选课程</p>
@@ -259,8 +264,25 @@
  </div>
 </div> 
 
+<div id=clubrandompage style="display:none">
+    <select id="dian">
+        <option value="0">  </option>
+        <option value="1">点名</option>
+        <option value="2">分组</option>
+    </select>
+  </div>
 
+<div id="onlyrandompage" style="display:none">
+    <input type="button"  id="ramdomD">随机点名</input>
+    <input type="button"  id="ramdomD">按奇数点名</input>
+    <input type="button"  id="ramdomD">按偶数点名</input>
+    <p id="randomst"><input type="text" style="width:150px; height:18px;">输入你一次想点的人数<br></p>
+    <ul id="namelist"></ul>
+  </div>
 
+<div id="onlyclubpage" style="display:none">
+    asd
+  </div>
 
 <link rel="stylesheet" href="styles.css">
 <script defer src="main.dart" type="application/dart"></script>
@@ -269,3 +291,17 @@
 
 </body>
 </html>
+<script type="text/javascript">
+         window.onload = function () {
+          document.getElementById('dian').addEventListener('change',function(){
+                 
+                 if(this.value==1){
+                    document.getElementById('onlyclubpage').style.display='none';
+                    document.getElementById('onlyrandompage').style.display='block';
+                  }else if(this.value==2){
+                    document.getElementById('onlyclubpage').style.display='block';
+                    document.getElementById('onlyrandompage').style.display='none';
+                  }
+             },false);
+         }
+ </script>
