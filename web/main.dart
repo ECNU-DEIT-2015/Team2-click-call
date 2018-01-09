@@ -189,9 +189,20 @@ Future randomPostRequest(Event e) async {
   String url = 'http://localhost:90/data/random';
   InputElement randomstnu = querySelector('#randomst input');
   int randomstnu1=int.parse(randomstnu.value);//字符串转换成数字；
-    for(int i=1;i<=randomstnu1;i++){
-       randomnumber[i]=new math.Random().nextInt(20);
-       randomnunow=randomnumber[i].toString();
+  int count=1;
+  var flag=1;
+    while(count<=randomstnu1){
+      int currentnum=new math.Random().nextInt(20);
+      flag=1;
+      for(int i=1;i<=randomstnu1;i++)
+      {
+      if(currentnum==randomnumber[i]){
+         flag=2;
+         break;}
+      }
+    if(flag==1){
+      randomnumber[count]=currentnum;
+      randomnunow=currentnum.toString();
         HttpRequest.request(url, method: 'POST', sendData:randomnunow)
        .then((HttpRequest resp) {
       //querySelector('#test').text =resp.responseText;
@@ -199,7 +210,9 @@ Future randomPostRequest(Event e) async {
       newnamelist.text=resp.responseText;
      studentlist.children.add(newnamelist);//将点到的学生名单用列表表示出来;
        });
-   }     
+      count++;
+   }  
+  } 
 }//随机点名部分,直接连接数据库
 
 void LoginButton(MouseEvent event){
