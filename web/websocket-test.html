@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="scaffolded-by" content="https://github.com/google/stagehand">
+  <title>课堂点名应用小程序</title>
+  <style> body{background-color: #EEF4F9} </style>
+</head>
+<body>
+
+<div id=startpage >
+        <div id="topbar"> 
+          <p id=test></p>
+          <p id="bg"><image src="images/bg.png" width=1440 height=808></image></p>
+          <p id="logo"><image src="images/logo.png" width=172 height=65></image></p>
+          <p id="loginbutton" type="button" ><image src="images/login.png" width=61.8 height=34.2></image></p>
+          <p id="registerbutton" type="button"><image src="images/register.png" width=97.2 height=34.2></image></p>
+         </div>
+      
+
+         <div id=login>
+            <p id="loginbg"><image src="images/loginbg.png" width=241 height=387></image></p>
+            <div id="startloginbutton" type="button">
+              <image src="images/start.png" width=180 height=60></image>
+            </div>          
+
+            <div id="loginagainbutton" type="button">
+              <image src="images/loginagain.png" width=120 height=40></image>
+            </div>     
+
+            <div id="successlogin" style="display:none">
+                <image src="images/successlogin.png" width=241 height=387></image>
+
+              </div>
+         <div id=loginbe style="display:block">
+           <p id="userid"><input type="text" name="userid"style="width:150px; height:18px;"><br></p>
+           <p id="userpassword"><input type="password" name="userpassword"style="width:150px; height:18px;"></p>
+           <p id="useridlog"><image src="images/user.png" width=25 height=25></image></p>
+           <p id="password"><image src="images/password.png" width=22.5 height=28></image></p>
+           <p id="signup"><image src="images/signup.png" width=149 height=46.2></image></p>
+          </div>
+         </div>
+
+</div>
+
+<div id="sidebar" style="display:none">
+  <p id="userphoto"><image src="images/photo.png" width=43 height=43></image></p>
+  <p id="usernameshow"style="font-family:arial;color:white;font-size:14px;">姓名：游客</p>
+  <p id="useridshow"style="font-family:arial;color:white;font-size:14px;">学号：00000000</p>
+  <p id="startcall"><image src="images/startcall.png" width=171 height=59.4></image></p>
+
+  <p id="myclass" type="button" a href="" class="avatar"><image src="images/我的课程.png" width=106 height=20></image></p>
+  <p id="randomclass"  type="button" a href="" class="avatar"><image src="images/随机点名.png" width=106 height=20></image></p>
+  <p id="recordclass"><a><image src="images/课堂记录.png" width=106 height=20></image></a></p>
+  <p id="help"><a><image src="images/使用帮助.png" width=106 height=22></image></a></p>
+  <p id="advice"><a><image src="images/意见反馈.png" width=106 height=15></image></a></p>
+</div>
+
+<div id=choosepage style="display:none">
+       <div id="topbarinside">
+          <br>
+          <p id="xiaotip"style="font-family:arial;color:black;font-size:14px;">您还没有选择课程，请现在下方勾选参加的课程</p>
+         </div>
+         <div id="classchoosing">
+           <p id=subtitle>选择课程</p>
+          <div class="img">
+           <a target="_blank">
+           <img src="images/lessonphoto1.png" alt="Ballade" width="225" height="130">
+           </a>
+          <div class="desc"><input type="radio" name="classid"  checked>web网络教育应用</div>
+          </div>
+         
+          <div class="img">
+            <a target="_blank" >
+             <img src="images/lessonphoto2.png" alt="Ballade" width="225" height="130">
+            </a>
+            <div class="desc"><input type="radio" name="classid" checked>单片机</div>
+          </div>
+         
+          <div class="img">
+            <a target="_blank" >
+             <img src="images/lessonphoto3.png" alt="Ballade" width="225" height="130">
+            </a>
+            <div class="desc"><input type="radio" name="classid" checked>英语听说（高级）</div>
+          </div>
+         
+          <div class="img">
+            <a target="_blank" >
+             <img src="images/lessonphoto4.png" alt="Ballade" width="225" height="130">
+            </a>
+            <div class="desc"><input type="radio" name="classid" checked>教育学</div>
+          </div>
+         
+          <p id="classok" a href="" class="avatar"><image src="images/确认.png" width=70 height=35></image></p>
+          <p id="classcancel" a href="" class="avatar"><image src="images/取消.png" width=70 height=35></image></p>
+         </div>
+</div>
+
+
+<div id=classpage style="display:none">
+<div id="topbarinside">
+    <br>
+   <div>您一共参加了3门课程</div>
+   <br>
+   <div id="topbarinside-class">
+      <select>
+           <option>web网络教育应用</option>
+           <option>教育学</option>
+           <option>虚拟现实</option>
+       </select>
+     </div>
+</div>
+ <div id="classchoosed">
+  <p id=subtitle>已选课程</p>
+  <div id="classbg"></div>
+ </div>
+ <div id="classinfo">
+    <p id=subtitle>课程概况</p>  
+ </div>
+
+ <div id="studentinfo">
+   <p id=subtitle>学生信息</p>
+   <div id="stubg">
+   </div>
+ </div>
+</div>
+
+
+
+
+<div id=lessonpage style="display:none">
+    <div id="topbarinside">
+        <br>
+       <div>您一共参加了3门课程</div>
+       <br>
+       <div id="topbarinside-class">
+          <select>
+               <option>web网络教育应用</option>
+               <option>教育学</option>
+               <option>虚拟现实</option>
+           </select>
+         </div>
+    </div>
+ <div id="onlesson-st">
+  <div id="onlesson-st-quet">
+    <form action="form_action.asp" method="get">
+       新增提问: <input type="text" name="fname" size="50"/>
+        <input type="submit" value="确认"/>
+     </form>
+   </div> 
+   <hr/>
+ <div id="onlesson-st-choose">
+   <div id="onlesson-st-choose-text">花式点名</div>
+   <div id="onlesson-st-choose-quet">
+     <form action="" method="get">  
+         <select>
+             <option>webAPP与web的区别</option>
+             <option>一个点名程序需要哪些功能</option>
+         </select> 
+     </form>  
+   </div>
+   <div id="onlesson-st-choose-random"><image src="images/random.png" width=105 height=45></image></div>
+   <div id="onlesson-st-choose-unrandom"><image src="images/condition.png" width=105 height=45></image></div>
+ </div>
+
+ <div id="onlesson-st-info">
+    <div id="onlesson-st-info-pic"><image src="images/ecnu.jpg" width=80 height=100></image></div>
+    <div id="onlesson-st-info-stname">姓名：  </div>
+    <div id="onlesson-st-info-stid">学号：  </div>
+    <div id="onlesson-st-info-stiflu">印象：  </div>
+    <div id="onlesson-st-info-stnumbei">被点次数：  </div>
+ </div> 
+      
+    <div id="onlesson-st-record">
+       <div id="onlesson-st-record-text">签到记录</div>
+       <div id="onlesson-st-record-info">
+           <table border=0 cellspacing="0" cellpadding="20" width=680 height=30>
+            <tr>
+           <th>姓名</th>
+           <th>学号</th>
+           <th>签到时间</th>
+           <th>签到地点</th>
+            </tr>
+          </table>
+        </div>
+    </div>
+ </div>
+
+ <div id="onlesson-call" >
+  <div id="onlesson-call-situ">签到情况</div>
+  <div id="onlesson-call-had">已签到人数：</div>
+  <div id="onlesson-call-hadnot">未签到人数：</div>
+  <div id="onlesson-call-closecall"><image src="images/relieve.png" width=200 height=50></image></div>
+  <div id="onlesson-call-text">虚拟座位表</div>
+
+  <div id="onlesson-call-char1">
+     <p id="studentid1"></p>
+  </div>
+  <div id="onlesson-call-char2">
+    <p id="studentid2"></p>
+  </div>
+  <div id="onlesson-call-char3">
+    <p id="studentid3"></p>
+  </div>
+  <div id="onlesson-call-char4">
+    <p id="studentid4"></p>
+  </div>
+  <div id="onlesson-call-char5">
+    <p id="studentid5"></p>
+  </div>
+  <div id="onlesson-call-char6">
+    <p id="studentid6"></p>
+  </div>
+  <div id="onlesson-call-char7">
+    <p id="studentid7"></p>
+  </div>
+  <div id="onlesson-call-char8">
+    <p id="studentid8"></p>
+  </div>
+  <div id="onlesson-call-char9">
+    <p id="studentid9"></p>
+  </div>
+  <div id="onlesson-call-char10">
+    <p id="studentid10"></p>
+  </div>
+  <div id="onlesson-call-char11">
+    <p id="studentid11"></p>
+  </div>
+  <div id="onlesson-call-char12">
+    <p id="studentid12"></p>
+  </div>
+  <div id="onlesson-call-char13">
+    <p id="studentid13"></p>
+  </div>
+  <div id="onlesson-call-char14">
+    <p id="studentid14"></p>
+  </div>
+  <div id="onlesson-call-char15">
+    <p id="studentid15"></p>
+  </div>
+  <div id="onlesson-call-char16">
+    <p id="studentid16"></p>
+  </div>
+  <div id="onlesson-call-char17">
+    <p id="studentid17"></p>
+  </div>
+  <div id="onlesson-call-char18">
+    <p id="studentid18"></p>
+  </div>
+  <div id="onlesson-call-char19">
+    <p id="studentid19"></p>
+  </div>
+  <div id="onlesson-call-char20">
+    <p id="studentid20"></p>
+  </div>
+  <div id="onlesson-call-outclass"><image src="images/offclass.png" width=100 height=50></image></div>
+ </div>
+</div> 
+
+
+
+
+<link rel="stylesheet" href="styles.css">
+<script defer src="main.dart" type="application/dart"></script>
+<script defer src="packages/browser/dart.js"></script>
+<div id="output"></div>
+
+</body>
+</html>
