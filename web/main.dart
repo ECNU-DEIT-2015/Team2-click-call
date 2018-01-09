@@ -2,6 +2,9 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:html';
 import 'dart:math' as math;
+import 'package:web_socket_channel/web_socket_channel.dart';
+import 'package:web_socket_channel/io.dart';
+import 'package:web_socket_channel/status.dart' as status;
 InputElement  useridinput1;//此变量用于用户名登陆
 InputElement  userpasswordinput1;
 String myid;//此变量用来存储登录成功后的学号后两位，以便在座位上显示；
@@ -248,13 +251,20 @@ void onlyrandomButton(MouseEvent event){
 }
 
 
-//var webSocket = new WebSocket('ws://localhost:90/ws');
-//if (webSocket != null && webSocket.readyState == WebSocket.OPEN) {
-//  webSocket.send(data);
-//} else {
-//  print('WebSocket not connected, message $data not sent');
-//}
-//webSocket.onMessage.listen((MessageEvent e) {
-// receivedData(e.data);
-//});
+var webSocket = new WebSocket('ws://localhost:90/ws');
+
+//主函数内
+  for (int i = 0; i < 10; i++) {
+    print(i);
+    sleep(const Duration(milliseconds: 500));
+  }
+
+if (webSocket != null && webSocket.readyState == WebSocket.OPEN) {
+  webSocket.send(data);
+} else {
+  print('WebSocket not connected, message $data not sent');
+}
+webSocket.onMessage.listen((MessageEvent e) {
+ receivedData(e.data);
+});
 

@@ -9,3 +9,4 @@ dependencies:
   sqljocky5: "^1.0.0"
 dev_dependencies:
   unittest: any
+  web_socket_channel: "^1.0.6"
