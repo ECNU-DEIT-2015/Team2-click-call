@@ -7,6 +7,8 @@ import 'package:sqljocky5/sqljocky.dart';
 import 'package:sqljocky5/utils.dart';
 import 'dart:async';
 import 'dart:convert';
+import 'package:redstone/server.dart' as app;
+import 'package:redstone_web_socket/redstone_web_socket.dart';
 
 
 @app.Route("/data/login", methods: const [app.POST])
@@ -53,6 +55,17 @@ Future<String> randomDataFromDB(String data) async{
 @app.Route("/register/")
 register() => "you can now a number";
 
+@WebSocketHandler("/ws")
+onConnection(WebSocketChannel channel) {
+  channel.stream.listen((message) {
+    channel.sink.add("echo $message");
+  });
+}
+
+
+
+
+
 main() {
    Map corsHeaders1 = {
     "Access-Control-Allow-Methods": "POST",
@@ -62,5 +75,6 @@ main() {
       shelf_cors.createCorsHeadersMiddleware(corsHeaders:corsHeaders1);
   app.setupConsoleLog();
   app.addShelfMiddleware(middleware);
+  app.addPlugin(getWebSocketPlugin()); //install web socket handlers
   app.start(port:90);
 }

@@ -7,6 +7,6 @@ dependencies:
   shelf_cors: "^0.2.1"
   http: "^0.11.3+16"
   sqljocky5: "^1.0.0"
+  redstone_web_socket: "^0.1.0"
 dev_dependencies:
   unittest: any
-  web_socket_channel: "^1.0.6"
