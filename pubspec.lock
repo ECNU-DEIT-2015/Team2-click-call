@@ -223,6 +223,12 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.8"
+  redstone_web_socket:
+    description:
+      name: redstone_web_socket
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.0"
   route_hierarchical:
     description:
       name: route_hierarchical
