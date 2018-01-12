@@ -23,6 +23,15 @@ main() async {
   querySelector("#loginbutton")//点击登录按钮，跳转到选课页面
    ..id
    ..onClick.listen(LoginButton);
+
+   querySelector("#startloginbutton")//登陆成功后跳到选课页面
+   ..id
+   ..onClick.listen(LoginButton);
+
+  querySelector("#loginagainbutton")//登陆失败后重新登陆
+   ..id
+   ..onClick.listen(LoginagainButton);
+
   querySelector("#classok")//点击确认选课，跳转已选课页面
    ..id
    ..onClick.listen(ClassokButton);
@@ -172,7 +181,8 @@ Future loginmakePostRequest(Event e) async {
 
           if(resp.responseText == "1"){ 
                 suc.style.display='block';
-                bef.style.display='none'; //显示登录成功的图片
+                bef.style.display='none';
+                document.getElementById("startloginbutton").style.display='block'; //显示登录成功的图片
                 querySelector('#useridshow').text =useridinput1.value;
                 querySelector('#usernameshow').text =userpasswordinput1.value;//登录成功后之后的界面左上方显示账户和密码
                 for (int i = 10; i <= (useridinput1.value).length; i++) myid=(useridinput1.value)[i];
@@ -180,6 +190,7 @@ Future loginmakePostRequest(Event e) async {
           else {
           bef.style.display='none';//登陆消失，显示登录失败图片；
           suc.style.display='none';
+          document.getElementById("loginagainbutton").style.display='block';
                }
        });
      }
@@ -221,6 +232,13 @@ void LoginButton(MouseEvent event){
     bc.style.display='block';
     cd.style.display='none';
     de.style.display='none';
+}
+
+void LoginagainButton(MouseEvent event){              //重新登陆
+    document.getElementById("loginagainbutton").style.display='none';
+    document.getElementById("userid").style.display='block';
+    document.getElementById("userpassword").style.display='block';
+    bef.style.display='block';
 }
 
 void ClassokButton(MouseEvent event){
