@@ -29,7 +29,7 @@ Future<String> logingetDataFromDB(String data) async{
   });
       return response;
      // return '''["林凌","刘冠群","汤夏颖"]''';
-}
+}//登录部分连接数据库
 
 @app.Route("/data/random", methods: const [app.POST])
 randomuser(@app.Body(app.TEXT) String userData) {
@@ -49,7 +49,26 @@ Future<String> randomDataFromDB(String data) async{
   });
       return response;
      // return '''["林凌","刘冠群","汤夏颖"]''';
+}//随机点几个名部分连接数据库
+
+@app.Route("/data/makeTeam", methods: const [app.POST])
+makeTuser(@app.Body(app.TEXT) String userData) {
+  String data = userData;
+  return teamDataFromDB(data);
 }
+
+Future<String> teamDataFromDB(String data) async{
+  var pool = new ConnectionPool(
+      host: 'www.muedu.org',port: 3306,
+      user: 'deit-2015',password: 'deit@2015!',
+      db: 'project_2015_2',max:5);
+      var results = await pool.query('select userid from user where usernumber='+data);
+      String response;
+       await results.forEach((row) { 
+       response =JSON.encode(["${row[0]}"]);
+  });
+      return response;
+}//随堂分组连接数据库部分
 
 @app.Route("/register/")
 register() => "you can now a number";
