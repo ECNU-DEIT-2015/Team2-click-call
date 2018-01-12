@@ -223,13 +223,10 @@ Future randomPostRequest(Event e) async {
 
 Future maketeamPostRequest(Event e) async { 
   String url = 'http://localhost:90/data/makeTeam';
-  InputElement randomstnu = querySelector('#randomst input');
-  int randomstnu1=int.parse(randomstnu.value);//字符串转换成数字；
+  InputElement teamnu = querySelector('#teamnu input');
+  int teamnu1=int.parse(teamnu.value);//字符串转换成数字；
   int count=1;
   var flag=1;
-    while(count<=randomstnu1){
-      int currentnum=new math.Random().nextInt(20);
-  } 
 }//随机分组部分,直接连接数据库
 
 void LoginButton(MouseEvent event){
