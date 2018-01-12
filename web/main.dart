@@ -5,7 +5,6 @@ import 'dart:math' as math;
 InputElement  useridinput1;//此变量用于用户名登陆
 InputElement  userpasswordinput1;
 String myid;//此变量用来存储登录成功后的学号后两位，以便在座位上显示；
-var randomnumber= new List<int>();//存随机点名的学号后两位；
 String randomnunow;//将学号后两位转换为字符串；
 UListElement studentlist;//存被点的学生名单;
 var wordList;
@@ -49,7 +48,6 @@ querySelector("#recordclass")//左侧点击课堂纪录
 
    querySelector('#signup').onClick.listen(loginmakePostRequest);//点击signup跳转到登录部分的连接数据库
    wordList = querySelector('#test');
-    randomnumber.addAll([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]);
 
   querySelector('#onlesson-call-char1').onClick.listen(seat1click);
   querySelector('#onlesson-call-char2').onClick.listen(seat2click);
@@ -75,11 +73,6 @@ querySelector("#recordclass")//左侧点击课堂纪录
  querySelector('#ramdomD').onClick.listen(randomPostRequest);//随机点名事件
  studentlist=querySelector("#namelist");
 }
-
-void makeclub(Event e){
-
-}//随机分组函数，目前还没加
-
 
 void seat1click(Event e){
   querySelector('#studentid1').text=myid;
@@ -198,6 +191,8 @@ Future loginmakePostRequest(Event e) async {
 
 Future randomPostRequest(Event e) async { 
   String url = 'http://localhost:90/data/random';
+  var randomnumber= new List<int>();//存随机点名的学号后两位；
+  randomnumber.addAll([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]);
   InputElement randomstnu = querySelector('#randomst input');
   int randomstnu1=int.parse(randomstnu.value);//字符串转换成数字；
   int count=1;
@@ -225,6 +220,17 @@ Future randomPostRequest(Event e) async {
    }  
   } 
 }//随机点名部分,直接连接数据库
+
+Future maketeamPostRequest(Event e) async { 
+  String url = 'http://localhost:90/data/makeTeam';
+  InputElement randomstnu = querySelector('#randomst input');
+  int randomstnu1=int.parse(randomstnu.value);//字符串转换成数字；
+  int count=1;
+  var flag=1;
+    while(count<=randomstnu1){
+      int currentnum=new math.Random().nextInt(20);
+  } 
+}//随机分组部分,直接连接数据库
 
 void LoginButton(MouseEvent event){
     ab.style.display='none';

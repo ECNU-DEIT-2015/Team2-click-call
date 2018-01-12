@@ -48,7 +48,6 @@ Future<String> randomDataFromDB(String data) async{
        response =JSON.encode(["${row[0]}"]);
   });
       return response;
-     // return '''["林凌","刘冠群","汤夏颖"]''';
 }//随机点几个名部分连接数据库
 
 @app.Route("/data/makeTeam", methods: const [app.POST])
