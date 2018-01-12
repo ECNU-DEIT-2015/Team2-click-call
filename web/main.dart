@@ -194,7 +194,7 @@ Future randomPostRequest(Event e) async {
   var randomnumber= new List<int>();//存随机点名的学号后两位；
   randomnumber.addAll([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]);
   InputElement randomstnu = querySelector('#randomst input');
-  int randomstnu1=int.parse(randomstnu.value);//字符串转换成数字；
+  int randomstnu1=int.parse(randomstnu.value);//一次想点的学生人数，字符串转换成数字；
   int count=1;
   var flag=1;
     while(count<=randomstnu1){
@@ -223,10 +223,15 @@ Future randomPostRequest(Event e) async {
 
 Future maketeamPostRequest(Event e) async { 
   String url = 'http://localhost:90/data/makeTeam';
+  int teamtotal=0;//设置刚开始为0个小组；
   InputElement teamnu = querySelector('#teamnu input');
-  int teamnu1=int.parse(teamnu.value);//字符串转换成数字；
-  int count=1;
-  var flag=1;
+  int teamnu1=int.parse(teamnu.value);//每组需要的人数，将字符串转换成数字；
+  if(20 % teamnu1==0){
+    //执行随堂分组
+  }
+ else {
+  //显示“无法分成均匀的小组，请重新输入小组的人数”;
+    }
 }//随机分组部分,直接连接数据库
 
 void LoginButton(MouseEvent event){
