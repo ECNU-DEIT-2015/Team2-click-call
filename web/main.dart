@@ -178,7 +178,7 @@ Future loginmakePostRequest(Event e) async {
                 document.getElementById("startloginbutton").style.display='block'; //显示登录成功的图片
                 querySelector('#useridshow').text =useridinput1.value;
                 querySelector('#usernameshow').text =userpasswordinput1.value;//登录成功后之后的界面左上方显示账户和密码
-                for (int i = 10; i <= (useridinput1.value).length; i++) myid=(useridinput1.value)[i];
+                for (int i = 10; i < (useridinput1.value).length; i++) myid=(useridinput1.value)[i-1]+(useridinput1.value)[i];
                }
           else {
           bef.style.display='none';//登陆消失，显示登录失败图片；
