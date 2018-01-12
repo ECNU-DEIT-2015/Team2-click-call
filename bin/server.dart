@@ -5,9 +5,9 @@ import 'package:shelf/shelf_io.dart' as shelf_io;
 import 'package:shelf_cors/shelf_cors.dart' as shelf_cors;
 import 'package:sqljocky5/sqljocky.dart';
 import 'package:sqljocky5/utils.dart';
+import 'dart:io';
 import 'dart:async';
 import 'dart:convert';
-import 'package:redstone/server.dart' as app;
 import 'package:redstone_web_socket/redstone_web_socket.dart';
 
 
@@ -62,8 +62,7 @@ onConnection(WebSocketChannel channel) {
   });
 }
 
-
-
+var ws = new WebSocket('ws://localhost:90/');
 
 
 main() {
