@@ -71,6 +71,25 @@ Future<String> randomjDataFromDB(String data) async{
       return response;
 }//随机点奇数名部分连接数据库
 
+
+@app.Route("/data/random", methods: const [app.POST])
+randomouser(@app.Body(app.TEXT) String userData) {
+  String data = userData;
+  return randomoDataFromDB(data);
+}
+Future<String> randomoDataFromDB(String data) async{
+  var pool = new ConnectionPool(
+      host: 'www.muedu.org',port: 3306,
+      user: 'deit-2015',password: 'deit@2015!',
+      db: 'project_2015_2',max:5);
+      var results = await pool.query('select userid from user where usernumber='+data);
+      String response;
+       await results.forEach((row) { 
+       response =JSON.encode(["${row[0]}"]);
+  });
+      return response;
+}//随机点偶数名部分连接数据库
+
 @app.Route("/data/makeTeam", methods: const [app.POST])
 makeTuser(@app.Body(app.TEXT) String userData) {
   String data = userData;
