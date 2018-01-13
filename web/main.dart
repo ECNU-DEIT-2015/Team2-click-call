@@ -224,38 +224,42 @@ Future randomPostRequest(Event e) async {
 
 Future maketeamPostRequest(Event e) async { 
   String url = 'http://localhost:90/data/makeTeam';
+  var randomnumber1= new List<int>();//存随机点名的学号后两位；
+  UListElement studentlist1;//用来存每组学生
+  studentlist1=querySelector("#namelist1");
+  randomnumber1.addAll([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]);
+  String teamstudent;//将学号后两位转换为字符串；
   InputElement teamnu = querySelector('#teamnu input');
   int teamnu1=int.parse(teamnu.value);//每组需要的人数，将字符串转换成数字；
-  int teamtotal=0;//设置刚开始为0个小组；
-  var teamst= new List<int>();//每个组分别存在不同的数组里面；
-  teamtotal=20 ~/teamnu1;//将double转化成int，得到一共有几个小组；
-  teamst.length=teamtotal;
-  // teamst.addAll([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]);
+  //int teamtotal=20 ~/teamnu1;//将double转化成int，得到一共有几个小组；
+  //for(int i=0;i<=teamtotal;i++){ 
+    // var newnamelist=new LIElement();
+     //newnamelist.text=i.toString();
+     //studentlist1.children.add(newnamelist);}//生成和小组数目一样的list，分别存储每个小组人员；
   if(20 % teamnu1==0){
   int count=1;
   var flag=1;
-    while(count<=teamnu1){
+    while(count<=20){
       int currentnum=new math.Random().nextInt(20);
       flag=1;
-      for(int i=1;i<=teamnu1;i++)
+      for(int i=1;i<20;i++)
       {
-      if(currentnum==teamst[i]){
+      if(currentnum==randomnumber1[i]){
          flag=2;
          break;}
       }
     if(flag==1){
-      teamst[count]=currentnum;
-      randomnunow=currentnum.toString();
-        HttpRequest.request(url, method: 'POST', sendData:randomnunow)
+      randomnumber1[count]=currentnum;
+      teamstudent=currentnum.toString();
+        HttpRequest.request(url, method: 'POST', sendData:teamstudent)
        .then((HttpRequest resp) {
-      //querySelector('#test').text =resp.responseText;
       var newnamelist=new LIElement();
       newnamelist.text=resp.responseText;
-     studentlist.children.add(newnamelist);//将点到的学生名单用列表表示出来;
+     studentlist1.children.add(newnamelist);//将点到的学生名单用列表表示出来;
        });
       count++;
    }  
-  }
+  } 
     //执行随堂分组
   }
  else {
