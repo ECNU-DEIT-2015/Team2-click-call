@@ -69,6 +69,8 @@ querySelector("#recordclass")//左侧点击课堂纪录
   querySelector('#onlesson-call-char20').onClick.listen(seat20click);//每个座位设置点击事件，显示相应的学号
 
  querySelector('#ramdomD').onClick.listen(randomPostRequest);//随机点名事件
+ //querySelector('#ramdomJ').onClick.listen(randomPostRequest);//随机点名事件
+ querySelector('#ramdomJ').onClick.listen(randomPostRequestJ);//随机点名事件
  querySelector('#makeT').onClick.listen(maketeamPostRequest);//随机分组事件
 }
 
@@ -188,6 +190,7 @@ Future loginmakePostRequest(Event e) async {
      }
 }//登录部分的连接数据库
 
+
 Future randomPostRequest(Event e) async { 
   String url = 'http://localhost:90/data/random';
   UListElement studentlist;//存被点的学生名单;
@@ -222,6 +225,44 @@ Future randomPostRequest(Event e) async {
    }  
   } 
 }//随机点名部分,直接连接数据库
+
+
+Future randomPostRequestJ(Event e) async { 
+  String url = 'http://localhost:90/data/random';
+  UListElement jstudentlist;//存被点的学生名单;
+  String randomjnunow;//将学号后两位转换为字符串；
+  jstudentlist=querySelector("#namelist");
+  var randomjnumber= new List<int>();//存随机点名的学号后两位；
+  randomjnumber.addAll([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]);
+  InputElement randomjstnu = querySelector('#randomst input');
+  int randomstnuj=int.parse(randomjstnu.value);//一次想点的学生人数，字符串转换成数字；
+  int countj=1;
+  var flagj=1;
+    while(countj<=randomstnuj){
+      int currentnum=new math.Random().nextInt(20);
+       flagj=1;
+      if(currentnum<20){              //转为奇数
+           if(currentnum%2!=0)currentnum=currentnum;
+           else randomjnumber[count]=currentnum+1;
+         }
+        for(int i=1;i<=randomstnuj;i++) {
+          if(currentnum==randomjnumber[i]){
+          flagj=2;
+         break;}
+         }
+        if(flagj==1){
+         randomjnunow=currentnum.toString();
+         HttpRequest.request(url, method: 'POST', sendData:randomjnunow)
+         .then((HttpRequest resp) {
+          //querySelector('#test').text =resp.responseText;
+           var newnamelist=new LIElement();
+            newnamelist.text=resp.responseText;
+            jstudentlist.children.add(newnamelist);//将点到的学生名单用列表表示出来;
+           });
+            countj++;
+         }  
+     } 
+}//随机点名奇数部分,直接连接数据库
 
 Future maketeamPostRequest(Event e) async { 
   String url = 'http://localhost:90/data/makeTeam';
