@@ -182,6 +182,7 @@ Future loginmakePostRequest(Event e) async {
           bef.style.display='none';//登陆消失，显示登录失败图片；
           suc.style.display='none';
           document.getElementById("loginagainbutton").style.display='block';
+          document.getElementById("failurelogin").style.display='block';
                }
        });
      }
@@ -277,9 +278,12 @@ void LoginButton(MouseEvent event){
 
 void LoginagainButton(MouseEvent event){              //重新登陆
     document.getElementById("loginagainbutton").style.display='none';
+    document.getElementById("failurelogin").style.display='none';
     document.getElementById("userid").style.display='block';
     document.getElementById("userpassword").style.display='block';
     bef.style.display='block';
+   // document.getElementById("userid").appendText(null);
+    //document.getElementById("userpassword").contentEditable.contains(null);
 }
 
 void ClassokButton(MouseEvent event){

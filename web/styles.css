@@ -714,6 +714,7 @@
   position:absolute;
   left: 600px;
   top: 100px;
+  z-index: 3;
 }
 
 #useridlog{
