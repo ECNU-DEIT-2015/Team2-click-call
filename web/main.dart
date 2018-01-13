@@ -228,7 +228,7 @@ Future randomPostRequest(Event e) async {
 
 
 Future randomPostRequestJ(Event e) async { 
-  String url = 'http://localhost:90/data/random';
+  String url = 'http://localhost:90/data/randomj';
   UListElement jstudentlist;//存被点的学生名单;
   String randomjnunow;//将学号后两位转换为字符串；
   jstudentlist=querySelector("#namelist");
@@ -239,20 +239,22 @@ Future randomPostRequestJ(Event e) async {
   int countj=1;
   var flagj=1;
     while(countj<=randomstnuj){
-      int currentnum=new math.Random().nextInt(20);
+      int currentnumj=new math.Random().nextInt(20);
        flagj=1;
-      if(currentnum<20){              //转为奇数
-           if(currentnum%2!=0)currentnum=currentnum;
-           else currentnum=currentnum+1;
+      if(currentnumj<20){              //转为奇数
+           if(currentnumj%2!=0)currentnumj=currentnumj;
+           else currentnumj=currentnumj+1;
          }
-      else currentnum=currentnum-1;
+       else currentnumj=currentnumj-1;
+
         for(int i=1;i<=randomstnuj;i++) {
-          if(currentnum==randomjnumber[i]){
+          if(currentnumj==randomjnumber[i]){
           flagj=2;
          break;}
          }
         if(flagj==1){
-         randomjnunow=currentnum.toString();
+          randomjnumber[countj]=currentnumj;
+         randomjnunow=currentnumj.toString();
          HttpRequest.request(url, method: 'POST', sendData:randomjnunow)
          .then((HttpRequest resp) {
           //querySelector('#test').text =resp.responseText;
@@ -266,7 +268,7 @@ Future randomPostRequestJ(Event e) async {
 }//随机点名奇数部分,直接连接数据库
 
 Future randomPostRequestO(Event e) async { 
-  String url = 'http://localhost:90/data/random';
+  String url = 'http://localhost:90/data/randomo';
   UListElement ostudentlist;//存被点的学生名单;
   String randomonunow;//将学号后两位转换为字符串；
   ostudentlist=querySelector("#namelist");
@@ -277,19 +279,20 @@ Future randomPostRequestO(Event e) async {
   int counto=1;
   var flago=1;
     while(counto<=randomstnuo){
-      int currentnum=new math.Random().nextInt(20);
+      int currentnumo=new math.Random().nextInt(20);
        flago=1;
-      if(currentnum<20){              //转为偶数
-           if(currentnum%2!=0)currentnum=currentnum+1;
-           else currentnum=currentnum;
+      if(currentnumo<20){              //转为偶数
+           if(currentnumo%2!=0)currentnumo=currentnumo+1;
+           else currentnumo=currentnumo;
          }
         for(int i=1;i<=randomstnuo;i++) {
-          if(currentnum==randomonumber[i]){
+          if(currentnumo==randomonumber[i]){
           flago=2;
          break;}
          }
         if(flago==1){
-         randomonunow=currentnum.toString();
+          randomonumber[counto]=currentnumo;
+          randomonunow=currentnumo.toString();
          HttpRequest.request(url, method: 'POST', sendData:randomonunow)
          .then((HttpRequest resp) {
           //querySelector('#test').text =resp.responseText;

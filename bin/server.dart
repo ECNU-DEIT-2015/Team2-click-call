@@ -52,7 +52,7 @@ Future<String> randomDataFromDB(String data) async{
 
 
 
-@app.Route("/data/random", methods: const [app.POST])
+@app.Route("/data/randomj", methods: const [app.POST])
 randomjuser(@app.Body(app.TEXT) String userData) {
   String data = userData;
   return randomjDataFromDB(data);
@@ -72,7 +72,7 @@ Future<String> randomjDataFromDB(String data) async{
 }//随机点奇数名部分连接数据库
 
 
-@app.Route("/data/random", methods: const [app.POST])
+@app.Route("/data/randomo", methods: const [app.POST])
 randomouser(@app.Body(app.TEXT) String userData) {
   String data = userData;
   return randomoDataFromDB(data);
