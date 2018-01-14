@@ -69,8 +69,8 @@ querySelector("#recordclass")//左侧点击课堂纪录
   querySelector('#onlesson-call-char20').onClick.listen(seat20click);//每个座位设置点击事件，显示相应的学号
 
  querySelector('#ramdomD').onClick.listen(randomPostRequest);//随机点名事件
- querySelector('#ramdomO').onClick.listen(randomPostRequestO);//随机偶数点名事件
  querySelector('#ramdomJ').onClick.listen(randomPostRequestJ);//随机奇数点名事件
+//  querySelector('#ramdomO').onClick.listen(randomPostRequestO);//随机偶数点名事件
  querySelector('#makeT').onClick.listen(maketeamPostRequest);//随机分组事件
 }
 
@@ -242,10 +242,10 @@ Future randomPostRequestJ(Event e) async {
       int currentnumj=new math.Random().nextInt(20);
        flagj=1;
       if(currentnumj<20){              //转为奇数
-           if(currentnumj%2!=0)currentnumj=currentnumj;
-           else currentnumj=currentnumj+1;
+           if(currentnumj%2==0)randomjnumber[countj]=currentnumj;
+           else randomjnumber[countj]=currentnumj+1;
          }
-       else currentnumj=currentnumj-1;
+       else randomjnumber[countj]=currentnumj-1;
 
         for(int i=1;i<=randomstnuj;i++) {
           if(currentnumj==randomjnumber[i]){
@@ -253,7 +253,7 @@ Future randomPostRequestJ(Event e) async {
          break;}
          }
         if(flagj==1){
-          randomjnumber[countj]=currentnumj;
+         // randomjnumber[countj]=currentnumj;
          randomjnunow=currentnumj.toString();
          HttpRequest.request(url, method: 'POST', sendData:randomjnunow)
          .then((HttpRequest resp) {
@@ -266,6 +266,7 @@ Future randomPostRequestJ(Event e) async {
          }  
      } 
 }//随机点名奇数部分,直接连接数据库
+
 
 Future randomPostRequestO(Event e) async { 
   String url = 'http://localhost:90/data/randomo';
@@ -282,17 +283,19 @@ Future randomPostRequestO(Event e) async {
       int currentnumo=new math.Random().nextInt(20);
        flago=1;
       if(currentnumo<20){              //转为偶数
-           if(currentnumo%2!=0)currentnumo=currentnumo+1;
-           else currentnumo=currentnumo;
+           if(currentnumo%2==0)randomonumber[counto]=currentnumo+1;
+           else randomonumber[counto]=currentnumo;
          }
+       else randomonumber[counto]=currentnumo;
+
         for(int i=1;i<=randomstnuo;i++) {
           if(currentnumo==randomonumber[i]){
           flago=2;
          break;}
          }
         if(flago==1){
-          randomonumber[counto]=currentnumo;
-          randomonunow=currentnumo.toString();
+        // randomonumber[counto]=currentnumo;
+         randomonunow=currentnumo.toString();
          HttpRequest.request(url, method: 'POST', sendData:randomonunow)
          .then((HttpRequest resp) {
           //querySelector('#test').text =resp.responseText;

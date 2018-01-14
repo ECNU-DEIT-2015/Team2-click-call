@@ -71,12 +71,12 @@ Future<String> randomjDataFromDB(String data) async{
       return response;
 }//随机点奇数名部分连接数据库
 
-
 @app.Route("/data/randomo", methods: const [app.POST])
 randomouser(@app.Body(app.TEXT) String userData) {
   String data = userData;
   return randomoDataFromDB(data);
 }
+
 Future<String> randomoDataFromDB(String data) async{
   var pool = new ConnectionPool(
       host: 'www.muedu.org',port: 3306,
@@ -88,7 +88,8 @@ Future<String> randomoDataFromDB(String data) async{
        response =JSON.encode(["${row[0]}"]);
   });
       return response;
-}//随机点偶数名部分连接数据库
+}//随机点ou数名部分连接数据库
+
 
 @app.Route("/data/makeTeam", methods: const [app.POST])
 makeTuser(@app.Body(app.TEXT) String userData) {
@@ -112,7 +113,7 @@ Future<String> teamDataFromDB(String data) async{
 @app.Route("/register/")
 register() => "you can now a number";
 
-var ws = new WebSocket('ws://localhost:90/');
+//var ws = new WebSocket('ws://localhost:90/');
 
 
 main() {
