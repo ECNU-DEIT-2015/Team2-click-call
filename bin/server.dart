@@ -1,4 +1,3 @@
-
 import 'package:redstone/redstone.dart' as app;
 import 'package:shelf/shelf.dart' as shelf;
 import 'package:shelf/shelf_io.dart' as shelf_io;
@@ -8,6 +7,9 @@ import 'package:sqljocky5/utils.dart';
 import 'dart:io';
 import 'dart:async';
 import 'dart:convert';
+import 'package:redstone/redstone.dart' as app;
+import 'package:redstone_web_socket/redstone_web_socket.dart';
+
 
 @app.Route("/data/login", methods: const [app.POST])
 addUser(@app.Body(app.TEXT) String userData) {
@@ -113,8 +115,31 @@ Future<String> teamDataFromDB(String data) async{
 @app.Route("/register/")
 register() => "you can now a number";
 
-//var ws = new WebSocket('ws://localhost:90/');
+@WebSocketHandler("/ws")
+class ServerEndPoint {
 
+  @OnOpen()
+  void onOpen(WebSocketSession session) {
+    print("connection established");
+  }
+
+  @OnMessage()
+  void onMessage(String message, WebSocketSession session) {
+    print("message received: $message");
+    session.connection.add("echo $message");
+  }
+
+  @OnError()
+  void onError(error, WebSocketSession session) {
+    print("error: $error");
+  }
+
+  @OnClose()
+  void onClose(WebSocketSession session) {
+    print("connection closed");
+  }
+
+}
 
 main() {
    Map corsHeaders1 = {
@@ -125,5 +150,7 @@ main() {
       shelf_cors.createCorsHeadersMiddleware(corsHeaders:corsHeaders1);
   app.setupConsoleLog();
   app.addShelfMiddleware(middleware);
-  app.start(port:90);
+  //install web socket handlers
+  app.addPlugin(getWebSocketPlugin());
+  app.start();
 }
