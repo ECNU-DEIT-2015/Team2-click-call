@@ -1067,3 +1067,6 @@ margin:10px 5px 10px 5px;
   margin-top:250px;  
   z-index: 15;
 }
+#subtitle{
+  font-weight:bold;
+}

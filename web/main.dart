@@ -266,14 +266,12 @@ Future loginmakePostRequest(Event e) async {
         String url = 'http://localhost:90/data/login';
        HttpRequest.request(url, method: 'POST', sendData:useridpassword)
        .then((HttpRequest resp) {
-      querySelector('#test').text =resp.responseText;
-
           if(resp.responseText == "1"){ 
                 suc.style.display='block';
                 bef.style.display='none';
                 document.getElementById("startloginbutton").style.display='block'; //显示登录成功的图片
                 querySelector('#useridshow').text =useridinput1.value;
-                querySelector('#usernameshow').text =userpasswordinput1.value;//登录成功后之后的界面左上方显示账户和密码
+                querySelector('#usernameshow').text ="   您的学号";//登录成功后之后的界面左上方显示账户和密码
                 for (int i = 10; i < (useridinput1.value).length; i++) myid=(useridinput1.value)[i-1]+(useridinput1.value)[i];
                }
           else {
