@@ -143,6 +143,9 @@
 
 <div id=lessonpage style="display:none">
   <div id="topbarinside">
+      <br>
+     <div>您一共参加了3门课程</div>
+     <br>
      <div id="topbarinside-class">
         <select>
              <option>web网络教育应用</option>
@@ -157,7 +160,7 @@
     <br><br>
      <div> <input id="questinput" 
                   type="text" 
-                  size="85" 
+                  size="100" 
                   style="height:30px"
                   placeholder=请在此处输入课堂提问的问题，回车键确认>
      </div>
@@ -165,18 +168,39 @@
       <ul id="quest" ></ul>
     </div> 
  </div> 
+ </div>
+
+ <div id="classplan">
+  <div id="classplanin">
+       今日教学安排
+      <br><br>
+       <div> <input id="taskinput" 
+                    type="text" 
+                    size="40" 
+                    style="height:30px"
+                    placeholder=写下你的安排吧！>
+       </div>
+       <br>
+      <div id=taskchoose>
+        <label><input id="task1" type="button"  />教学目标 </label>
+        <label><input id="task2" type="button"  />教学任务 </label>
+        <label><input id="task3" type="button" />重点难点 </label>
+        <label><input id="task4" type="button"  />其他 </label>        
+      </div>
+
+       <div id="classplanbg">
+         <div> 教学目标 <br>      <ul id="tasktarget" ></ul></div>
+         <div> 教学任务 <br>      <ul id="taskshow" ></ul></div>
+         <div> 重点难点 <br>      <ul id="taskhard" ></ul></div>
+         <div> 其他    <br>   <ul id="taskother" ></ul></div>
+        </div> 
+   </div> 
+   </div>
+
 </div>
 
-<div id="classplan">
-    <br>    <br>
-    已提问:
-    <br>
-    <div id="onlesson-st-info2">
-        <ul id="quest2" ></ul>
-     </div> 
 
-    </div>
-</div> 
+
 
 <div id=clickpage style="display:none">
   <div id="topbarinside">

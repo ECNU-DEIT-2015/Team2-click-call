@@ -6,7 +6,11 @@ InputElement  useridinput1;//此变量用于用户名登陆
 InputElement  userpasswordinput1;
 InputElement questinput;
 UListElement quest;
-UListElement quest2;
+InputElement taskinput;
+UListElement tasktarget;
+UListElement taskshow;
+UListElement taskhard;
+UListElement taskother;
 var studentlist1= new List<String>();
 int teamnu1;
 String myid;//此变量用来存储登录成功后的学号后两位，以便在座位上显示；
@@ -82,6 +86,15 @@ main() async {
 questinput = querySelector('#questinput');
 quest = querySelector('#quest');
 questinput.onChange.listen(addquestitem);
+taskinput = querySelector('#taskinput');
+taskshow = querySelector('#taskshow');
+taskhard = querySelector('#taskhard');
+taskother = querySelector('#taskother');
+tasktarget = querySelector('#tasktarget');
+querySelector('#task1').onClick.listen(addtask1);
+querySelector('#task2').onClick.listen(addtask2);
+querySelector('#task3').onClick.listen(addtask3);
+querySelector('#task4').onClick.listen(addtask4);
 
 for(int i=1;i<21;i++){
        String stn=i.toString();
@@ -102,11 +115,40 @@ void addquestitem(Event e)
   quest.children.add(newquest); 
 }
 
-void movequest(Event e)
-{
-  var newquest = new LIElement();
-  newquest.text = questinput.value;
-  quest2.children.add(newquest);
+void addtask1(Event e)
+{ 
+  var newtask = new LIElement();
+  newtask.text = taskinput.value;
+  newtask.onClick.listen((e) => newtask.remove());  
+  taskinput.value='';
+  tasktarget.children.add(newtask); 
+}
+
+void addtask2(Event e)
+{ 
+  var newtask = new LIElement();
+  newtask.text = taskinput.value;
+  newtask.onClick.listen((e) => newtask.remove());  
+  taskinput.value='';
+  taskshow.children.add(newtask); 
+}
+
+void addtask3(Event e)
+{ 
+  var newtask = new LIElement();
+  newtask.text = taskinput.value;
+  newtask.onClick.listen((e) => newtask.remove());  
+  taskinput.value='';
+  taskhard.children.add(newtask); 
+}
+
+void addtask4(Event e)
+{ 
+  var newtask = new LIElement();
+  newtask.text = taskinput.value;
+  newtask.onClick.listen((e) => newtask.remove());  
+  taskinput.value='';
+  taskother.children.add(newtask); 
 }
 
 void seat1click(Event e){
