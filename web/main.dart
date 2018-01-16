@@ -26,6 +26,7 @@ var suc=document.getElementById("successlogin");
 var bef=document.getElementById("loginbe");
 var rdm=document.getElementById("clubrandompage");
 var click=document.getElementById("clickpage");
+var wait=document.getElementById("developwait");
 
 main() async {
 
@@ -63,7 +64,11 @@ main() async {
    ..id
    ..onClick.listen(onlyclickButton); 
 
-      querySelector("#delete")
+  querySelector("#help").onClick.listen(helpwaitbutton); 
+
+  querySelector("#advice").onClick.listen(advicewaitbutton);    
+
+  querySelector("#delete")
    ..onClick.listen(deleteelemnt);
   
   querySelector('#onlesson-call-char1').onClick.listen(seat1click);
@@ -461,6 +466,7 @@ void LoginButton(MouseEvent event){             //点击跳转到选课
     cd.style.display='none';
     de.style.display='none';
     click.style.display='none';
+    wait.style.display='none';
     document.getElementById("onlyrandompage").style.display='none';
     document.getElementById("kuang").style.display='none';     
 }
@@ -472,6 +478,7 @@ void LoginagainButton(MouseEvent event){              //重新登陆
     document.getElementById("userpassword").style.display='block';
     bef.style.display='block';
     click.style.display='none';
+    wait.style.display='none';
     document.getElementById("onlyrandompage").style.display='none';
     document.getElementById("kuang").style.display='none';    
 }
@@ -484,6 +491,7 @@ void ClassokButton(MouseEvent event){
     de.style.display='none';
     click.style.display='none';
     rdm.style.display='none';
+    wait.style.display='none';
     document.getElementById("onlyrandompage").style.display='none';
     document.getElementById("kuang").style.display='none';       
 }
@@ -495,6 +503,7 @@ void RandomclassButton(MouseEvent event){
     cd.style.display='none';
     de.style.display='block';
    click.style.display='none';
+   wait.style.display='none';
     document.getElementById("onlyrandompage").style.display='block';
     document.getElementById("kuang").style.display='block';   
 }
@@ -507,6 +516,7 @@ void onlyrandomButton(MouseEvent event){
     de.style.display='block';
     click.style.display='none';
     rdm.style.display='none';
+    wait.style.display='none';
     document.getElementById("onlyrandompage").style.display='none';
     document.getElementById("kuang").style.display='none';   
 }
@@ -519,10 +529,37 @@ void onlyclickButton(MouseEvent event){
     de.style.display='none';
    rdm.style.display='none';
    click.style.display='block';
+   wait.style.display='none';
     document.getElementById("onlyrandompage").style.display='none';
     document.getElementById("kuang").style.display='none';     
 }
 
+void advicewaitbutton(MouseEvent event){
+    ab.style.display='none';
+    abb.style.display='block';
+    bc.style.display='none';
+    cd.style.display='none';
+    de.style.display='none';
+   rdm.style.display='none';
+   click.style.display='none';
+   wait.style.display='block';
+    document.getElementById("onlyrandompage").style.display='none';
+    document.getElementById("kuang").style.display='none';     
+}
+
+void helpwaitbutton(MouseEvent event){
+    ab.style.display='none';
+    abb.style.display='block';
+    bc.style.display='none';
+    cd.style.display='none';
+    de.style.display='none';
+    rdm.style.display='none';
+    click.style.display='none';
+    wait.style.display='block';
+    document.getElementById("onlyrandompage").style.display='none';
+    document.getElementById("kuang").style.display='none';  
+
+}
 
  void deleteelemnt(Event event)
  {

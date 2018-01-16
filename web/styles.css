@@ -1054,6 +1054,16 @@ margin:10px 5px 10px 5px;
   box-shadow:5px 5px 5px rgba(119,151,178,0.36);
 }
 
-#developwait{
-  text-align:center;
+#waitbg{
+  float:left;
+  position:absolute;
+  margin-left:198px;
+  z-index: 5;
+}
+
+#develop{
+  position:absolute;
+  margin-left:529px;
+  margin-top:250px;  
+  z-index: 15;
 }
