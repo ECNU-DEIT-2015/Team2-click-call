@@ -4,6 +4,8 @@ import 'dart:html';
 import 'dart:math' as math;
 InputElement  useridinput1;//此变量用于用户名登陆
 InputElement  userpasswordinput1;
+InputElement questinput;
+UListElement quest;
 String myid;//此变量用来存储登录成功后的学号后两位，以便在座位上显示；
 var wordList;
 var ab=document.getElementById("startpage");
@@ -14,8 +16,6 @@ var de=document.getElementById("lessonpage");
 var suc=document.getElementById("successlogin");
 var bef=document.getElementById("loginbe");
 var rdm=document.getElementById("clubrandompage");
-InputElement questinput;
-UListElement quest;
 
 main() async {
 
@@ -41,7 +41,7 @@ main() async {
    ..id
    ..onClick.listen(RandomclassButton);
 
-querySelector("#recordclass")//左侧点击课堂纪录
+  querySelector("#recordclass")//左侧点击课堂纪录
    ..id
    ..onClick.listen(onlyrandomButton);
    
