@@ -4,8 +4,10 @@ import 'dart:html';
 import 'dart:math' as math;
 InputElement  useridinput1;//此变量用于用户名登陆
 InputElement  userpasswordinput1;
-InputElement questinput;
-UListElement quest;
+//InputElement questinput;
+//UListElement quest;
+var studentlist1= new List<String>();
+int teamnu1;
 String myid;//此变量用来存储登录成功后的学号后两位，以便在座位上显示；
 var wordList;
 var ab=document.getElementById("startpage");
@@ -74,18 +76,18 @@ main() async {
  querySelector('#ramdomJ').onClick.listen(randomPostRequestJ);//随机奇数点名事件
  querySelector('#ramdomO').onClick.listen(randomPostRequestO);//随机偶数点名事件
  querySelector('#makeT').onClick.listen(maketeamPostRequest);//随机分组事件
-questinput = querySelector('#questinput');
-quest = querySelector('#quest');
-questinput.onChange.listen(addquestitem);
+// questinput = querySelector('#questinput');
+//quest = querySelector('#quest');
+//questinput.onChange.listen(addquestitem);
 }
 
-void addquestitem(Event e)
-{
-  var newquest = new LIElement();
-  newquest.text = questinput.value;
-  questinput.value='';
-  quest.children.add(newquest);
-}
+//void addquestitem(Event e)
+//{
+  //var newquest = new LIElement();
+  //newquest.text = questinput.value;
+  //questinput.value='';
+  //quest.children.add(newquest);
+//}
 
 void seat1click(Event e){
   querySelector('#studentid1').text=myid;
@@ -324,11 +326,10 @@ Future randomPostRequestO(Event e) async {
 Future maketeamPostRequest(Event e) async { 
   String url = 'http://localhost:90/data/makeTeam';
   var randomnumber1= new List<int>();//存随机点名的学号后两位；
-  var studentlist1= new List<String>();
    randomnumber1.addAll([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]);
   String teamstudent;//将学号后两位转换为字符串；
   InputElement teamnu = querySelector('#teamnu input');
-  int teamnu1=int.parse(teamnu.value);//每组需要的人数，将字符串转换成数字；
+  teamnu1=int.parse(teamnu.value);//每组需要的人数，将字符串转换成数字；
   if(20 % teamnu1==0){
   int count=1;
   var flag=1;
@@ -346,9 +347,8 @@ Future maketeamPostRequest(Event e) async {
       teamstudent=currentnum.toString();
         HttpRequest.request(url, method: 'POST', sendData:teamstudent)
        .then((HttpRequest resp) {
-     //studentlist1.add(resp.responseText);//将点到的学生名单用列表表示出来;
-     if(1<teamnu1){querySelector("#namelist1").appendHtml('<li>' + resp.responseText + '</li>');}
-     //querySelector("#namelist1").appendHtml('<li>' + resp.responseText + '</li>');
+     studentlist1.add(resp.responseText);//将点到的学生名单用列表表示出来;
+     querySelector("#namelist1").appendHtml('<li>' + resp.responseText + '</li>');
        });
       count++;
    }  
@@ -374,8 +374,6 @@ void LoginagainButton(MouseEvent event){              //重新登陆
     document.getElementById("userid").style.display='block';
     document.getElementById("userpassword").style.display='block';
     bef.style.display='block';
-   // document.getElementById("userid").appendText(null);
-    //document.getElementById("userpassword").contentEditable.contains(null);
 }
 
 void ClassokButton(MouseEvent event){

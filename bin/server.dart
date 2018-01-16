@@ -50,7 +50,7 @@ Future<String> randomDataFromDB(String data) async{
        response =JSON.encode(["${row[0]}"]);
   });
       return response;
-}//随机点几个名部分连接数据
+}//随机点几个名部分连接数据库
 
 @app.Route("/data/randomj", methods: const [app.POST])
 randomjuser(@app.Body(app.TEXT) String userData) {
