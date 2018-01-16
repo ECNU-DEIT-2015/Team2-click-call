@@ -4,8 +4,9 @@ import 'dart:html';
 import 'dart:math' as math;
 InputElement  useridinput1;//此变量用于用户名登陆
 InputElement  userpasswordinput1;
-//InputElement questinput;
-//UListElement quest;
+InputElement questinput;
+UListElement quest;
+UListElement quest2;
 var studentlist1= new List<String>();
 int teamnu1;
 String myid;//此变量用来存储登录成功后的学号后两位，以便在座位上显示；
@@ -18,6 +19,7 @@ var de=document.getElementById("lessonpage");
 var suc=document.getElementById("successlogin");
 var bef=document.getElementById("loginbe");
 var rdm=document.getElementById("clubrandompage");
+var click=document.getElementById("clickpage");
 
 main() async {
 
@@ -47,6 +49,9 @@ main() async {
    ..id
    ..onClick.listen(onlyrandomButton);
    
+  querySelector("#startcall")//左侧点击开始签到
+   ..id
+   ..onClick.listen(onlyclickButton); 
 
    querySelector('#signup').onClick.listen(loginmakePostRequest);//点击signup跳转到登录部分的连接数据库
    wordList = querySelector('#test');
@@ -77,18 +82,26 @@ main() async {
  querySelector('#ramdomO').onClick.listen(randomPostRequestO);//随机偶数点名事件
  querySelector('#makeT').onClick.listen(maketeamPostRequest);//随机分组事件
 // for(int i=1;i<teamnu1;i++){querySelector("#namelist1").appendHtml('<li>' + studentlist1 + '</li>');}
-// questinput = querySelector('#questinput');
-//quest = querySelector('#quest');
-//questinput.onChange.listen(addquestitem);
+questinput = querySelector('#questinput');
+quest = querySelector('#quest');
+questinput.onChange.listen(addquestitem);
 }
 
-//void addquestitem(Event e)
-//{
-  //var newquest = new LIElement();
-  //newquest.text = questinput.value;
-  //questinput.value='';
-  //quest.children.add(newquest);
-//}
+void addquestitem(Event e)
+{
+  var newquest = new LIElement();
+  newquest.text = questinput.value;
+  newquest.onClick.listen((e) => newquest.remove());
+  questinput.value='';
+  quest.children.add(newquest); 
+}
+
+void movequest(Event e)
+{
+  var newquest = new LIElement();
+  newquest.text = questinput.value;
+  quest2.children.add(newquest);
+}
 
 void seat1click(Event e){
   querySelector('#studentid1').text=myid;
@@ -400,5 +413,16 @@ void onlyrandomButton(MouseEvent event){
     de.style.display='none';
     rdm.style.display='block';
 }
+
+void onlyclickButton(MouseEvent event){
+    ab.style.display='none';
+    abb.style.display='block';
+    bc.style.display='none';
+    cd.style.display='none';
+    de.style.display='none';
+   rdm.style.display='none';
+    click.style.display='block';
+}
+
 
 
