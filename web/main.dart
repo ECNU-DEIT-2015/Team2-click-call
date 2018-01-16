@@ -518,6 +518,8 @@ void onlyrandomButton(MouseEvent event){
     rdm.style.display='none';
     wait.style.display='none';
     document.getElementById("onlyrandompage").style.display='none';
+    document.getElementById("onlesson-st").style.display='block';
+    document.getElementById("classplan").style.display='block';
     document.getElementById("kuang").style.display='none';   
 }
 
