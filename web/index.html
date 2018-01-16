@@ -19,7 +19,7 @@
           <p id="registerbutton" type="button"><image src="images/register.png" width=97.2 height=34.2></image></p>
          </div>
 
-         <div id=login>
+         <div id=login style="display:none">
             <p id="loginbg"><image src="images/loginbg.png" width=241 height=387></image></p>
             <div id="startloginbutton" type="button" style="display:none">
               <image src="images/start.png" width=180 height=60></image>
@@ -286,10 +286,9 @@
 </div>
 </div> 
 
-
+<div id=kuang style="display:none">
 <div id=clubrandompage style="display:none">
     <select id="dian">
-        <option value="0">  </option>
         <option value="1">点名</option>
         <option value="2">分组</option>
     </select>
@@ -309,6 +308,8 @@
   <p id="teamnu"><input type="text" style="width:150px; height:18px;">输入每组的人数<br></p>
   <ul id="namelist1"></ul>
   </div>
+  <p id="logo2"><image src="images/logo.png" width=344 height=130></image></p>
+</div>
 
 <link rel="stylesheet" href="styles.css">
 <script defer src="main.dart" type="application/dart"></script>
@@ -328,9 +329,6 @@
                     if(this.value==2){
                            document.getElementById('onlyclubpage').style.display='block';
                            document.getElementById('onlyrandompage').style.display='none';}
-                       else if(this.value==0){
-                    document.getElementById('onlyclubpage').style.display='none';
-                    document.getElementById('onlyrandompage').style.display='none';}
                   }
              },false);
          }

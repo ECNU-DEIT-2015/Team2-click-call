@@ -27,7 +27,11 @@ var click=document.getElementById("clickpage");
 
 main() async {
 
-  querySelector("#loginbutton")//点击登录按钮，跳转到选课页面
+  querySelector("#loginbutton")//点击登录按钮，出现登陆页面
+   ..id
+   ..onClick.listen(StartLoginButton);
+
+   querySelector("#registerbutton")//点击免费注册按钮，跳转到选课页面
    ..id
    ..onClick.listen(LoginButton);
 
@@ -422,8 +426,11 @@ Future maketeamPostRequest(Event e) async {
     }
 }//随机分组部分,直接连接数据库
 
+void StartLoginButton(MouseEvent event){      //点击开始登陆
+    document.getElementById("login").style.display='block';
+}
 
-void LoginButton(MouseEvent event){
+void LoginButton(MouseEvent event){             //点击跳转到选课
     ab.style.display='none';
     abb.style.display='block';
     bc.style.display='block';
@@ -460,12 +467,14 @@ void RandomclassButton(MouseEvent event){
 }
 void onlyrandomButton(MouseEvent event){
     ab.style.display='none';
-    abb.style.display='none';
+    abb.style.display='block';
     bc.style.display='none';
     cd.style.display='none';
     de.style.display='none';
     rdm.style.display='block';
     click.style.display='none';
+    document.getElementById("onlyrandompage").style.display='block';
+    document.getElementById("kuang").style.display='block';
 }
 
 void onlyclickButton(MouseEvent event){
