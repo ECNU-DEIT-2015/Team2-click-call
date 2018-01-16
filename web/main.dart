@@ -62,6 +62,9 @@ main() async {
   querySelector("#startcall")//左侧点击开始签到
    ..id
    ..onClick.listen(onlyclickButton); 
+
+      querySelector("#delete")
+   ..onClick.listen(deleteelemnt);
   
   querySelector('#onlesson-call-char1').onClick.listen(seat1click);
   querySelector('#onlesson-call-char2').onClick.listen(seat2click);
@@ -308,6 +311,7 @@ Future randomPostRequest(Event e) async {
       var newnamelist=new LIElement();
       newnamelist.text=resp.responseText;
      studentlist.children.add(newnamelist);//将点到的学生名单用列表表示出来;
+     newnamelist.onClick.listen((e)=>newnamelist.remove());
        });
       count++;
    }  
@@ -349,6 +353,7 @@ Future randomPostRequestJ(Event e) async {
            var newnamelist=new LIElement();
             newnamelist.text=resp.responseText;
             jstudentlist.children.add(newnamelist);//将点到的学生名单用列表表示出来;
+            newnamelist.onClick.listen((e)=>newnamelist.remove());
            });
             countj++;
          }  
@@ -390,6 +395,7 @@ Future randomPostRequestO(Event e) async {
            var newnamelist=new LIElement();
             newnamelist.text=resp.responseText;
             ostudentlist.children.add(newnamelist);//将点到的学生名单用列表表示出来;
+            newnamelist.onClick.listen((e)=>newnamelist.remove());
            });
             counto++;
          }  
@@ -505,5 +511,12 @@ void onlyclickButton(MouseEvent event){
     click.style.display='block';
 }
 
+
+ void deleteelemnt(Event event)
+ {
+   UListElement studentlist;
+   studentlist=querySelector("#namelist");
+  studentlist.children.clear(); 
+ }
 
 
