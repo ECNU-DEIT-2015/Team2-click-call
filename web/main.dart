@@ -14,6 +14,8 @@ var de=document.getElementById("lessonpage");
 var suc=document.getElementById("successlogin");
 var bef=document.getElementById("loginbe");
 var rdm=document.getElementById("clubrandompage");
+InputElement questinput;
+UListElement quest;
 
 main() async {
 
@@ -72,9 +74,18 @@ querySelector("#recordclass")//左侧点击课堂纪录
  querySelector('#ramdomJ').onClick.listen(randomPostRequestJ);//随机奇数点名事件
 //  querySelector('#ramdomO').onClick.listen(randomPostRequestO);//随机偶数点名事件
  querySelector('#makeT').onClick.listen(maketeamPostRequest);//随机分组事件
+questinput = querySelector('#questinput');
+quest = querySelector('#quest');
+questinput.onChange.listen(addquestitem);
 }
 
-
+void addquestitem(Event e)
+{
+  var newquest = new LIElement();
+  newquest.text = questinput.value;
+  questinput.value='';
+  quest.children.add(newquest);
+}
 
 void seat1click(Event e){
   querySelector('#studentid1').text=myid;
