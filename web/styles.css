@@ -984,4 +984,7 @@ margin:10px 5px 10px 5px;
    z-index: 4;
    background-color: rgb(249, 249, 250);
   }
+  #subtitle-info{
+    line-height: 30px;
+  }
  

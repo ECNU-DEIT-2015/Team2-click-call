@@ -4,6 +4,7 @@ import 'dart:html';
 import 'dart:math' as math;
 InputElement  useridinput1;//此变量用于用户名登陆
 InputElement  userpasswordinput1;
+InputElement newclass;
 InputElement questinput;
 UListElement quest;
 InputElement taskinput;
@@ -11,6 +12,7 @@ UListElement tasktarget;
 UListElement taskshow;
 UListElement taskhard;
 UListElement taskother;
+UListElement newclasses;
 var studentlist1= new List<String>();
 int teamnu1;
 String myid;//此变量用来存储登录成功后的学号后两位，以便在座位上显示；
@@ -87,14 +89,19 @@ main() async {
  querySelector('#ramdomO').onClick.listen(randomPostRequestO);//随机偶数点名事件
  querySelector('#makeT').onClick.listen(maketeamPostRequest);//随机分组事件
 // for(int i=1;i<teamnu1;i++){querySelector("#namelist1").appendHtml('<li>' + studentlist1 + '</li>');}
+ querySelector('#signup').onClick.listen(loginmakePostRequest);//登录事件
 questinput = querySelector('#questinput');
 quest = querySelector('#quest');
+newclass = querySelector('#classinput');
 questinput.onChange.listen(addquestitem);
+newclass.onChange.listen(classmakePostRequest);
 taskinput = querySelector('#taskinput');
 taskshow = querySelector('#taskshow');
 taskhard = querySelector('#taskhard');
 taskother = querySelector('#taskother');
 tasktarget = querySelector('#tasktarget');
+newclasses= querySelector('#classnew');
+
 querySelector('#task1').onClick.listen(addtask1);
 querySelector('#task2').onClick.listen(addtask2);
 querySelector('#task3').onClick.listen(addtask3);
@@ -425,6 +432,17 @@ Future maketeamPostRequest(Event e) async {
  querySelector('#test2').text ="无法分成均匀的小组，请重新输入小组的人数"; //当不能分成均匀小组时
     }
 }//随机分组部分,直接连接数据库
+
+Future classmakePostRequest(Event e) async {
+    String url = 'http://localhost:90/data/newclass'; 
+    String newclass1=newclass.value;
+    var newclass2 = new LIElement();
+    newclass2.text = newclass.value;
+    newclasses.children.add(newclass2); 
+   HttpRequest.request(url, method: 'POST', sendData:newclass1)
+       .then((HttpRequest resp) {
+       });
+     }//新增课程部分的连接数据库
 
 void StartLoginButton(MouseEvent event){      //点击开始登陆
     document.getElementById("login").style.display='block';

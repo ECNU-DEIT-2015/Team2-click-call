@@ -26,11 +26,9 @@ Future<String> logingetDataFromDB(String data) async{
       var results = await pool.query('select userid,password from user where useridpassword='+data);
       String response;
        await results.forEach((row) { 
-     // response =JSON.encode(["${row[0]}"]);
     if((row[0]+row[1])==data){response="1";}//判断账号密码是否正确
   });
       return response;
-     // return '''["林凌","刘冠群","汤夏颖"]''';
 }//登录部分连接数据库
 
 @app.Route("/data/random", methods: const [app.POST])
@@ -129,6 +127,26 @@ Future<String> stinfoDataFromDB(String data) async{
   });
       return response;
 }//显示学生信息，连接数据库部分
+
+@app.Route("/data/newclass", methods: const [app.POST])
+newclassuser(@app.Body(app.TEXT) String userData) {
+  String data = userData;
+  return stinfoDataFromDB(data);
+}
+
+Future<String> newclassDataFromDB(String data) async{
+  var pool = new ConnectionPool(
+      host: 'www.muedu.org',port: 3306,
+      user: 'deit-2015',password: 'deit@2015!',
+      db: 'project_2015_2',max:5);
+      var results = await pool.query('insert into lesson(lessonname) values('+data+')');
+      String response;
+       await results.forEach((row) { 
+        response="     "+row[0]+"     "+row[1];
+      // response =JSON.encode(["${row[0]}"]);
+  });
+      return response;
+}//增加课程，连接数据库部分
 
 
 @app.Route("/register/")

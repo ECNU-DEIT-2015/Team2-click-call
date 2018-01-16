@@ -136,7 +136,24 @@
  </div>
 
  <div id="studentinfo">
-   <p id=subtitle>学生信息</p>
+   <p id=subtitle>所选课程</p>
+   <div> <input id="classinput" 
+    type="text" 
+    size="80" 
+    style="height:30px"
+    placeholder=请在此处输入将新增的课程，回车键确认>
+   </div>
+<ul id="classnew" >
+  已选课程
+  <br><br>
+  网络教育应用
+  <br><br>
+  教育学原理
+  <br><br>
+  虚拟现实
+</ul>
+</div> 
+
    </div>
  </div>
 </div>
@@ -338,7 +355,7 @@
             document.getElementById("subtitle-info").innerHTML="web网络教育应用是一名很好的课哦";
            }else {
              if(this.value==2){
-              document.getElementById("subtitle-info").innerHTML="教育学是一名很好的课哦";}
+              document.getElementById("subtitle-info").innerHTML="教育学是研究人类教育现象和解决教育问题、揭示一般教育规律的一门社会科学。教育是广泛存在于人类生活中的社会现象，教育学是有目的地培养社会人的活动。它是通过对各种教育现象和问题的研究揭示教育的一般规律。";}
                 else {if(this.value==3)document.getElementById("subtitle-info").innerHTML="软件工程是一名很好的课哦";
                   else if(this.value==0){
                   document.getElementById("subtitle-info").innerHTML="查看课程介绍吧";}
