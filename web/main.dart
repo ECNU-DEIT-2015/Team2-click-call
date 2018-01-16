@@ -380,6 +380,7 @@ void LoginButton(MouseEvent event){
     bc.style.display='block';
     cd.style.display='none';
     de.style.display='none';
+    click.style.display='none';
 }
 
 void LoginagainButton(MouseEvent event){              //重新登陆
@@ -388,6 +389,7 @@ void LoginagainButton(MouseEvent event){              //重新登陆
     document.getElementById("userid").style.display='block';
     document.getElementById("userpassword").style.display='block';
     bef.style.display='block';
+    click.style.display='none';
 }
 
 void ClassokButton(MouseEvent event){
@@ -396,6 +398,7 @@ void ClassokButton(MouseEvent event){
     bc.style.display='none';
     cd.style.display='block';
     de.style.display='none';
+    click.style.display='none';
 }
 
 void RandomclassButton(MouseEvent event){
@@ -404,6 +407,7 @@ void RandomclassButton(MouseEvent event){
     bc.style.display='none';
     cd.style.display='none';
     de.style.display='block';
+   click.style.display='none';
 }
 void onlyrandomButton(MouseEvent event){
     ab.style.display='none';
@@ -412,6 +416,7 @@ void onlyrandomButton(MouseEvent event){
     cd.style.display='none';
     de.style.display='none';
     rdm.style.display='block';
+    click.style.display='none';
 }
 
 void onlyclickButton(MouseEvent event){
