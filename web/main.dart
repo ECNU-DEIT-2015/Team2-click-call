@@ -52,10 +52,7 @@ main() async {
   querySelector("#startcall")//左侧点击开始签到
    ..id
    ..onClick.listen(onlyclickButton); 
-
-   querySelector('#signup').onClick.listen(loginmakePostRequest);//点击signup跳转到登录部分的连接数据库
-   wordList = querySelector('#test');
-
+  
   querySelector('#onlesson-call-char1').onClick.listen(seat1click);
   querySelector('#onlesson-call-char2').onClick.listen(seat2click);
   querySelector('#onlesson-call-char3').onClick.listen(seat3click);
@@ -373,6 +370,7 @@ Future maketeamPostRequest(Event e) async {
  querySelector('#test2').text ="无法分成均匀的小组，请重新输入小组的人数"; //当不能分成均匀小组时
     }
 }//随机分组部分,直接连接数据库
+
 
 void LoginButton(MouseEvent event){
     ab.style.display='none';

@@ -113,11 +113,12 @@
    <div>您一共参加了3门课程</div>
    <br>
    <div id="topbarinside-class">
-      <select>
-           <option>web网络教育应用</option>
-           <option>教育学</option>
-           <option>虚拟现实</option>
-       </select>
+      <select id="dian2">
+          <option value='0'></option>
+          <option value="1">web网络教育应用</option>
+          <option value="2">教育学</option>
+          <option value="3">虚拟现实</option>
+      </select>
      </div>   
 </div>
  <div id="classchoosed">
@@ -126,6 +127,7 @@
  </div>
  <div id="classinfo">
     <p id=subtitle>课程概况</p>  
+    <p id=subtitle-info>课程概况</p> 
  </div>
 
  <div id="studentinfo">
@@ -134,10 +136,6 @@
    </div>
  </div>
 </div>
-
-
-
-
 
 <div id=lessonpage style="display:none">
   <div id="topbarinside">
@@ -186,10 +184,10 @@
      <br>
      <div id="topbarinside-class">
         <select>
-             <option>web网络教育应用</option>
-             <option>教育学</option>
-             <option>虚拟现实</option>
-         </select>
+            <option>web网络教育应用</option>
+            <option>教育学</option>
+            <option>虚拟现实</option>
+        </select>
        </div>
   </div>
 <div id="onlesson-call" >
@@ -311,4 +309,19 @@
                   }
              },false);
          }
+             
+   document.getElementById('dian2').addEventListener('change',function(){        
+          if(this.value==1){
+            document.getElementById("subtitle-info").innerHTML="web网络教育应用是一名很好的课哦";
+           }else {
+             if(this.value==2){
+              document.getElementById("subtitle-info").innerHTML="教育学是一名很好的课哦";}
+                else {if(this.value==3)document.getElementById("subtitle-info").innerHTML="软件工程是一名很好的课哦";
+                  else if(this.value==0){
+                  document.getElementById("subtitle-info").innerHTML="软件工程是一名很好的课哦";}
+                  }
+           }
+      },false);
  </script>
+
+
