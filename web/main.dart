@@ -72,7 +72,7 @@ main() async {
 
  querySelector('#ramdomD').onClick.listen(randomPostRequest);//随机点名事件
  querySelector('#ramdomJ').onClick.listen(randomPostRequestJ);//随机奇数点名事件
-//  querySelector('#ramdomO').onClick.listen(randomPostRequestO);//随机偶数点名事件
+ querySelector('#ramdomO').onClick.listen(randomPostRequestO);//随机偶数点名事件
  querySelector('#makeT').onClick.listen(maketeamPostRequest);//随机分组事件
 questinput = querySelector('#questinput');
 quest = querySelector('#quest');
@@ -346,7 +346,7 @@ Future maketeamPostRequest(Event e) async {
       teamstudent=currentnum.toString();
         HttpRequest.request(url, method: 'POST', sendData:teamstudent)
        .then((HttpRequest resp) {
-    // studentlist1.add(resp.responseText);//将点到的学生名单用列表表示出来;
+     //studentlist1.add(resp.responseText);//将点到的学生名单用列表表示出来;
      if(1<teamnu1){querySelector("#namelist1").appendHtml('<li>' + resp.responseText + '</li>');}
      //querySelector("#namelist1").appendHtml('<li>' + resp.responseText + '</li>');
        });
