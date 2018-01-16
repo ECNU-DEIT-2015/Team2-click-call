@@ -74,6 +74,8 @@ querySelector("#recordclass")//左侧点击课堂纪录
  querySelector('#makeT').onClick.listen(maketeamPostRequest);//随机分组事件
 }
 
+
+
 void seat1click(Event e){
   querySelector('#studentid1').text=myid;
 }
@@ -311,8 +313,9 @@ Future randomPostRequestO(Event e) async {
 Future maketeamPostRequest(Event e) async { 
   String url = 'http://localhost:90/data/makeTeam';
   var randomnumber1= new List<int>();//存随机点名的学号后两位；
-  UListElement studentlist1;//用来存每组学生
-  studentlist1=querySelector("#namelist1");
+  var studentlist1= new List<String>();
+  //UListElement studentlist1;//用来存每组学生
+  //studentlist1=querySelector("#namelist1");
   randomnumber1.addAll([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]);
   String teamstudent;//将学号后两位转换为字符串；
   InputElement teamnu = querySelector('#teamnu input');
@@ -339,9 +342,10 @@ Future maketeamPostRequest(Event e) async {
       teamstudent=currentnum.toString();
         HttpRequest.request(url, method: 'POST', sendData:teamstudent)
        .then((HttpRequest resp) {
-      var newnamelist=new LIElement();
-      newnamelist.text=resp.responseText;
-     studentlist1.children.add(newnamelist);//将点到的学生名单用列表表示出来;
+     studentlist1.add(resp.responseText);//将点到的学生名单用列表表示出来;
+     if(count % teamnu1==0){querySelector("#namelist1").appendHtml('<li>第一组</li>');
+                            querySelector("#namelist1").appendHtml('<li>' + resp.responseText + '</li>');}
+     else { querySelector("#namelist1").appendHtml('<li>' + resp.responseText + '</li>');}
        });
       count++;
    }  
