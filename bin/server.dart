@@ -110,6 +110,27 @@ Future<String> teamDataFromDB(String data) async{
       return response;
 }//随堂分组连接数据库部分
 
+@app.Route("/data/stinfo", methods: const [app.POST])
+stinfouser(@app.Body(app.TEXT) String userData) {
+  String data = userData;
+  return stinfoDataFromDB(data);
+}
+
+Future<String> stinfoDataFromDB(String data) async{
+  var pool = new ConnectionPool(
+      host: 'www.muedu.org',port: 3306,
+      user: 'deit-2015',password: 'deit@2015!',
+      db: 'project_2015_2',max:5);
+      var results = await pool.query('select stuname,studentid from student where studentnum='+data);
+      String response;
+       await results.forEach((row) { 
+        response="     "+row[0]+"     "+row[1];
+      // response =JSON.encode(["${row[0]}"]);
+  });
+      return response;
+}//显示学生信息，连接数据库部分
+
+
 @app.Route("/register/")
 register() => "you can now a number";
 

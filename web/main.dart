@@ -82,6 +82,15 @@ main() async {
 questinput = querySelector('#questinput');
 quest = querySelector('#quest');
 questinput.onChange.listen(addquestitem);
+
+for(int i=1;i<21;i++){
+       String stn=i.toString();
+       String url = 'http://localhost:90/data/stinfo';
+       HttpRequest.request(url, method: 'POST', sendData:stn)
+       .then((HttpRequest resp) {
+      querySelector("#stinfo").appendHtml('<tr>'+resp.responseText+'</tr>');
+       });
+       }//dart语言控制HTML里面表格，自动显示数据库中学生学号与姓名，不需要单个在HTML里面写；
 }
 
 void addquestitem(Event e)
