@@ -346,8 +346,8 @@ Future maketeamPostRequest(Event e) async {
       teamstudent=currentnum.toString();
         HttpRequest.request(url, method: 'POST', sendData:teamstudent)
        .then((HttpRequest resp) {
-     //studentlist1.add(resp.responseText);//将点到的学生名单用列表表示出来;
-     if(count<teamnu1){querySelector("#namelist1").appendHtml('<li>' + resp.responseText + '</li>');}
+    // studentlist1.add(resp.responseText);//将点到的学生名单用列表表示出来;
+     if(1<teamnu1){querySelector("#namelist1").appendHtml('<li>' + resp.responseText + '</li>');}
      //querySelector("#namelist1").appendHtml('<li>' + resp.responseText + '</li>');
        });
       count++;
