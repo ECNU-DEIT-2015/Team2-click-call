@@ -502,6 +502,8 @@ void RandomclassButton(MouseEvent event){
     de.style.display='block';
    click.style.display='none';
    wait.style.display='none';
+   document.getElementById("classplan").style.display='none';
+   document.getElementById("onlesson-st").style.display='none';
     document.getElementById("onlyrandompage").style.display='block';
     document.getElementById("kuang").style.display='block';   
 }
