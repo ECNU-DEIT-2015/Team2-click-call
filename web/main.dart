@@ -508,6 +508,7 @@ void RandomclassButton(MouseEvent event){
     document.getElementById("kuang").style.display='block';   
 }
 
+
 void onlyrandomButton(MouseEvent event){
     ab.style.display='none';
     abb.style.display='block';
@@ -518,8 +519,6 @@ void onlyrandomButton(MouseEvent event){
     rdm.style.display='none';
     wait.style.display='none';
     document.getElementById("onlyrandompage").style.display='none';
-    document.getElementById("onlesson-st").style.display='block';
-    document.getElementById("classplan").style.display='block';
     document.getElementById("kuang").style.display='none';   
 }
 
@@ -560,7 +559,6 @@ void helpwaitbutton(MouseEvent event){
     wait.style.display='block';
     document.getElementById("onlyrandompage").style.display='none';
     document.getElementById("kuang").style.display='none';  
-
 }
 
  void deleteelemnt(Event event)
