@@ -325,13 +325,14 @@ Future maketeamPostRequest(Event e) async {
   String url = 'http://localhost:90/data/makeTeam';
   var randomnumber1= new List<int>();//存随机点名的学号后两位；
   var studentlist1= new List<String>();
+   randomnumber1.addAll([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]);
   String teamstudent;//将学号后两位转换为字符串；
   InputElement teamnu = querySelector('#teamnu input');
   int teamnu1=int.parse(teamnu.value);//每组需要的人数，将字符串转换成数字；
   if(20 % teamnu1==0){
   int count=1;
   var flag=1;
-    while(count<=20){
+    while(count<20){
       int currentnum=new math.Random().nextInt(20);
       flag=1;
       for(int i=1;i<20;i++)
@@ -345,17 +346,13 @@ Future maketeamPostRequest(Event e) async {
       teamstudent=currentnum.toString();
         HttpRequest.request(url, method: 'POST', sendData:teamstudent)
        .then((HttpRequest resp) {
-     studentlist1.add(resp.responseText);//将点到的学生名单用列表表示出来;
+     //studentlist1.add(resp.responseText);//将点到的学生名单用列表表示出来;
+     if(count<teamnu1){querySelector("#namelist1").appendHtml('<li>' + resp.responseText + '</li>');}
+     //querySelector("#namelist1").appendHtml('<li>' + resp.responseText + '</li>');
        });
       count++;
    }  
-  } 
-  for(int j=1;j<20;j++){
-    if(j % teamnu1==0){querySelector("#namelist1").appendHtml('<li>'+'第'+(j / teamnu1).toString()+'组'+'</li>');
-                       querySelector("#namelist1").appendHtml('<li>' + studentlist1[j] + '</li>');}
-     else { querySelector("#namelist1").appendHtml('<li>' + studentlist1[j] + '</li>');}
   }
-   
     //执行随堂分组
   }
  else {
