@@ -76,6 +76,7 @@ main() async {
  querySelector('#ramdomJ').onClick.listen(randomPostRequestJ);//随机奇数点名事件
  querySelector('#ramdomO').onClick.listen(randomPostRequestO);//随机偶数点名事件
  querySelector('#makeT').onClick.listen(maketeamPostRequest);//随机分组事件
+// for(int i=1;i<teamnu1;i++){querySelector("#namelist1").appendHtml('<li>' + studentlist1 + '</li>');}
 // questinput = querySelector('#questinput');
 //quest = querySelector('#quest');
 //questinput.onChange.listen(addquestitem);
