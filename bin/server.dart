@@ -50,10 +50,7 @@ Future<String> randomDataFromDB(String data) async{
        response =JSON.encode(["${row[0]}"]);
   });
       return response;
-}//随机点几个名部分连接数据库
-
-
-
+}//随机点几个名部分连接数据
 
 @app.Route("/data/randomj", methods: const [app.POST])
 randomjuser(@app.Body(app.TEXT) String userData) {
@@ -116,31 +113,31 @@ Future<String> teamDataFromDB(String data) async{
 @app.Route("/register/")
 register() => "you can now a number";
 
-@WebSocketHandler("/ws")
-class ServerEndPoint {
+//@WebSocketHandler("/ws")
+//class ServerEndPoint {
 
-  @OnOpen()
-  void onOpen(WebSocketSession session) {
-    print("connection established");
-  }
+ // @OnOpen()
+  //void onOpen(WebSocketSession session) {
+   // print("connection established");
+  //}
 
-  @OnMessage()
-  void onMessage(String message, WebSocketSession session) {
-    print("message received: $message");
-    session.connection.add("echo $message");
-  }
+  //@OnMessage()
+  //void onMessage(String message, WebSocketSession session) {
+   // print("message received: $message");
+   // session.connection.add("echo $message");
+  //}
 
-  @OnError()
-  void onError(error, WebSocketSession session) {
-    print("error: $error");
-  }
+ // @OnError()
+  //void onError(error, WebSocketSession session) {
+  //  print("error: $error");
+  //}
 
-  @OnClose()
-  void onClose(WebSocketSession session) {
-    print("connection closed");
-  }
+  //@OnClose()
+ // void onClose(WebSocketSession session) {
+   // print("connection closed");
+  //}
 
-}
+//}
 
 main() {
    Map corsHeaders1 = {
