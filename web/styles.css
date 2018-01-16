@@ -197,7 +197,7 @@ li{margin:10px 0px;}
   position:absolute;
   background-color:#ffffff;
   height:540px;
-  width:1000px;  
+  width:400px;  
   margin-top:110px;
   margin-left:230px;
   box-shadow:5px 5px 5px rgba(119,151,178,0.36);
@@ -324,7 +324,7 @@ li{margin:10px 0px;}
 #onlesson-call-text{
   float:left;
   position:absolute; 
-  margin-top:150px; 
+  margin-top:120px; 
   margin-left:30px;
 }
 #onlesson-call-char1{
@@ -333,7 +333,7 @@ li{margin:10px 0px;}
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
-  margin-top:210px;
+  margin-top:170px;
   margin-left: 30px;
 }
 #studentid1{
@@ -351,7 +351,7 @@ li{margin:10px 0px;}
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
-  margin-top:210px;
+  margin-top:170px;
   margin-left: 124px;
 }
 #studentid2{
@@ -369,7 +369,7 @@ li{margin:10px 0px;}
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
-  margin-top:210px;
+  margin-top:170px;
   margin-left:214px;
 }
 #studentid3{
@@ -387,7 +387,7 @@ li{margin:10px 0px;}
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
-  margin-top:210px;
+  margin-top:170px;
   margin-left: 306px;
 }
 #studentid4{
@@ -405,7 +405,7 @@ li{margin:10px 0px;}
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
-  margin-top:270px;
+  margin-top:230px;
   margin-left: 30px;
 }
 #studentid5{
@@ -423,7 +423,7 @@ li{margin:10px 0px;}
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
-  margin-top:270px;
+  margin-top:230px;
   margin-left: 124px;
 }
 #studentid6{
@@ -441,7 +441,7 @@ li{margin:10px 0px;}
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
-  margin-top:270px;
+  margin-top:230px;
   margin-left:214px;
 }
 #studentid7{
@@ -459,7 +459,7 @@ li{margin:10px 0px;}
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
-  margin-top:270px;
+  margin-top:230px;
   margin-left: 306px;
 }
 #studentid8{
@@ -477,7 +477,7 @@ li{margin:10px 0px;}
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
-  margin-top:330px;
+  margin-top:290px;
   margin-left: 30px;
 }
 #studentid9{
@@ -495,7 +495,7 @@ li{margin:10px 0px;}
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
-  margin-top:330px;
+  margin-top:290px;
   margin-left: 124px;
 }
 #studentid10{
@@ -513,7 +513,7 @@ li{margin:10px 0px;}
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
-  margin-top:330px;
+  margin-top:290px;
   margin-left:214px;
 }
 #studentid11{
@@ -531,7 +531,7 @@ li{margin:10px 0px;}
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
-  margin-top:330px;
+  margin-top:290px;
   margin-left: 306px;
 }
 #studentid12{
@@ -549,7 +549,7 @@ li{margin:10px 0px;}
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
-  margin-top:390px;
+  margin-top:350px;
   margin-left: 30px;
 }
 #studentid13{
@@ -567,7 +567,7 @@ li{margin:10px 0px;}
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
-  margin-top:390px;
+  margin-top:350px;
   margin-left: 124px;
 }
 #studentid14{
@@ -585,7 +585,7 @@ li{margin:10px 0px;}
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
-  margin-top:390px;
+  margin-top:350px;
   margin-left:214px;
 }
 #studentid15{
@@ -603,7 +603,7 @@ li{margin:10px 0px;}
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
-  margin-top:390px;
+  margin-top:350px;
   margin-left: 306px;
 }
 #studentid16{
@@ -621,7 +621,7 @@ li{margin:10px 0px;}
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
-  margin-top:450px;
+  margin-top:410px;
   margin-left: 30px;
 }
 #studentid17{
@@ -639,7 +639,7 @@ li{margin:10px 0px;}
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
-  margin-top:450px;
+  margin-top:410px;
   margin-left: 124px;
 }
 #studentid18{
@@ -657,7 +657,7 @@ li{margin:10px 0px;}
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
-  margin-top:450px;
+  margin-top:410px;
   margin-left:214px;
 }
 #studentid19{
@@ -675,7 +675,7 @@ li{margin:10px 0px;}
   background-color:#EEEBEB;
   height:35px;
   width:70px;  
-  margin-top:450px;
+  margin-top:410px;
   margin-left: 306px;
 }
 #studentid20{
@@ -822,19 +822,16 @@ li{margin:10px 0px;}
   text-align:center;
   left: 0px;
   margin-top: 30px;
-  opacity:0.7;
 }
 #help{
   text-align:center;
   left: 0px;
   margin-top: 30px;
-  opacity:0.7;
 }
 #advice{
   text-align:center;
   left: 0px;
   margin-top: 30px;
-  opacity:0.7;
 
 }
 #topbarinside{
@@ -995,3 +992,68 @@ margin:10px 5px 10px 5px;
     top: 540px;
     z-index: 9;
   }
+
+  #taskchoose{
+    font-size: 10px;
+    text-align:center;
+  }
+ 
+  #taskhard li:hover {
+    color: red;
+    font-size: 18px;
+    cursor:pointer;
+  }
+  
+  #tasktarget li:hover {
+    color: red;
+    font-size: 18px;
+    cursor:pointer;
+  }
+  
+  #taskother li:hover {
+    color: red;
+    font-size: 18px;
+    cursor:pointer;
+  }
+  
+  #taskshow li:hover {
+    color: red;
+    font-size: 18px;
+    cursor:pointer;
+  }  
+
+
+#classplanin{
+  margin:20px;
+}
+
+
+#classplanbg{
+  float:left;
+  position:absolute;
+  background-color:#EEEBEB;
+  height:375px;
+  width:250px;  
+  margin-top:10px;
+  padding-left:15px;
+  padding-top:15px;
+  text-align:left;
+  overflow-y:scroll; 
+}
+
+#cameratry{
+  float:left;
+  position:absolute;
+  background-color:#ffffff;
+  height:525px;
+  width:600px;  
+  margin-top:110px;
+  margin-left:660px;
+  padding-left:15px;
+  padding-top:15px;
+  box-shadow:5px 5px 5px rgba(119,151,178,0.36);
+}
+
+#developwait{
+  text-align:center;
+}

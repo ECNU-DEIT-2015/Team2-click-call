@@ -52,53 +52,53 @@
   <p id="userphoto"><image src="images/photo.png" width=43 height=43></image></p>
   <p id="usernameshow"style="font-family:arial;color:white;font-size:14px;">姓名：游客</p>
   <p id="useridshow"style="font-family:arial;color:white;font-size:14px;">学号：00000000</p>
-  <p id="startcall"><image src="images/startcall.png" width=171 height=59.4></image></p>
+  <p id="startcall" type="button" a href="" class="avatar"><image src="images/startcall.png" width=171 height=59.4></image></p>
 
   <p id="myclass" type="button" a href="" class="avatar"><image src="images/我的课程.png" width=106 height=20></image></p>
-  <p id="randomclass"  type="button" a href="" class="avatar"><image src="images/随机点名.png" width=106 height=20></image></p>
-  <p id="recordclass"><a><image src="images/课堂记录.png" width=106 height=20></image></a></p>
-  <p id="help"><a><image src="images/使用帮助.png" width=106 height=22></image></a></p>
-  <p id="advice"><a><image src="images/意见反馈.png" width=106 height=15></image></a></p>
+  <p id="randomclass" type="button" a href="" class="avatar" ><image src="images/随机点名.png" width=106 height=20></image></p>
+  <p id="recordclass" type="button" a href="" class="avatar"><image src="images/课堂记录.png" width=106 height=20></image></p>
+  <p id="help" type="button" a href="" class="avatar"><image src="images/使用帮助.png" width=106 height=22></image></p>
+  <p id="advice" type="button" a href="" class="avatar"><image src="images/意见反馈.png" width=106 height=15></image></p>
 </div>
-
+<div id= "developwait"><image src="images/意见反馈.png" width=106 height=15></image></div>
 <div id=choosepage style="display:none">
        <div id="topbarinside">
           <br>
           <p id="xiaotip"style="font-family:arial;color:black;font-size:14px;">您还没有选择课程，请现在下方勾选参加的课程</p>
          </div>
          <div id="classchoosing">
-           <p id=subtitle>选择课程</p>
-          <div class="img">
-           <a target="_blank">
-           <img src="images/lessonphoto1.png" alt="Ballade" width="225" height="130">
-           </a>
-          <div class="desc"><input type="radio" name="classid"  checked>web网络教育应用</div>
-          </div>
-         
-          <div class="img">
-            <a target="_blank" >
-             <img src="images/lessonphoto2.png" alt="Ballade" width="225" height="130">
-            </a>
-            <div class="desc"><input type="radio" name="classid" checked>单片机</div>
-          </div>
-         
-          <div class="img">
-            <a target="_blank" >
-             <img src="images/lessonphoto3.png" alt="Ballade" width="225" height="130">
-            </a>
-            <div class="desc"><input type="radio" name="classid" checked>英语听说（高级）</div>
-          </div>
-         
-          <div class="img">
-            <a target="_blank" >
-             <img src="images/lessonphoto4.png" alt="Ballade" width="225" height="130">
-            </a>
-            <div class="desc"><input type="radio" name="classid" checked>教育学</div>
-          </div>
-         
-          <p id="classok" a href="" class="avatar"><image src="images/确认.png" width=70 height=35></image></p>
-          <p id="classcancel" a href="" class="avatar"><image src="images/取消.png" width=70 height=35></image></p>
+          <p id=subtitle>选择课程</p>
+         <div class="img">
+          <a target="_blank">
+          <img src="images/lessonphoto1.png" alt="Ballade" width="225" height="130">
+          </a>
+         <div class="desc"><input type="checkbox" name="classid" >web网络教育应用</div>
          </div>
+        
+         <div class="img">
+           <a target="_blank" >
+            <img src="images/lessonphoto2.png" alt="Ballade" width="225" height="130">
+           </a>
+           <div class="desc"><input type="checkbox" name="classid" >虚拟现实</div>
+         </div>
+        
+         <div class="img">
+           <a target="_blank" >
+            <img src="images/lessonphoto3.png" alt="Ballade" width="225" height="130">
+           </a>
+           <div class="desc"><input type="checkbox" name="classid" >英语听说（高级）</div>
+         </div>
+        
+         <div class="img">
+           <a target="_blank" >
+            <img src="images/lessonphoto4.png" alt="Ballade" width="225" height="130">
+           </a>
+           <div class="desc"><input type="checkbox" name="classid">教育学</div>
+         </div>
+        
+         <p id="classok" a href="" class="avatar"><image src="images/确认.png" width=70 height=35></image></p>
+         <p id="classcancel" a href="" class="avatar"><image src="images/取消.png" width=70 height=35></image></p>
+        </div>
 </div>
 
 
@@ -301,6 +301,13 @@
 </div>
 <div id="onlesson-call-outclass"><image src="images/offclass.png" width=100 height=50></image></div>
 </div>
+ <div id=cameratry>
+  <br>
+  打开摄像头
+  <button id="snap">Snap Photo</button>
+  <video id="video" width="640" height="480" autoplay></video>
+  <canvas id="canvas" width="640" height="480"></canvas>
+ </div>
 </div> 
 
 <div id=kuang style="display:none">

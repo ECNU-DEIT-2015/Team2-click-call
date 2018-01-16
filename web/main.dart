@@ -461,6 +461,8 @@ void LoginButton(MouseEvent event){             //点击跳转到选课
     cd.style.display='none';
     de.style.display='none';
     click.style.display='none';
+    document.getElementById("onlyrandompage").style.display='none';
+    document.getElementById("kuang").style.display='none';     
 }
 
 void LoginagainButton(MouseEvent event){              //重新登陆
@@ -470,6 +472,8 @@ void LoginagainButton(MouseEvent event){              //重新登陆
     document.getElementById("userpassword").style.display='block';
     bef.style.display='block';
     click.style.display='none';
+    document.getElementById("onlyrandompage").style.display='none';
+    document.getElementById("kuang").style.display='none';    
 }
 
 void ClassokButton(MouseEvent event){
@@ -479,6 +483,9 @@ void ClassokButton(MouseEvent event){
     cd.style.display='block';
     de.style.display='none';
     click.style.display='none';
+    rdm.style.display='none';
+    document.getElementById("onlyrandompage").style.display='none';
+    document.getElementById("kuang").style.display='none';       
 }
 
 void RandomclassButton(MouseEvent event){
@@ -488,17 +495,20 @@ void RandomclassButton(MouseEvent event){
     cd.style.display='none';
     de.style.display='block';
    click.style.display='none';
+    document.getElementById("onlyrandompage").style.display='block';
+    document.getElementById("kuang").style.display='block';   
 }
+
 void onlyrandomButton(MouseEvent event){
     ab.style.display='none';
     abb.style.display='block';
     bc.style.display='none';
     cd.style.display='none';
-    de.style.display='none';
-    rdm.style.display='block';
+    de.style.display='block';
     click.style.display='none';
-    document.getElementById("onlyrandompage").style.display='block';
-    document.getElementById("kuang").style.display='block';
+    rdm.style.display='none';
+    document.getElementById("onlyrandompage").style.display='none';
+    document.getElementById("kuang").style.display='none';   
 }
 
 void onlyclickButton(MouseEvent event){
@@ -508,7 +518,9 @@ void onlyclickButton(MouseEvent event){
     cd.style.display='none';
     de.style.display='none';
    rdm.style.display='none';
-    click.style.display='block';
+   click.style.display='block';
+    document.getElementById("onlyrandompage").style.display='none';
+    document.getElementById("kuang").style.display='none';     
 }
 
 
