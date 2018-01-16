@@ -14,6 +14,7 @@
 ## 创意
 > 在计算机类课堂上，特别是在上课学生较多的情况下，教师不能快速确定学生的出勤率，出勤状况的统计较为耗时且麻烦。课堂上学生们大多都是一边听讲，一边看着自己的电脑，师生之间的互动较少。因而，导致在教师需要学生回答问题的时候，总是没有学生愿意主动回答，不利于塑造良好的课堂氛围。长此以往地缺乏学生及时反馈，会使教师在上课时忘记要提的问题，也可能造成对于重难点等教学安排出现偏差。此外，在学生回答问题后，由于缺乏便捷的工具对学生课堂表现进行记录与统计，不利于教师进行更有针对性的教学，不利于学生个性化发展。  
 > 根据以上的现象及问题，我们设计出一款以课堂点名为主要功能，以签到、记录等功能为辅的课堂点名应用小程序，以促进课堂师生间的互动交流，同时有效记录课堂上师生间的活动情况。
+
 >**创意阶段的个人贡献**   
 >在创意阶段，我主要负责在小组交流中提供想法。
 
@@ -76,10 +77,11 @@
 ## 我的代码
 >采用markdown 中代码标记来粘贴你完成的那些代码。  比如：
   
-dart
+  
+ ```dart 
 ///主函数
-main() async {
 
+main() async {
   querySelector("#loginbutton")//点击登录按钮，出现登陆页面
    ..id
    ..onClick.listen(StartLoginButton);
@@ -131,7 +133,7 @@ Future randomPostRequestJ(Event e) async {
            else randomjnumber[countj]=currentnumj+1;
          }
        else randomjnumber[countj]=currentnumj-1;
-
+  
         for(int i=1;i<=randomstnuj;i++) {
           if(currentnumj==randomjnumber[i]){
           flagj=2;
@@ -695,7 +697,6 @@ void onlyclickButton(MouseEvent event){
   
 ## 我的活动量化
 > 活动量化数据
-
 >  **林凌/10154507117/9 commits / 397 ++ / 98 --/1 issues/**  
 
 ## 我的issue活动
